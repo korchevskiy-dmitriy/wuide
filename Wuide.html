@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wuide</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header_main">
+        <header>
+            <a href="Wuide.html" class="logo-link">
+        
+                <span class="logo-icon-wrapper">
+                    <img src="img_main/logo.png" alt="Иконка рюкзака">
+                </span>
+        
+                <span class="logo-text">Wuide</span>
+        
+            </a>
+
+            <nav id="main_reg_id" class="main_reg">
+                <a class="reg_signin" href="#">Sign in</a>
+                <a class="reg_login" href="#"><span>Log in</span></a>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Discover the World with Wuide</h1>
+            <a id="exp_id" class="exp" href="#">
+        
+                <span class="exp-text">Explore Now</span>
+        
+                <span class="exp-icon-wrapper">
+                    <img src="img_main/Frame 6.png" id="arrow1_id" class="arrow1" alt="">
+                </span>
+
+            </a>
+
+            <div id="tag_list_id" class="tag_list">
+                <ul>
+                    <li class="mli1"><a href="#">Explore</a></li>
+                    <li class="mli2"><a href="#">Travel</a></li>
+                    <li class="mli3"><a href="#">Trip</a></li>
+                    <li class="mli4"><a href="#">Vocation</a></li>
+                    <li class="mli5"><a href="#">Adventure</a></li>
+                    <li class="mli6"><a href="#">Journey</a></li>
+                    <li class="mli7"><a href="#">Discover</a></li>
+                    <li class="mli8"><a href="#">Enjoying</a></li>
+                </ul>
+            </div>
+            <div id="main_description_id" class="main_description">
+                <h2>Discover the world your way</h2>
+                <p>
+                    With Wuide, every journey becomes an adventure — explore new places, share your experiences, 
+                    and find hidden gems across the globe. Let us help you uncover something new every day.
+                </p>
+                <div class="icons">
+                    <a id="insta_link_id" class="insta_link" href="#">
+                        <img id="instagram_icon_id" class="instagram_icon" src="img_main/mdi_instagram.png" alt="icon of instagram">
+                    </a>
+                    <a id="facebook_link_id" class="facebook_link" href="#">
+                        <img id="facebook_icon_id" class="facebook_icon" src="img_main/ic_outline-facebook.png" alt="icon of facebook">
+                    </a>
+                    <a id="threads_link_id" class="threads_link" href="#">
+                        <img id="threads_icon_id" class="threads_icon" src="img_main/mingcute_threads-line.png" alt="icon of threads">
+                    </a>
+                    <a id="gmail_link_id" class="gmail_link" href="#">
+                        <img id="gmail_icon_id" class="gmail_icon" src="img_main/material-symbols_mail-outline.png" alt="icon of gmail">
+                    </a>
+                </div>
+            </div>    
+        </main>
+    </div>
+    <section class="first_section" id="first_section_id">
+        <div class="explore_country_on_full" id="explore_country_on_full_id">
+            <div class="title2" id="title2_id">
+                <h3>
+                    Explore country on full
+                </h3>
+                <p>Most popular</p>
+            </div> 
+            <div class="filters" id="filters_id">
+    
+                <div class="filter-dropdown-unit"> 
+        
+                    <button class="filters_price" 
+                            id="filters_price_id"
+                            type="button" 
+                            aria-expanded="false" 
+                            aria-controls="price-list-id"> 
+                        
+                        <span>Price</span>
+                        <img src="img_main/iconamoon_arrow-up-2-duotone.svg" alt="Открыть фильтр цен" class="arrow_icon" id="arrow_icon_price_id">
+                    </button>
+                    
+                    <ul class="filter-list-options" id="price-list-id" hidden>
+                        <li><a href="#" data-value="1">$</a></li>
+                        <li><a href="#" data-value="2">$$</a></li>
+                        <li><a href="#" data-value="3">$$$</a></li>
+                    </ul>
+                    
+                </div>
+
+                <div class="filter-dropdown-unit"> 
+                    
+                    <button class="filters_region" 
+                            id="filters_region_id"
+                            type="button"
+                            aria-expanded="false" 
+                            aria-controls="region-list-id">
+                        <span>Region</span>
+                        <img src="img_main/iconamoon_arrow-up-2-duotone.svg" alt="Открыть фильтр регионов" class="arrow_icon" id="arrow_icon_region_id">
+                    </button>
+
+                    <ul class="filter-list-options" id="region-list-id" hidden>
+                        <li><a href="#">Европа</a></li>
+                        <li><a href="#">Азия</a></li>
+                        <li><a href="#">Америка</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="country_cards_block" id="country_cards_block_id">
+                <div class="country_card" id="country_card_id">
+                    <div class="country_img" id="country_img_id">
+                        <img class="main_photo" src="img_main/image 9.svg">
+                        <a href="#" class="arrow_more" id="arrow_more_id">
+                            <img src="img_main/Frame 20.svg" alt="Icon of options">
+                        </a>
+                    </div>
+                    <div class="description_country" id="description_country_id">
+                        <div class="name_and_flag" id="name_and_flag">
+                            <h4 class="name_of_country" id="name_of_country_id">Czech Republic</h4>
+                            <img src="img_main/twemoji_flag-czechia.png" class="flag_of_country">
+                        </div>
+                        <div class="exactly_price" id="exactly_price_id">
+                            <span class="text_price">Price</span>
+                            <span class="count">$$</span>
+                        </div>
+                        <p class="description_of_country" id="description_of_country_id">The country where medieval charm meets 
+                            modern life. Explore fairytale castles, taste world-famous beer, and wander through the cobblestone
+                            streets of Prague — the heart of Europe</p>
+                    </div>
+                </div>
+                <div class="country_card">
+                    <div class="country_img" id="country_two_img_id">
+                        <img class="main_photo" src="img_main/image 9.svg">
+                        <a href="#" class="arrow_more" id="arrow_more_id">
+                            <img src="img_main/Frame 20.svg" alt="Icon of options">
+                        </a>
+                    </div>
+                    <div class="description_country" id="description_country_id">
+                        <div class="name_and_flag" id="name_and_flag">
+                            <h4 class="name_of_country" id="name_of_country_id">Czech Republic</h4>
+                            <img src="img_main/twemoji_flag-czechia.png" class="flag_of_country">
+                        </div>
+                        <div class="exactly_price" id="exactly_price_id">
+                            <span class="text_price">Price</span>
+                            <span class="count">$$</span>
+                        </div>
+                        <p class="description_of_country" id="description_of_country_id">The country where medieval charm meets 
+                            modern life. Explore fairytale castles, taste world-famous beer, and wander through the cobblestone
+                            streets of Prague — the heart of Europe</p>
+                    </div>
+                </div>
+                <div class="country_card">
+                    <div class="country_img" id="country_three_img_id">
+                        <img class="main_photo" src="img_main/image 9.svg">
+                        <a href="#" class="arrow_more" id="arrow_more_id">
+                            <img src="img_main/Frame 20.svg" alt="Icon of options">
+                        </a>
+                    </div>
+                    <div class="description_country" id="description_country_id">
+                        <div class="name_and_flag" id="name_and_flag">
+                            <h4 class="name_of_country" id="name_of_country_id">Czech Republic</h4>
+                            <img src="img_main/twemoji_flag-czechia.png" class="flag_of_country">
+                        </div>
+                        <div class="exactly_price" id="exactly_price_id">
+                            <span class="text_price">Price</span>
+                            <span class="count">$$</span>
+                        </div>
+                        <p class="description_of_country" id="description_of_country_id">The country where medieval charm meets 
+                            modern life. Explore fairytale castles, taste world-famous beer, and wander through the cobblestone
+                            streets of Prague — the heart of Europe</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="show_more" id="show_more_id">
+                <span>Show More</span>
+                <span>
+                    <img src="img_main/Frame 6.svg">
+                </span>
+            </a>
+        </div>
+    </section>
+    <section class="traveler_achievements">
+        <h5 class="traveler">Traveler achievements</h5>
+        <div class="gallery">
+            <div class="photo_achievements">
+                <div class="achievements_photo_1" id="achievements_photo_1_id">
+                    <img src="img_main/Rectangle 2.png">
+                    <img src="img_main/Rectangle 2.png">
+                    <img src="img_main/Rectangle 2.png">
+                    <img src="img_main/Rectangle 2.png">
+                </div>
+                <div class="achievements_photo_2" id="achievements_photo_2_id">
+                    <img src="img_main/Rectangle 2.png">
+                    <img src="img_main/Rectangle 2.png">
+                    <img src="img_main/Rectangle 2.png">
+                    <img src="img_main/Rectangle 2.png">
+                    <img src="img_main/Rectangle 2.png">
+                </div>
+                <div class="achievements_photo_3" id="achievements_photo_3_id">
+                    <img src="img_main/Rectangle 2.png">
+                    <img src="img_main/Rectangle 2.png">
+                    <img src="img_main/Rectangle 2.png">
+                    <img src="img_main/Rectangle 2.png">
+                </div>    
+            </div>
+            <div class="buttons" id="buttons_id">
+                <a href="#" class="previous_slide">
+                    <img src="img_main/iconamoon_arrow-up-2-duotone.svg" class="prev_arrow">
+                </a>
+                <a href="#" class="next_slide">
+                    <img src="img_main/iconamoon_arrow-up-2-duotone.svg" class="prev_arrow">
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="end_of_main" id="end_of_main">
+        <div class="imp">
+            <div class="logo_and_text">
+                <a href="Wuide.html" class="logo_link_2">
+                    <span class="logo-icon-wrapper">
+                        <img src="img_main/logo.png" alt="icon">
+                    </span>    
+                    <span class="logo-text">Wuide</span>       
+                </a>
+                <p>Discover the World with Wuide</p>
+            </div>
+            <div class="icons_2">
+                <a id="insta_link_id" class="insta_link" href="#">
+                        <img id="instagram_icon_id" class="instagram_icon" src="img_main/mdi_instagram.png" alt="icon of instagram">
+                </a>
+                <a id="facebook_link_id" class="facebook_link" href="#">
+                    <img id="facebook_icon_id" class="facebook_icon" src="img_main/ic_outline-facebook.png" alt="icon of facebook">
+                </a>
+                <a id="threads_link_id" class="threads_link" href="#">
+                        <img id="threads_icon_id" class="threads_icon" src="img_main/mingcute_threads-line.png" alt="icon of threads">
+                </a>
+                <a id="gmail_link_id" class="gmail_link" href="#">
+                        <img id="gmail_icon_id" class="gmail_icon" src="img_main/material-symbols_mail-outline.png" alt="icon of gmail">
+                </a>
+            </div>
+            <nav id="main_reg_id_end" class="main_reg_end">
+                <a class="reg_signin_end" href="#">Sign in</a>
+                <a class="reg_login_end" href="#"><span>Log in</span></a>
+            </nav>
+        </div>
+    </footer>
+
+    <div class="auth-modal" id="auth-modal-id">
+        <div class="modal-content">
+            <div class="head_form_container">
+                <h6 id="modal-title">Sign in</h6>
+                <button class="icon_cross" id="icon_cross_id"><span>&times;</span></button>
+            </div>
+
+            <form action="#" method="post" class="reg_form_in hidden" id="signin-form">
+                <div class="form-grid-container">
+                    <div class="user_photo" id="user_photo_id">
+                        <label for="user_photo_form" class="photo-label">User photo</label> 
+                        
+                        <input type="file" id="user_photo_form" name="user-photo" accept="image/*" class="actual-file-input">
+                        
+                        <button type="button" class="upload-btn">Upload</button> 
+                    </div>
+
+                    <input type="text" class="name_signin" id="name_signin_id" name="name" placeholder="Name" required>
+                    <input type="email" class="email_signin" id="email_signin_id" name="email" placeholder="E-mail" required>
+
+                    <input type="text" class="surname_signin" id="surname_signin_id" name="surname" placeholder="Surname" required>
+                    <div class="password-wrapper">
+                        <input type="password" class="password_signin" id="password_signin_id" name="password" placeholder="Password" required>
+                        <span class="password-toggle">👁</span> 
+                    </div>
+
+                    <div class="country_signin">
+                        <select class="country-select" name="country" required>
+                            <option value="" disabled selected>Country</option> 
+                            <option value="cz">Czechia</option>
+                            <option value="us">USA</option>
+                            <option value="de">Germany</option>
+                        </select>
+                        
+                        <span class="select-arrow">▼</span> 
+                    </div>
+
+                    <button type="submit" class="submit-btn-signin">Sign in</button>
+                </div>
+            </form>
+            <form action="#" method="post" class="reg_ent_form_in" id="login-form">
+                <div class="container_email_password">
+                    <input type="email" class="email_login" id="email_login_id" name="email" placeholder="E-mail" required>
+                    <div class="password-wrapper-2">
+                        <input type="password" class="password_login" id="password_login_id" name="password" placeholder="Password" required>
+                        <span class="password-toggle">👁</span> 
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn-login">Log in</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
