@@ -25,8 +25,8 @@
             </a>
 
             <nav id="main_reg_id" class="main_reg">
-                <a class="reg_signin" href="#">Sign in</a>
-                <a class="reg_login" href="#"><span>Log in</span></a>
+                <button class="reg_signin" id="reg_signin_id" type="button">Sign in</button>
+                <button class="reg_login" id="reg_login_id" type="button"><span>Log in</span></button>
             </nav>
         </header>
 
@@ -90,10 +90,10 @@
                 <div class="filter-dropdown-unit"> 
         
                     <button class="filters_price" 
-                            id="filters_price_id"
-                            type="button" 
-                            aria-expanded="false" 
-                            aria-controls="price-list-id"> 
+                        id="filters_price_id"
+                        type="button" 
+                        aria-expanded="false" 
+                        aria-controls="price-list-id"> 
                         
                         <span>Price</span>
                         <img src="img_main/iconamoon_arrow-up-2-duotone.svg" alt="Открыть фильтр цен" class="arrow_icon" id="arrow_icon_price_id">
@@ -110,18 +110,18 @@
                 <div class="filter-dropdown-unit"> 
                     
                     <button class="filters_region" 
-                            id="filters_region_id"
-                            type="button"
-                            aria-expanded="false" 
-                            aria-controls="region-list-id">
+                        id="filters_region_id"
+                        type="button"
+                        aria-expanded="false" 
+                        aria-controls="region-list-id">
                         <span>Region</span>
                         <img src="img_main/iconamoon_arrow-up-2-duotone.svg" alt="Открыть фильтр регионов" class="arrow_icon" id="arrow_icon_region_id">
                     </button>
 
                     <ul class="filter-list-options" id="region-list-id" hidden>
-                        <li><a href="#">Европа</a></li>
-                        <li><a href="#">Азия</a></li>
-                        <li><a href="#">Америка</a></li>
+                        <li><a href="#">Europe</a></li>
+                        <li><a href="#">Asia</a></li>
+                        <li><a href="#">America</a></li>
                     </ul>
                     
                 </div>
@@ -259,8 +259,8 @@
                 </a>
             </div>
             <nav id="main_reg_id_end" class="main_reg_end">
-                <a class="reg_signin_end" href="#">Sign in</a>
-                <a class="reg_login_end" href="#"><span>Log in</span></a>
+                <button class="reg_signin_end" id="reg_signin_footer_id" type="button">Sign in</button>
+                <button class="reg_login_end" id="reg_login_footer_id" type="button"><span>Log in</span></button>
             </nav>
         </div>
     </footer>
@@ -317,5 +317,6 @@
             </form>
         </div>
     </div>
+    <script src="main_script.js"></script>
 </body>
 </html>

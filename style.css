@@ -63,7 +63,7 @@ header{
     width: auto;
     height: auto;
 }
-.main_reg a{
+.main_reg button{
     text-decoration: none;
     font-family: 'Semibold';
     font-style: normal;
@@ -71,6 +71,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    box-shadow: none;
+    border: none;
 
     color: #000000;
 }
@@ -634,7 +637,7 @@ h2 {
     width: auto;
     height: auto;
 }
-.main_reg_end a{
+.main_reg_end button{
     text-decoration: none;
     font-family: 'Semibold';
     font-style: normal;
@@ -642,6 +645,9 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    box-shadow: none;
+    border: none;
 
     color: #000000;
 }
@@ -686,11 +692,13 @@ h2 {
     height: 100%;
     z-index: 1000;	
     background-color: rgba(57, 57, 57, 0.5);
-    display: flex; 
+    display: none; 
     justify-content: center; 
     align-items: center;
 }
-
+.auth-modal.open {
+    display: flex;
+}
 .modal-content{
     width: 54.7%;
     height: 38.54%;
