@@ -32,7 +32,7 @@
 
         <main>
             <h1>Discover the World with Wuide</h1>
-            <a id="exp_id" class="exp" href="#">
+            <button type="button" id="exp_id" class="exp">
         
                 <span class="exp-text">Explore Now</span>
         
@@ -40,7 +40,7 @@
                     <img src="img_main/Frame 6.png" id="arrow1_id" class="arrow1" alt="">
                 </span>
 
-            </a>
+            </button>
 
             <div id="tag_list_id" class="tag_list">
                 <ul>
@@ -100,9 +100,9 @@
                     </button>
                     
                     <ul class="filter-list-options" id="price-list-id" hidden>
-                        <li><a href="#" data-value="1">$</a></li>
-                        <li><a href="#" data-value="2">$$</a></li>
-                        <li><a href="#" data-value="3">$$$</a></li>
+                        <li><button type="button" class="option-btn" data-value="1">$</button></li>
+                        <li><button type="button" class="option-btn" data-value="2">$$</button></li>
+                        <li><button type="button" class="option-btn" data-value="3">$$$</button></li>
                     </ul>
                     
                 </div>
@@ -119,9 +119,9 @@
                     </button>
 
                     <ul class="filter-list-options" id="region-list-id" hidden>
-                        <li><a href="#">Europe</a></li>
-                        <li><a href="#">Asia</a></li>
-                        <li><a href="#">America</a></li>
+                        <li><button type="button" class="option-btn">Europe</button></li>
+                        <li><button type="button" class="option-btn">Asia</button></li>
+                        <li><button type="button" class="option-btn">America</button></li>
                     </ul>
                     
                 </div>
@@ -199,40 +199,57 @@
             </a>
         </div>
     </section>
+
+
     <section class="traveler_achievements">
         <h5 class="traveler">Traveler achievements</h5>
         <div class="gallery">
             <div class="photo_achievements">
-                <div class="achievements_photo_1" id="achievements_photo_1_id">
-                    <img src="img_main/Rectangle 2.png">
-                    <img src="img_main/Rectangle 2.png">
-                    <img src="img_main/Rectangle 2.png">
-                    <img src="img_main/Rectangle 2.png">
+
+                <div class="achievements_photo_1 slider-track" id="track-1">
+                    <img src="img_main/putechestvenniki-e1429089640644.jpg">
+                    <img src="img_main/455d281e8d49dfd3feea73fcde1baac1.jpg">
+                    <img src="img_main/photopeople.png">
+                    <img src="img_main/travel-couple.jpg">
+                    <img src="img_main/1626340964610874745.jpg">
+                    <img src="img_main/2149290355_1.jpg">
+                    <img src="img_main/249_puteshestviye.webp">
+                    <img src="img_main/unnamed.jpg">
                 </div>
-                <div class="achievements_photo_2" id="achievements_photo_2_id">
-                    <img src="img_main/Rectangle 2.png">
-                    <img src="img_main/Rectangle 2.png">
-                    <img src="img_main/Rectangle 2.png">
-                    <img src="img_main/Rectangle 2.png">
-                    <img src="img_main/Rectangle 2.png">
+                <div class="achievements_photo_2 slider-track" id="track-2">
+                    <img src="img_main/b3663ad7709c10d9966e79e74af908cb_th____________________________1.jpg">
+                    <img src="img_main/turist-machu-pikchu.jpg">
+                    <img src="img_main/gjptxjm3f4k59488dplq07rafdschz0l.jpg">
+                    <img src="img_main/kaliningrad-1200x877.jpg">
+                    <img src="img_main/20220616_132537-scaled.webp">
+                    <img src="img_main/e79fece206bb9097.jpg">
+                    <img src="img_main/AQABeQ7S_J1No8wLubJPN2rcoMzgmCiyKJgv5hIpmuKsxjznkKYPcoRr03y5Dc_qVoVi_MG_xLaWm6sINqAevU1Cl9E.jpg">
+                    <img src="img_main/1iQUD1ZTH6M.jpg">
                 </div>
-                <div class="achievements_photo_3" id="achievements_photo_3_id">
-                    <img src="img_main/Rectangle 2.png">
-                    <img src="img_main/Rectangle 2.png">
-                    <img src="img_main/Rectangle 2.png">
-                    <img src="img_main/Rectangle 2.png">
+                <div class="achievements_photo_3 slider-track" id="track-3">
+                    <img src="img_main/2308635_five.jpeg">
+                    <img src="img_main/Urban-Adventures-Venice-Urban-Adventure-Leslie-Latchman-Photos-11.jpg">
+                    <img src="img_main/1254_1.jpg">
+                    <img src="img_main/de-1200x900.jpg">
+                    <img src="img_main/Swiss_f930e35ddc.jpg">
+                    <img src="img_main/tourism9.jpg">
+                    <img src="img_main/IMG_20180511_170122_.jpg.webp">
+                    <img src="img_main/7c3a5e539ba0ba0d64e4a9d67c.jpg">
                 </div>    
             </div>
             <div class="buttons" id="buttons_id">
-                <a href="#" class="previous_slide">
+                <button type="button" id="btn-prev" class="previous_slide">
                     <img src="img_main/iconamoon_arrow-up-2-duotone.svg" class="prev_arrow">
-                </a>
-                <a href="#" class="next_slide">
+                </button>
+                <button type="button" id="btn-next" class="next_slide">
                     <img src="img_main/iconamoon_arrow-up-2-duotone.svg" class="prev_arrow">
-                </a>
+                </button>
             </div>
         </div>
     </section>
+
+
+
     <footer class="end_of_main" id="end_of_main">
         <div class="imp">
             <div class="logo_and_text">

@@ -32,16 +32,122 @@ window.addEventListener('click', (event) => {
     }
 })
 
+const exploreNowBtn = document.getElementById('exp_id');
+const firstSection = document.getElementById('first_section_id');
+
+exploreNowBtn.addEventListener('click', () => {
+    firstSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+});
+
 const filterPriceBtn = document.getElementById('filters_price_id');
 const filterPriceList = document.getElementById('price-list-id');
+const priceArrow = document.getElementById('arrow_icon_price_id');
 
 filterPriceBtn.addEventListener('click', () => {
-    filterPriceList.hidden = !filterPriceList.hidden
+    filterPriceList.hidden = !filterPriceList.hidden;
+    priceArrow.classList.toggle('rotate');
 });
 
 const filterRegionBtn = document.getElementById('filters_region_id');
 const filterRegionList = document.getElementById('region-list-id');
+const regionArrow = document.getElementById('arrow_icon_region_id');
 
 filterRegionBtn.addEventListener('click', () => {
-    filterRegionList.hidden = !filterRegionList.hidden
+    filterRegionList.hidden = !filterRegionList.hidden;
+    regionArrow.classList.toggle('rotate');
+});
+
+const priceOptions = document.querySelectorAll('#price-list-id .option-btn');
+const priceBtnText = filterPriceBtn.querySelector('span');
+
+priceOptions.forEach((option) => {
+    option.addEventListener('click', () => {
+        priceBtnText.textContent = option.textContent;
+        filterPriceList.hidden = true;
+        priceArrow.classList.toggle('rotate');
+    })
+});
+
+const regionOptions = document.querySelectorAll('#region-list-id .option-btn');
+const regionBtnText = filterRegionBtn.querySelector('span');
+
+regionOptions.forEach((option) => {
+    option.addEventListener('click', () => {
+        regionBtnText.textContent = option.textContent;
+        filterRegionList.hidden = true;
+        regionArrow.classList.toggle('rotate');
+    })
+});
+
+
+
+
+const btnPrev = document.getElementById('btn-prev');
+const btnNext = document.getElementById('btn-next');
+const tracks = document.querySelectorAll('.slider-track');
+
+const itemsVisible = 4;
+const originalTotalItems = tracks[0].children.length; 
+
+const itemWidth = 25; 
+
+tracks.forEach(track => {
+    for (let i = 0; i < itemsVisible + 3; i++) {
+        const clone = track.children[i].cloneNode(true);
+        track.appendChild(clone);
+    }
+
+    track.style.transition = 'transform 0.5s ease-in-out';
+});
+
+let currentSlideIndex = 0;
+let isAnimating = false;
+
+function updateSlider(withAnimation = true) {
+    const offset = -(currentSlideIndex * itemWidth);
+    
+    tracks.forEach(track => {
+        track.style.transition = withAnimation ? 'transform 0.5s ease-in-out' : 'none';
+        track.style.transform = `translateX(${offset}%)`;
+    });
+}
+
+btnNext.addEventListener('click', () => {
+    if (isAnimating) return; 
+    isAnimating = true;
+
+    currentSlideIndex++;
+    updateSlider(true);
+
+    if (currentSlideIndex === originalTotalItems) {
+        setTimeout(() => {
+            currentSlideIndex = 0; 
+            updateSlider(false);  
+            isAnimating = false;   
+        }, 500);
+    } else {
+        setTimeout(() => {
+            isAnimating = false;
+        }, 500);
+    }
+});
+
+btnPrev.addEventListener('click', () => {
+    if (isAnimating) return;
+    
+    if (currentSlideIndex > 0) {
+        isAnimating = true;
+        currentSlideIndex--;
+        updateSlider(true);
+        setTimeout(() => { isAnimating = false; }, 500);
+    } 
+    else {
+        isAnimating = true;
+        currentSlideIndex = originalTotalItems - 1;
+        updateSlider(true);
+        setTimeout(() => { isAnimating = false; }, 500);
+    }
 });
