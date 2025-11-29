@@ -30,7 +30,24 @@ window.addEventListener('click', (event) => {
     if (event.target === modal){
         modal.classList.remove('open');
     }
-})
+});
+
+const signInEndBtn = document.getElementById('reg_signin_footer_id');
+const logInEndBtn = document.getElementById('reg_login_footer_id');
+
+signInEndBtn.addEventListener('click', () => {
+    modal.classList.add('open');
+    logInForm.classList.add('hidden');
+    signInForm.classList.remove('hidden');
+    modalTitle.textContent = 'Sign in'    
+});
+
+logInEndBtn.addEventListener('click', () => {
+    modal.classList.add('open');
+    signInForm.classList.add('hidden');
+    logInForm.classList.remove('hidden');
+    modalTitle.textContent = 'Log in'
+});
 
 const exploreNowBtn = document.getElementById('exp_id');
 const firstSection = document.getElementById('first_section_id');
@@ -150,4 +167,20 @@ btnPrev.addEventListener('click', () => {
         updateSlider(true);
         setTimeout(() => { isAnimating = false; }, 500);
     }
+});
+
+
+const passToggleBtn = document.querySelectorAll('.password-toggle');
+passToggleBtn.forEach((toggle) =>{
+    toggle.addEventListener('click', () => {
+        const passInputType = toggle.previousElementSibling
+        if (passInputType.type === 'password'){
+            passInputType.type = 'text';
+            toggle.textContent = '🙈';
+        }
+        else{
+            passInputType.type = 'password';
+            toggle.textContent = '👁';
+        }
+    });
 });

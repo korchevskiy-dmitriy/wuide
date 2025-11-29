@@ -87,6 +87,9 @@ header{
 
     font-size: 16px;
 }
+.reg_signin:hover {
+    background: #dcdcdc;
+}
 
 .reg_login{
     width: 130px;
@@ -102,6 +105,9 @@ header{
     border: 1px solid var(--white, rgba(255, 255, 255, 1));
     border-radius: 60px;
     background: rgba(11, 11, 20, 0.4);
+}
+.reg_login:hover {
+    background: rgba(0, 0, 0, 0.63);
 }
 
 .reg_login span{
@@ -289,7 +295,7 @@ h2 {
 .explore_country_on_full{
     max-width: 77.6%;
 
-    margin-top: 60px;
+    margin-top: 75px;
     margin-left: 11.2%;
 }
 
@@ -345,6 +351,9 @@ h2 {
     
     font-size: 100%;
 }
+.filters_price:hover {
+    background: #ececec;
+}
 
 .filters_region {
     display: flex;
@@ -361,7 +370,9 @@ h2 {
     
     font-size: 100%;
 }
-
+.filters_region:hover {
+    background: #ececec;
+}
 
 .filters_price span, .filters_region span {
     
@@ -659,7 +670,7 @@ h2 {
     background-color: black;
     height: 200px;
 
-    margin-top: 30%;
+    margin-top: 10%;
     padding: 3% 0% 0% 0%;
 }
 
@@ -696,7 +707,6 @@ h2 {
 }
 
 .main_reg_end {
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -719,8 +729,6 @@ h2 {
 
     box-shadow: none;
     border: none;
-
-    color: #000000;
 }
 
 .reg_signin_end{
@@ -729,6 +737,8 @@ h2 {
     border-radius: 60px;
     background: var(--white, rgba(255, 255, 255, 1));
     margin-right: 15px;
+
+    font-size: 16px;
 }
 
 .reg_login_end{
@@ -742,13 +752,15 @@ h2 {
     padding: 10px;
 
     box-sizing: border-box;
-    border: 1px solid var(--white, rgba(255, 255, 255, 1));
+    border: 1px;
+    border-color: #FFFFFF;
     border-radius: 60px;
-    background: rgba(11, 11, 20, 0.4);
+    background: rgba(65, 65, 71, 0.358);
 }
 
 .reg_login_end span{
     color:#FFFFFF;
+    font-size: 16px;
 }
 
 .hidden {
@@ -770,18 +782,26 @@ h2 {
 .auth-modal.open {
     display: flex;
 }
-.modal-content{
-    width: 54.7%;
-    height: 38.54%;
+.modal-content {
+    width: 90%;
+    max-width: 900px;
 
+    height: auto; 
+    
+    padding: 40px; 
+    
     border-radius: 35px;
     background: var(--white, rgba(255, 255, 255, 1));
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .head_form_container{
     margin-left: 42%;
     margin-right: 3%;
-    margin-top: 3.5%;
+    margin-top: 0px;
 
     display: flex;
     justify-content: space-between;
@@ -799,20 +819,31 @@ h2 {
     line-height: 55px;
 }
 
-.icon_cross{
+.icon_cross {
     width: 50px;
     height: 50px;
-    border-radius: 25px;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    
+    padding: 0;   
+    line-height: 1; 
+    
     background: var(--main, rgba(11, 11, 20, 1));
-    box-shadow: none;
     border: none;
-
     color: white;
-    font-size: 35px;
+    font-size: 32px;
+    cursor: pointer;
+    margin-bottom: 0;
+    
+    transition: transform 0.2s, background-color 0.2s;
+}
 
-    padding-bottom: 15px;
-
-    margin-bottom: 30px;
+.icon_cross:hover {
+    transform: rotate(90deg); 
+    background: #333;
 }
 
 .form-grid-container {
@@ -839,6 +870,9 @@ h2 {
 
     padding-bottom: 15px;
     margin-left: 10px;
+}
+.user_photo:hover {
+    background: #dcdcdc;
 }
 
 .photo-label{
@@ -880,6 +914,9 @@ h2 {
     padding-bottom: 20px;
     padding-left: 25px;
 }
+.name_signin:hover {
+    background: #dcdcdc;
+}
 
 .email_signin{
     grid-column: 6/ span 3; 
@@ -896,6 +933,9 @@ h2 {
     padding-left: 25px;
     margin-right: 10px;
 }
+.email_signin:hover {
+    background: #dcdcdc;
+}
 
 .surname_signin{
     grid-column: 3/ span 3; 
@@ -906,7 +946,9 @@ h2 {
     border: none;
     box-sizing: border-box;
     padding-left: 25px;
-
+}
+.surname_signin:hover {
+    background: #dcdcdc;
 }
 
 .password-wrapper {
@@ -929,6 +971,9 @@ h2 {
     padding-right: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+.password_signin:hover {
+    background: #dcdcdc;
 }
 
 .password-toggle {
@@ -961,6 +1006,9 @@ h2 {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+.country-select:hover {
+    background: #dcdcdc;
 }
 .select-arrow {
     position: absolute;
@@ -1008,6 +1056,9 @@ h2 {
     padding-bottom: 20px;
     padding-left: 25px;
 }
+.email_login:hover {
+    background: #dcdcdc;
+}
 .password-wrapper-2 {
     width: 47%;
     position: relative; 
@@ -1024,6 +1075,9 @@ h2 {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 40px;
+}
+.password_login:hover {
+    background: #dcdcdc;
 }
 
 

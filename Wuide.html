@@ -286,18 +286,23 @@
         <div class="modal-content">
             <div class="head_form_container">
                 <h6 id="modal-title">Sign in</h6>
-                <button class="icon_cross" id="icon_cross_id"><span>&times;</span></button>
+                <button class="icon_cross" id="icon_cross_id">
+                    <svg class="cross-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </div>
 
             <form action="#" method="post" class="reg_form_in hidden" id="signin-form">
                 <div class="form-grid-container">
-                    <div class="user_photo" id="user_photo_id">
-                        <label for="user_photo_form" class="photo-label">User photo</label> 
+                    <label class="user_photo" id="user_photo_id" for="user_photo_form">
+                        <span for="user_photo_form" class="photo-label">User photo</span> 
                         
                         <input type="file" id="user_photo_form" name="user-photo" accept="image/*" class="actual-file-input">
                         
-                        <button type="button" class="upload-btn">Upload</button> 
-                    </div>
+                        <span type="button" class="upload-btn">Upload</span> 
+                    </label>
 
                     <input type="text" class="name_signin" id="name_signin_id" name="name" placeholder="Name" required>
                     <input type="email" class="email_signin" id="email_signin_id" name="email" placeholder="E-mail" required>
