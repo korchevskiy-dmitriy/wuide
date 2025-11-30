@@ -184,3 +184,38 @@ passToggleBtn.forEach((toggle) =>{
         }
     });
 });
+
+
+const fileInput = document.getElementById('user_photo_form');
+const photoConteiner = document.getElementById('user_photo_id');
+
+fileInput.addEventListener('change', function()  {
+    const file = this.files[0];
+    if (file){
+        const reader = new FileReader();
+        reader.onload = function(event){
+            const url = event.target.result;
+            photoConteiner.style.backgroundImage = `url(${url})`;
+            photoConteiner.classList.add('has-image');
+        }
+        reader.readAsDataURL(file);
+    }
+});
+
+
+const hiddenElements = document.querySelectorAll('.hidden-element');
+
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+            
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+        }
+    });
+});
+
+hiddenElements.forEach((el) => observer.observe(el));
