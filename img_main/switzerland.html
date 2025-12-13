@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="csrf-param" content="_csrf">
+<meta name="csrf-token" content="KIQVENdkDNkndJNSfY-S1jqmm3tD9UvrA0oHZHTZDw0d62B2lDtko0E3ywoa4cO-DN_sSXuRMa1FCTcPQbt4Tw==">
+    <title>Швейцария - Информация для поездки - Поиск попутчиков с Triplook</title>
+    <link rel="icon" href="/favicon.ico">
+    <meta property="og:title" content="Швейцария: путеводитель по стране">
+<meta property="og:description" content="Какой транспорт выбрать. Визовые вопросы и таможенный досмотр. Аутентичная кухня. Рекомендации к главным достопримечательностям страны.">
+<meta property="og:image" content="https://triplook.me/media/countries/photo/5/0/07.jpg">
+<meta name="description" content="Туристическая информация для самостоятельной поездки на курорты Швейцарии и поиска попутчиков: виза и документы, прохождение таможни, список курортов и достопримечательностей, национальная кухня, деньги, сувениры, обычаи">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link href="/assets/2ed8008/css/lightslider.css" rel="stylesheet">
+<link href="/assets/5ae2bec6/authchoice.css" rel="stylesheet">
+<link href="/assets/295cc781/css/font-awesome.css" rel="stylesheet">
+<link href="/assets/6517e04c/css/selectize.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700&amp;subset=latin,cyrillic-ext" rel="stylesheet">
+<link href="/css/style.min.css" rel="stylesheet">
+<script src="/assets/986a89e5/jquery.js"></script>
+<script src="/assets/5a0fc194/yii.js"></script>
+<script src="/assets/fc855b6e/jquery.scrollTo.min.js"></script>
+<script src="/assets/ca59b20a/jquery.slimscroll.min.js"></script>
+<script src="/assets/6517e04c/js/standalone/selectize.min.js"></script>
+<script src="/js/app.min.js"></script></head>
+<body class="inside">
+            <div class="inner">
+        <header class="header">
+    <div class="wrap">
+                    <div class="main_header_top main_header_top_logout guest-top-menu">
+                <div class="main_header_entry mobile-nav">
+    <a class="main_header_input" id="auth-login-button" href="/ru/auth/login" data-mfp-src="#auth-login">Войти</a>
+    <a class="main_header_reg" id="auth-register-button" href="/ru/auth/register" data-mfp-src="#auth-register">Регистрация</a>
+</div>
+
+<div id="auth-login" class="mfp-hide auth-popup">
+    <div class="auth">
+        <div class="auth__title auth-title-login"><span>Вход на сайт</span></div>
+        <form id="login-form" action="/ru/auth/do-login" method="post">
+<input type="hidden" name="_csrf" value="KIQVENdkDNkndJNSfY-S1jqmm3tD9UvrA0oHZHTZDw0d62B2lDtko0E3ywoa4cO-DN_sSXuRMa1FCTcPQbt4Tw==">    <div class="auth__block">
+        <div id="login-form-error"></div>
+
+        <div class="auth__block_item">
+            <div class="auth__block_title">Email</div>
+            <input type="text" id="login-email" name="login[email]" value="" placeholder="Ваш электронный адрес">        </div>
+
+        <div class="auth__block_item">
+            <div class="auth__block_title">Пароль</div>
+            <input type="password" id="login-password" name="login[password]" value="" placeholder="Ваш пароль">        </div>
+
+        <div class="auth-block-remember">
+            <label><input type="checkbox" id="login-remember-me" name="login[rememberMe]" value="1" checked> Запомнить меня</label>        </div>
+
+        <div class="auth-block-recover">
+            <a href="/ru/password/recover">Забыли пароль?</a>
+        </div>
+    </div>
+
+    <input type="button" id="login-form-send" class="single__btn" name="sendLogin" value="Вход на сайт"></form>
+<div id="w0">    <div class="soclogin">
+        <div class="label">Войти через аккаунт социальных сетей:</div>
+
+        <div class="icons">
+                            <a href="/ru/auth/index?authclient=vkontakte" title="VKontakte"><img src="/images/auth/vkontakte.svg" alt="VKontakte"></a>
+                            <a href="/ru/auth/index?authclient=facebook" title="Facebook"><img src="/images/auth/facebook.svg" alt="Facebook"></a>
+                            <a href="/ru/auth/index?authclient=twitter" title="Twitter"><img src="/images/auth/twitter.svg" alt="Twitter"></a>
+                            <a href="/ru/auth/index?authclient=odnoklassniki" title="Odnoklassniki"><img src="/images/auth/odnoklassniki.svg" alt="Odnoklassniki"></a>
+                            <a href="/ru/auth/index?authclient=google" title="Google"><img src="/images/auth/google.svg" alt="Google"></a>
+                            <a href="/ru/auth/index?authclient=yandex" title="Yandex"><img src="/images/auth/yandex.svg" alt="Yandex"></a>
+                    </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function setLoginError(text) {
+        $('#login-form-error').append('<div class="form-error">' + text + '</div>');
+        return false;
+    }
+
+    $(document).ready(function() {
+        $("#login-form-send").on("click", function() {
+
+            var email = $('#login-email').val();
+            var password = $('#login-password').val();
+
+            $('#login-form-error').empty();
+
+            if (!email)
+                return setLoginError('Пожалуйста, укажите свой электронный адрес');
+
+            if (!validateEmail(email))
+                return setLoginError('Указан некорректный электронный адрес');
+
+            if (!password)
+                return setLoginError('Пожалуйста, укажите свой пароль');
+
+            $(this).prop('disabled', true).val('Подождите').addClass('btn_disabled');
+
+            $.ajax({
+                url: '/ru/auth/do-login',
+                type: "post",
+                data: $("#login-form").serialize(),
+                success: function(response) {
+                    if (response.result == 1)
+                        window.location = '/ru';
+                    else {
+                        $('#login-form-error').append('<div class="form-error">' + response.errorText + '</div>');
+                        $("#login-form-send").prop('disabled', false).val('Вход на сайт').removeClass('btn_disabled');
+                    }
+                },
+                error: function() {
+                    setLoginError('Произошла неизвестная ошибка');
+                },
+                dataType: 'json'
+            });
+        });
+    });
+</script>    </div>
+</div>
+
+<div id="auth-register" class="mfp-hide auth-popup">
+    <div class="auth">
+        <div class="auth__title auth-title-reg"><span>Регистрация</span></div>
+        
+    <form id="register-form" action="/ru/auth/create" method="post">
+<input type="hidden" name="_csrf" value="KIQVENdkDNkndJNSfY-S1jqmm3tD9UvrA0oHZHTZDw0d62B2lDtko0E3ywoa4cO-DN_sSXuRMa1FCTcPQbt4Tw==">        <div class="auth__block">
+            <div id="register-form-error"></div>
+
+            <div class="auth__block_item">
+                <div class="auth__block_title">Ваше имя</div>
+                <input type="text" id="reg-name" name="reg[name]" value="" placeholder="Имя или псевдоним">            </div>
+
+            <div class="auth__block_item">
+                <div class="auth__block_title">Email</div>
+                <input type="text" id="reg-email" name="reg[email]" value="" placeholder="Используется для входа">            </div>
+
+            <div class="auth__block_item">
+                <div class="auth__block_title">Пароль</div>
+                <input type="password" id="reg-password" name="reg[password]" value="" placeholder="Не менее 5 символов">            </div>
+
+            <div class="auth__block_item">
+                <div class="auth__block_title">Повторите пароль</div>
+                <input type="password" id="reg-password2" name="reg[password2]" value="" placeholder="Введите пароль повторно">            </div>
+        </div>
+
+        <input type="button" id="register-form-send" class="single__btn" name="sendReg" value="Создать аккаунт">    </form>
+        <div id="w1">        <div class="soclogin">
+            <div class="label">Войти через аккаунт социальных сетей:</div>
+
+            <div class="icons">
+                                    <a href="/ru/auth/index?authclient=vkontakte" title="VKontakte"><img src="/images/auth/vkontakte.svg" alt="VKontakte"></a>
+                                    <a href="/ru/auth/index?authclient=facebook" title="Facebook"><img src="/images/auth/facebook.svg" alt="Facebook"></a>
+                                    <a href="/ru/auth/index?authclient=twitter" title="Twitter"><img src="/images/auth/twitter.svg" alt="Twitter"></a>
+                                    <a href="/ru/auth/index?authclient=odnoklassniki" title="Odnoklassniki"><img src="/images/auth/odnoklassniki.svg" alt="Odnoklassniki"></a>
+                                    <a href="/ru/auth/index?authclient=google" title="Google"><img src="/images/auth/google.svg" alt="Google"></a>
+                                    <a href="/ru/auth/index?authclient=yandex" title="Yandex"><img src="/images/auth/yandex.svg" alt="Yandex"></a>
+                            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function setRegisterError(text) {
+            $('#register-form-error').append('<div class="form-error">' + text + '</div>');
+            return false;
+        }
+
+        $(document).ready(function() {
+            $("#register-form-send").on("click", function() {
+
+                var name = $('#reg-name').val();
+                var email = $('#reg-email').val();
+                var password = $('#reg-password').val();
+                var password2 = $('#reg-password2').val();
+
+                $('#register-form-error').empty();
+
+                if (!name)
+                    return setRegisterError('Пожалуйста, укажите свое имя');
+
+                if (!email)
+                    return setRegisterError('Пожалуйста, укажите свой электронный адрес');
+
+                if (!validateEmail(email))
+                    return setRegisterError('Указан некорректный электронный адрес');
+
+                if (!password)
+                    return setRegisterError('Пожалуйста, укажите свой пароль');
+
+                if (password.length < 5)
+                    return setRegisterError('Пароль должен содержать не менее 5 символов');
+
+                if (!password2)
+                    return setRegisterError('Введите пароль повторно');
+
+                if (password !== password2)
+                    return setRegisterError('Пароли не совпадают');
+
+                $(this).prop('disabled', true).val('Подождите').addClass('btn_disabled');
+
+                $.ajax({
+                    url: '/ru/auth/create',
+                    type: "post",
+                    data: $("#register-form").serialize(),
+                    success: function(response) {
+                        if (response.result == 1)
+                            window.location = '/ru/auth/welcome';
+                        else {
+                            $('#register-form-error').append('<div class="form-error">' + response.errorText + '</div>');
+                            $("#register-form-send").prop('disabled', false).val('Создать аккаунт').removeClass('btn_disabled');
+                        }
+                    },
+                    error: function() {
+                        setRegisterError('Произошла неизвестная ошибка');
+                    },
+                    dataType: 'json'
+                });
+            });
+        });
+    </script>
+
+    </div>
+</div>            </div>
+        
+        <div class="header__nav"><div class="menu__button"></div></div>
+
+        <a href="/ru" class="header__logo" title="Поиск попутчиков для путешествия с Triplook"></a>
+        
+        <div class="search-bar-wrap">
+            <div class="search-bar" id="search-bar">
+    <div class="search-bar-form">
+        <div class="search-bar-input">
+            <input type="text" id="search-bar-query" name="search-bar" placeholder="Поиск">        </div>
+
+        <div class="search-bar-button"></div>
+    </div>
+
+    <div class="search-bar-result search-bar-result-empty" id="search-bar-result">
+        <ul id="search-bar-result-list"></ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    /**
+     * Current search bar query text
+     */
+    var searchBarText = null;
+
+    /**
+     * Current search AJAX request
+     */
+    var searchBarRequest = null;
+
+    /**
+     * Run search
+     */
+    function searchBarQuery(query) {
+
+        // Prevent multiple requests
+        if (searchBarRequest != null)
+            searchBarRequest.abort();
+
+        searchBarRequest = $.ajax({
+            url: '/ru/service/search',
+            type: "post",
+            data: {q: query},
+            beforeSend: function() {
+                $("#search-bar-result-list li div.search-service").each(function() {
+                    $(this).parent().remove();
+                });
+
+                $('#search-bar-result-list').prepend('<li><div class="search-service">Поиск...</div></li>');
+                $('#search-bar-result').removeClass('search-bar-result-empty');
+            },
+            success: function(response) {
+                $('#search-bar-result-list').empty();
+
+                if (response.responseCode == 200) {
+                    $.each(response.items, function(index, item) {
+                        $('#search-bar-result-list').append(item);
+                    });
+                } else {
+                    $('#search-bar-result-list').append('<li><div class="search-service">Совпадений не найдено</div></li>');
+                }
+            },
+            error: function() {
+                $('#search-bar-result-list').empty();
+                $('#search-bar-result-list').append('<li><div class="search-service">Совпадений не найдено</div></li>');
+            },
+            dataType: 'json'
+        });
+    }
+
+    /**
+     * Add request to queue
+     */
+    function searchBarQueue() {
+        if (searchBarText) {
+            searchBarQuery(searchBarText);
+            searchBarText = null;
+        }
+    }
+
+    $(document).ready(function() {
+
+        /**
+         * Search bar on focus in
+         */
+        $('#search-bar-query').focusin(function(){
+            $('#search-bar').addClass('search-bar-open');
+
+            if (!$('#search-bar-query').val()) {
+                $('#search-bar-query').prop('placeholder', 'Пожалуйста, введите хотя бы один символ');
+            }
+        });
+
+        /**
+         * Search bar on focus out
+         */
+        $('#search-bar-query').focusout(function(){
+            $('#search-bar').removeClass('search-bar-open');
+
+            if (!$('#search-bar-query').val()) {
+                $('#search-bar-query').prop('placeholder', 'Поиск');
+            }
+        });
+
+        /**
+         * Search bar on mouse down
+         */
+        $('#search-bar-result').on('mousedown', function(event) {
+            event.preventDefault();
+        });
+
+        /**
+         * Search bar text changed
+         */
+        $('#search-bar-query').on('input', function(e) {
+
+            e.preventDefault();
+
+            searchBarText = $('#search-bar-query').val();
+
+            if (searchBarText) {
+                setTimeout(function() {
+                    searchBarQueue();
+                }, 500);
+            } else {
+                if (searchBarRequest != null)
+                    searchBarRequest.abort();
+
+                $('#search-bar-result-list').empty();
+                $('#search-bar-result').addClass('search-bar-result-empty');
+            }
+        });
+    });
+</script>        </div>
+
+            </div>
+</header>
+        <div class="inner__content">
+            <div class="wrap">
+                <div class="middle">
+                    <div class="container">
+                        <main class="content">
+                                                                    <div class="title">
+                                        <h1  class="title-country">Швейцария</h1>
+                                    </div>
+                                
+                                                                    <div class="breadcrumbs">
+                                        <ul class="breadcrumb"><li><a href="/ru">Главная</a></li>
+<li><a href="/ru/countries">Страны</a></li>
+<li><span>Швейцария</span></li>
+</ul>                                    </div>
+                                
+                                <div class="content_stranu">
+    <div class="stranu">
+                    <div class="more__repose"><a href="/ru/countries/switzerland/resorts">Курорты Швейцарии</a></div>
+        
+        <div class="repose">
+            <div class="repose__note">
+                <div class="repose__box__list">
+                    <ul>
+                                                    <li><span class="subtitle">Столица:</span><span class="info">Берн</span></li>
+                        
+                                                    
+                                                                                                <li>
+                                        <span class="subtitle">Валюта:</span>
+                                        <span class="info">швейцарский франк</span>
+                                    </li>
+                                                                                                                                <li>
+                                        <span class="subtitle">Время:</span>
+                                        <span class="info">UTC+1, летом UTC+2</span>
+                                    </li>
+                                                                                                                                <li>
+                                        <span class="subtitle">Языки:</span>
+                                        <span class="info">немецкий, французский, итальянский, романшский (швейцарский ретороманский)</span>
+                                    </li>
+                                                                                                                                <li>
+                                        <span class="subtitle">Религии:</span>
+                                        <span class="info">христианство (католицизм, протестантизм)</span>
+                                    </li>
+                                                            
+                            <li>
+                                <span class="subtitle">Разделы:</span>
+                                <span class="info">
+                                                                                                                        <a href="#description-travel">Как добраться</a>
+                                                                                                                                                                <a href="#description-visa">Виза</a>
+                                                                                                                                                                <a href="#description-customs">Таможня</a>
+                                                                                                                                                                <a href="#description-cuisine">Кухня</a>
+                                                                                                                                                                <a href="#description-money">Деньги</a>
+                                                                                                                                                                <a href="#description-about">Что нужно знать</a>
+                                                                                                                                                        <a href="#popular-resorts">Популярные курорты</a>
+                                                                    </span>
+                            </li>
+
+                            <li>
+                                     <div class="share-inline-wrap">
+
+    <div class="share-icons-wrap">
+        
+            
+            <a href="/ru/service/share?platform=facebook&title=%D0%A8%D0%B2%D0%B5%D0%B9%D1%86%D0%B0%D1%80%D0%B8%D1%8F%3A+%D0%BF%D1%83%D1%82%D0%B5%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C+%D0%BF%D0%BE+%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B5&url=https%3A%2F%2Ftriplook.me%2Fru%2Fcountries%2Fswitzerland" class="share-button share-button-popup share-platform-facebook" title="Поделиться в Facebook">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+        
+            
+            <a href="/ru/service/share?platform=twitter&title=%D0%A8%D0%B2%D0%B5%D0%B9%D1%86%D0%B0%D1%80%D0%B8%D1%8F%3A+%D0%BF%D1%83%D1%82%D0%B5%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C+%D0%BF%D0%BE+%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B5&url=https%3A%2F%2Ftriplook.me%2Fru%2Fcountries%2Fswitzerland" class="share-button share-button-popup share-platform-twitter" title="Поделиться в Twitter">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+        
+            
+            <a href="/ru/service/share?platform=google&title=%D0%A8%D0%B2%D0%B5%D0%B9%D1%86%D0%B0%D1%80%D0%B8%D1%8F%3A+%D0%BF%D1%83%D1%82%D0%B5%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C+%D0%BF%D0%BE+%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B5&url=https%3A%2F%2Ftriplook.me%2Fru%2Fcountries%2Fswitzerland" class="share-button share-button-popup share-platform-google" title="Поделиться в Google Plus">
+                <i class="fa fa-google-plus" aria-hidden="true"></i>
+            </a>
+        
+            
+            <a href="/ru/service/share?platform=vk&title=%D0%A8%D0%B2%D0%B5%D0%B9%D1%86%D0%B0%D1%80%D0%B8%D1%8F%3A+%D0%BF%D1%83%D1%82%D0%B5%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C+%D0%BF%D0%BE+%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B5&url=https%3A%2F%2Ftriplook.me%2Fru%2Fcountries%2Fswitzerland" class="share-button share-button-popup share-platform-vk" title="Поделиться в ВКонтакте">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+        
+        <a href="https://triplook.me/ru/countries/switzerland" class="share-button share-button-link" title="Скопировать ссылку"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="share-input-wrap">
+        <div class="share-button-link-item">
+            <input type="hidden" title="" value="https://triplook.me/ru/countries/switzerland" class="share-button-input-url">
+            <span>Ссылка скопирована</span>
+        </div>
+        <div class="share-button-link-item">
+            <a href="javascript: void(0)" class="share-button-link-done" title="Готово">
+                <i class="fa fa-check" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+
+</div>                            </li>
+                                            </ul>
+                </div>
+                <div class="repose__box__image">
+                    <a href="/media/countries/photo/5/0/07.jpg" class="guide-gallery-item" data-info="Источник: interlax-bg.com"><img src="/media/countries/preview/big/f/4/07.jpg" alt="Швейцария"></a>                </div>
+
+                <div class="guide-place-buttons">
+                    
+    <a href="#auth-login" class="box__btn btn btn_blue need-auth-button">Я здесь был</a>
+    <a href="#auth-login" class="box__btn btn btn_green need-auth-button">Хочу сюда</a>
+
+                </div>
+            </div>
+
+            <div class="guide-gallery-wrap">
+                    <div class="guide-gallery">
+        <ul id="guide-gallery-list">
+                            <li>
+                    <a href="/media/countries/optimized/1/1/9h.jpg" class="guide-gallery-item" data-info="Источник: parsseh.com">
+                        <img src="/media/countries/preview/medium/a/0/9h.jpg" alt=""/>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/media/countries/optimized/8/e/ah.jpg" class="guide-gallery-item" data-info="Источник: www.alpenwild.com">
+                        <img src="/media/countries/preview/medium/d/1/ah.jpg" alt=""/>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/media/countries/optimized/5/c/bh.jpg" class="guide-gallery-item" data-info="Источник: www.thedailymeal.com">
+                        <img src="/media/countries/preview/medium/6/4/bh.jpg" alt=""/>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/media/countries/optimized/7/4/ch.jpg" class="guide-gallery-item" data-info="Источник: www.kayak.com">
+                        <img src="/media/countries/preview/medium/7/8/ch.jpg" alt=""/>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/media/countries/optimized/7/7/dh.jpg" class="guide-gallery-item" data-info="Источник: www.region-du-leman.ch">
+                        <img src="/media/countries/preview/medium/f/a/dh.jpg" alt=""/>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/media/countries/optimized/6/d/eh.jpg" class="guide-gallery-item" data-info="Источник: happytours.eu">
+                        <img src="/media/countries/preview/medium/6/b/eh.jpg" alt=""/>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/media/countries/optimized/d/8/fh.jpg" class="guide-gallery-item" data-info="Источник: www.justusboys.com">
+                        <img src="/media/countries/preview/medium/f/8/fh.jpg" alt=""/>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/media/countries/optimized/1/5/gh.jpg" class="guide-gallery-item" data-info="Источник: iffdfoundation.org">
+                        <img src="/media/countries/preview/medium/0/5/gh.jpg" alt=""/>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/media/countries/optimized/c/3/hh.jpg" class="guide-gallery-item" data-info="Источник: 500px.com">
+                        <img src="/media/countries/preview/medium/7/3/hh.jpg" alt=""/>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/media/countries/optimized/5/9/ih.jpg" class="guide-gallery-item" data-info="Источник: www.onthesnow.com">
+                        <img src="/media/countries/preview/medium/3/a/ih.jpg" alt=""/>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/media/countries/optimized/8/6/jh.jpg" class="guide-gallery-item" data-info="Источник: www.sysaworld.com">
+                        <img src="/media/countries/preview/medium/d/4/jh.jpg" alt=""/>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/media/countries/optimized/5/6/kh.jpg" class="guide-gallery-item" data-info="Источник: pictures-and-images.com">
+                        <img src="/media/countries/preview/medium/5/6/kh.jpg" alt=""/>
+                    </a>
+                </li>
+                    </ul>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#guide-gallery-list").lightSlider({
+                item: 4,
+                slideMargin: 0,
+                pager: true,
+                slideMove: 4,
+                enableDrag: false,
+                responsive: [
+                    {
+                        breakpoint: 910,
+                        settings: {
+                            item: 3,
+                            slideMove: 3
+                        }
+                    },{
+                        breakpoint: 768,
+                        settings: {
+                            item: 4,
+                            slideMove: 4
+                        }
+                    },{
+                        breakpoint: 480,
+                        settings: {
+                            item: 3,
+                            slideMove: 3
+                        }
+                    }
+                ]
+            });
+
+            $('.repose').magnificPopup({
+                delegate: 'a.guide-gallery-item',
+                type: 'image',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0, 1],
+                    tCounter: ''
+                },
+                image: {
+                    cursor: null,
+                    titleSrc: function(item) {
+                        return '<div>' + item.el.attr('data-info') + '</div>';
+                    }
+                }
+            });
+        });
+    </script>
+
+            </div>
+
+                                                <div class="repose__box__description">
+                        
+<p>Швейцария <em>(Switzerland) </em>— государство в форме конфедерации, расположенное в западной части Европейского континента <em>(European continent).</em> Имеет общие границы с Германией <em>(Germany)</em>, Францией<em> (France),</em> Италией <em>(Italy)</em>, Австрией<em> (Austria)</em> и Лихтенштейном<em> (Liechtenstein).</em> Большая часть территории страны находится в Альпах<em> (Alps).</em> Столица — Женева <em>(Geneva).</em></p>
+
+<p>Климат Швейцарии изменяется в зависимости от региона. В отдельных частях страны разность температур может достигать 10-15 °C. На юге Швейцарии климат средиземноморский. Центральный регион находится в умеренном климатическом поясе, а горная часть относится к умеренно-континентальному поясу. Прохладнее всего в горных районах в зимние месяцы, когда температура воздуха может снижаться до -15 °C. На Юге Швейцарии почти всегда тепло и средняя температура воздуха в летние месяцы держится в пределах +28 °C.</p>
+
+<p>Отдых в Швейцарии хорош в любое время года. Идеальное время для того, чтобы провести отпуск на великолепных швейцарских озерах — период с июня по сентябрь. Горнолыжные курорты рекомендуем посещать в ноябре-апреле.</p>
+
+<p>В стране четыре языка имеют государственный статус: немецкий, французский, итальянский и ретороманский. Подавляющие большинство верующих швейцарцев составляют католики и протестанты.</p>
+
+<p>Швейцария — рай для поклонников горнолыжного спорта. Альпы — родина таких видов спорта, как альпинизм и горнолыжные спуски. В центральной Швейцарии расположен город-курорт Андерматт <em>(Andermatt)</em>. Для спортивно-развлекательных видов туризма идеально подходит городок Лунгерн<em> (Lungern)</em>. Самые популярные горнолыжные курорты, открытые круглый год: Церматт <em>(Zermatt)</em> и Саас-Фе <em>(Saas-Fee).</em></p>
+
+<p>Помимо горнолыжных курортов, страна прославилась благодаря лечебным озерам и бальнеологическим курортам. Фешенебельная курортная зона Бад Рагац <em>(Bad Ragaz)</em> предлагает гостям страны увлекательную экскурсионную программу. А ценителей исторических памятников и музеев, безусловно, привлечет Берн <em>(Bern)</em>, который по праву называют европейской «сокровищницей музеев».</p>
+
+<p>Присутствует в Швейцарии и пляжный отдых. Женевское озеро <em>(Geneva Lake)</em> является самым большим водоемом на всей территории Европы <em>(Europe)</em>.</p>
+                    </div>
+                
+                                                            <div class="repose__box__description" id="description-travel">
+                            <h2>Как добраться</h2>
+                            
+<h3>Самолет</h3>
+
+<p>Проще всего в Швейцарию долететь на самолете. Российские и швейцарские авиакомпании организуют регулярные рейсы в Женеву.</p>
+
+<p>Из аэропортов Беларуси (<em>Belarus</em>), Украины (<em>Ukraine</em>) и Риги (<em>Riga</em>) производятся вылеты швейцарских авиакомпаний.</p>
+
+<h3>Железнодорожный транспорт</h3>
+
+<p>Отправиться на отдых в Швейцарию можно поездом со стыковкой в Берлине (<em>Berlin</em>), Париже (<em>Paris</em>) или Вене (<em>Vienna</em>).</p>
+
+<h3>Автобусное сообщение</h3>
+
+<p>Международный автобусный рейс из России (<em>Russia</em>) в Швейцарию займет более 2,5 суток. Маршрут предполагает транзит через территорию Германии.</p>
+                        </div>
+                                                                                <div class="repose__box__description" id="description-visa">
+                            <h2>Виза</h2>
+                            
+<p>Швейцария входит в зону шенгенского соглашения и для поездки в эту страну от туристов потребуется оформление визы.</p>
+
+<p>Оформление разрешения на въезд на территорию Швейцарии займет у путешественников четыре дня. Подать документы для оформления шенгена можно как лично, так и через своего представителя (при наличии нотариально заверенной доверенности).</p>
+
+<p>Прием документов в Посольстве осуществляется только по предварительной записи.</p>
+
+<p>Анкета для получения разрешения на въезд заполняется на сайте Посольства на английском, французском или немецком языках.</p>
+                        </div>
+                                                                                <div class="repose__box__description" id="description-customs">
+                            <h2>Таможня</h2>
+                            
+<p>Швейцария является страной шенгенской зоны, но при этом не входит в состав ЕС, поэтому на границах со странами-членами Еврозоны таможенный контроль сохранен.</p>
+
+<p>Таможенные положения Швейцарии не содержат ограничений туристов, а также их попутчиков на импорт или экспорт иностранной валюты, которую можно провозить через границу.</p>
+
+<p>Не взимается пошлина с товаров, необходимых для комфортного путешествия: личных вещей, сигарет или алкогольной продукции. Все эти товары и вещи для личного использования отдыхающие могут брать в поездку пределах, ограниченных лимитами.</p>
+
+<p>Гости страны, въезжающие на территорию Швейцарии из стран, не входящих в Евросоюз, не могут провозить мясную и молочную продукцию, а также продукт жизнедеятельности пчел. Детское питание и лекарства ввозятся из расчета суточной необходимости.</p>
+
+<p>Отдыхающим запрещено провозить через швейцарскую границу:</p>
+
+<ul>
+<li>фальшивые часы;</li>
+	<li>абсент в любом объеме;</li>
+	<li>шкуры диких кошачьих, крокодилов и ящериц;</li>
+	<li>растения и почву.</li>
+</ul>
+<p>Путешественники могут взять на отдых до двух спортивных и охотничьих ружей, если предъявят таможенной службе документы, подтверждающие участие в охотничьих или спортивных соревнованиях.</p>
+
+<p>Собаки с купированными ушами и хвостами провозятся в том случае, если туристы смогут представить доказательства (ветеринарный паспорт), что животное не относится к запрещенным бойцовским породам. Каждый домашний питомец должен иметь микрочип с информацией о проведенных вакцинациях.</p>
+
+<p>Швейцарский сыр в количестве более 15 кг подлежит обязательной декларации.</p>
+                        </div>
+                                                                                <div class="repose__box__description" id="description-cuisine">
+                            <h2>Кухня</h2>
+                            
+<p>Кулинарные традиции Франции, Германии, Австрии и Италии в той или иной мере наложили отпечаток на швейцарскую кухню. Единственное блюдо, которое можно назвать действительно аутентичным швейцарским — фондю. В классический рецепт традиционного для Швейцарии фондю входят пять видов швейцарского сыра, расплавленного в белом сухом вине. Помимо сырного фондю, рекомендуем на отдыхе попробуйте настоящее швейцарское шоколадно-фруктовое фондю.</p>
+
+<p>Многие блюда национальной кухни Швейцарии содержат такой ингредиент, как сыр. Его используют в приготовлении супов, запекают с овощами, мясом или рыбой и даже жарят. Сырные швейцарские десерты пользуются популярностью как у самих швейцарцев, так и у гостей страны. Проводя отпуск в Швейцарии, обязательно закажите восхитительное сырное блюдо «Раклетт» (крупные ломтики картофеля в расплавленном сыре).</p>
+
+<p>Каждый кантон славится своим «фирменным блюдом». Цюрих прославился «Хюхлями» и «Крепфлями» — сладкими воздушными десерты. В Берне самое популярное блюдо — жареные колбаски с бернской закуской, приготовленной на основе квашеной капусты и картошки. Базель (<em>Basel</em>) порадует в поездке сладкоежек «Лепестки лотоса» (нежнейшим печеньем с добавлением миндального ореха).</p>
+
+<p>Великолепный шоколад (<em>Toblerone</em>, <em>Maestral</em>, <em>Lindt &amp; Springli</em> и <em>Sushard</em>) является визитной карточкой Швейцарии. А неповторимый вкус шоколада <em>Delafee</em> с примесью золота станет роскошным подарком для друзей и родственников!</p>
+
+<p>В путешествии по Швейцарии отдыхающим предложат традиционные для Европы безалкогольные напитки: соки, минеральную воду, многочисленные сорта чая и кофе. Весьма полюбился швейцарцам «Ристретто» — крепкий неразбавленный черный кофе, который принято пить, запивая чистой холодной водой.</p>
+
+<p>Красные вина из альпийских долин, объединенные общим названием <em>Inferno, экспортируются в лучшие рестораны Европы.</em></p>
+                        </div>
+                                                                                <div class="repose__box__description" id="description-money">
+                            <h2>Деньги</h2>
+                            
+<p>Официальная валюта — швейцарский франк.</p>
+
+<p>В путешествие гости Швейцарии могут обменять иностранную валюту на швейцарские франки в любом банке, обменном пункте или в гостинице. Самый выгодный курс обмена установлен в специальных обменных бюро «Bureaux de change». Чаще всего такие бюро размещаются рядом с кассами в аэропортах, железнодорожных или автобусных вокзалах.</p>
+
+<p>В гостиницах, билетных автоматах, на вокзалах и парковках, а также в некоторых магазинах и аптеках туристы, проводящие отпуск в Швейцарии, можно рассчитаться евровалютой. О том, что в данном учреждении или торговой точке принимают единую валюту Еврозоны «говорит» табличка с логотипом евро.</p>
+
+<p>АТМ-банкоматы принимают пластиковые карты основных платежных систем. В торговых центрах и небольших магазинах можно рассчитаться пластиком, но, как правило, на территории таких заведений действует ограничение на сумма покупки по безналичному расчету. Зато карты. выпущенные местными банками, принимаются к оплате любых покупок и услуг без каких-либо ограничений.</p>
+
+<p>Банкоматы считаются один из самых быстрых и удобных способов обменять европейскую валюту на франки.</p>
+
+<p>Туристические чеки путешественники, прибывшие на отдых в Швейцарию, могут поменять в любом отделении банка, туристическом агентстве или в отелях. Рекомендуем пользоваться чеками, оформленными в евро, долларах США или фунтах стерлингов.</p>
+
+<p>Совершив покупку на сумму свыше 300 швейцарских франков, гости страны имеют право на возмещение НДС по системе <em>tax free</em>.</p>
+                        </div>
+                                                                                <div class="repose__box__description" id="description-about">
+                            <h2>Что нужно знать</h2>
+                            
+<h3>Достопримечательности Швейцарии</h3>
+
+<p>Швейцария — самая чистая страна мира. Газоны в стране идеально подстрижены, а граждане бдительно следят за тем, чтобы никто не мусорил на улице. Брошенная в неположенном месте обертка от шоколадки может обернуться для туристов и их попутчиков, проводящих отпуск в Швейцарии, серьезным штрафом.</p>
+
+<p>Безусловно, Швейцария — идеальное место для экскурсионного, горнолыжного, семейного и оздоровительного туризма. Гостей страны ждут разнообразные туристические объекты: природные парки, культурные мероприятия, архитектурные и исторические памятники. В список всемирного наследия ЮНЕСКО внесены 11 швейцарских достопримечательностей, из которых 8 объектов относятся к ценностям мировой культуры, а 3 объекта являются природным достоянием человечества.</p>
+
+<p>Путешественникам стоит посетить Бенедиктинский монастырь Святого Иоанна <em>(Benedictine Convent of St. John at Mustair),</em> построенный в VII веке. Не менее величественным отдыхающим покажется старинный монастырь Святого Галла в Санкт-Галлене <em>(Abbey of St Gall).</em>Охраняет Юнеско и историческую часть столицы Швейцарии — старый город Берн<em> (Old City of Bern).</em> Впечатлит гостей страны и экскурсионная поездка в три замка Беллинцоны <em>(Three Castles, Defensive Wall and Ramparts of the Market-Town of Bellinzona),</em> предназначенные для защиты одноименного города.</p>
+
+<p>Однако главной гордостью Швейцарии остаются ее природные достопримечательности: парки и заповедники, горнолыжные зоны отдыха и лечебные курорты, старинные города и альпийские деревни с невероятной уютной атмосферой. Под охраной Юнеско находятся уникальные доисторические поселения в Альпах, построенные на сваях (<em>Prehistoric Pile dwellings around the Alps</em>). Путешествие по этим поселениям познакомит туристов с тем, как жили люди в эпоху неолита.</p>
+
+<p>Заповедник «Бернские Альпы»<em> (Swiss Alps Jungfrau-Aletsch)</em>, признанный самым обширным ледниковым район горного хребта, оставит неизгладимые впечатления у путешественников. В заповеднике каждый желающий может воочию увидеть, как проходил процесс горообразования, в результате которого образовались Альпы.</p>
+
+<p>Природный парк «Горная тектоническая группа Сардона» <em>(Swiss Tectonic Arena Sardona) </em>предоставит гостям Швейцарии уникальную возможность понять, как в процессе континентального столкновения образовываются горы. А в национальном парке «Гора Сан Джиорджио» <em>(Monte San Giorgio)</em> гости страны, приехавшие в отпуск, смогут посмотреть и сфотографировать окаменелости морских обитателей, сохранившиеся с триасовый периода (более 230 000 000 лет назад).</p>
+
+<p>Поездка на Террасовые виноградники Лаво (<em>Lavaux, Vineyard Terraces</em>) придется по вкусу всем, кому дорог экологический туризм и небезразлична проблема взаимодействия человечества и окружающей его природы. Интересным будет экскурсия к Ретийской железной дороге, вписавшейся в ландшафте Альбулы и Бернины (<em>Rhaetian Railway in the Albula / Bernina Landscapes</em>). Занимательным для туристов, отправившихся в путешествие по Швейцарии, покажется посещение городов-общин Ла-Шо-де-Фон и Ле-Локль (<em>La Chaux-de-Fonds / Le Locle, Watchmaking Town Planning</em>).</p>
+
+<p>Прогуливаясь по Женеве, рекомендуем гостям столицы заглянуть в Собор Святого Петра<em> (St. Pierre Cathedral)</em> и Базилику Нотр-Дам <em>(Notre Dame Basilica)</em>. А в Цюрихе стоит зайти в настоящую обсерваторию Урания <em>(Urania Observatory) </em>и в один из лучших зоопарков в Европе<em> (Zurich Zoological Garden).</em></p>
+
+<h3>Сувениры Швейцарии</h3>
+
+<p>Самые популярные сувениры Швейцарии — часы, шоколад и сыр. Мужчинам можно презентовать настоящие армейские ножи из коллекции <em>Victorinox</em> или <em>Wenger</em>.</p>
+
+<p>В любой интерьер впишутся музыкальные шкатулки и другие очаровательные предметы из дерева швейцарской фирмы <em>Brienz</em>.</p>
+
+<p>Из контона Санкт-Галлен отдыхающие могут привести швейцарские кружева, постельное белье и символ Альп — статуэтки коров.</p>
+                        </div>
+                                                
+                            <div class="repose__list resorts-gallery" id="popular-resorts">
+                    <div class="repose__title">Популярные курорты</div>
+                    <div class="read__more"><a href="/ru/countries/switzerland/resorts">Все курорты</a></div>
+
+                                                                        <div class="repose__item">
+                                <div class="repose__info">
+                                    <div class="repose__name">
+                                        <a href="/ru/countries/resort/3718" class="repose__href">Цюрих</a>
+                                    </div>
+
+                                    <div class="repose__item__type">
+                                                                                Городской курорт                                    </div>
+
+                                    <div class="repose__rating"  title="Место в общем рейтинге курортов">
+                                        <b>#669</b>
+                                    </div>
+                                </div>
+
+                                <div class="repose__photo">
+                                    <div class="photo"><a href="/media/resorts/photo/8/4/uv8.jpg" class="resort-popup" data-id="3718" data-info="Источник: www.dotwnews.com"><img src="/media/resorts/preview/big/a/5/uv8.jpg" alt="Цюрих"></a></div><div class="photo"><a href="/media/resorts/photo/8/0/vv8.jpg" class="resort-popup" data-id="3718" data-info="Источник: www.luxos.com"><img src="/media/resorts/preview/big/a/c/vv8.jpg" alt="Цюрих"></a></div><div class="photo"><a href="/media/resorts/photo/0/5/009.jpg" class="resort-popup" data-id="3718" data-info="Источник: exclusives.webjet.com.au"><img src="/media/resorts/preview/big/d/9/009.jpg" alt="Цюрих"></a></div>                                </div>
+                            </div>
+                                                                                               <div class="repose__item">
+                                <div class="repose__info">
+                                    <div class="repose__name">
+                                        <a href="/ru/countries/resort/1053" class="repose__href">Женева</a>
+                                    </div>
+
+                                    <div class="repose__item__type">
+                                                                                Городской курорт                                    </div>
+
+                                    <div class="repose__rating"  title="Место в общем рейтинге курортов">
+                                        <b>#712</b>
+                                    </div>
+                                </div>
+
+                                <div class="repose__photo">
+                                    <div class="photo"><a href="/media/resorts/photo/2/3/lu8.jpg" class="resort-popup" data-id="1053" data-info="Источник: www.myholidayguru.co.uk"><img src="/media/resorts/preview/big/5/d/lu8.jpg" alt="Женева"></a></div><div class="photo"><a href="/media/resorts/photo/2/f/mu8.jpg" class="resort-popup" data-id="1053" data-info="Источник: www.holidayguru.ie"><img src="/media/resorts/preview/big/d/4/mu8.jpg" alt="Женева"></a></div><div class="photo"><a href="/media/resorts/photo/e/6/nu8.jpg" class="resort-popup" data-id="1053" data-info="Источник: www.skyscanner.ca"><img src="/media/resorts/preview/big/3/a/nu8.jpg" alt="Женева"></a></div>                                </div>
+                            </div>
+                                                                                               <div class="repose__item">
+                                <div class="repose__info">
+                                    <div class="repose__name">
+                                        <a href="/ru/countries/resort/393" class="repose__href">Бернские Альпы</a>
+                                    </div>
+
+                                    <div class="repose__item__type">
+                                                                                Лыжный курорт                                    </div>
+
+                                    <div class="repose__rating"  title="Место в общем рейтинге курортов">
+                                        <b>#829</b>
+                                    </div>
+                                </div>
+
+                                <div class="repose__photo">
+                                    <div class="photo"><a href="/media/resorts/photo/a/9/fu8.jpg" class="resort-popup" data-id="393" data-info="Источник: wallpapersafari.com"><img src="/media/resorts/preview/big/f/6/fu8.jpg" alt="Бернские Альпы"></a></div><div class="photo"><a href="/media/resorts/photo/d/6/gu8.jpg" class="resort-popup" data-id="393" data-info="Источник: www.internationaltraveller.com"><img src="/media/resorts/preview/big/1/d/gu8.jpg" alt="Бернские Альпы"></a></div><div class="photo"><a href="/media/resorts/photo/c/5/hu8.jpg" class="resort-popup" data-id="393" data-info="Источник: sonurai.com"><img src="/media/resorts/preview/big/5/1/hu8.jpg" alt="Бернские Альпы"></a></div>                                </div>
+                            </div>
+                                                                                               <div class="repose__item">
+                                <div class="repose__info">
+                                    <div class="repose__name">
+                                        <a href="/ru/countries/resort/1054" class="repose__href">Женевское Озеро</a>
+                                    </div>
+
+                                    <div class="repose__item__type">
+                                                                                Загородный курорт                                    </div>
+
+                                    <div class="repose__rating"  title="Место в общем рейтинге курортов">
+                                        <b>#925</b>
+                                    </div>
+                                </div>
+
+                                <div class="repose__photo">
+                                    <div class="photo"><a href="/media/resorts/photo/c/8/ou8.jpg" class="resort-popup" data-id="1054" data-info="Источник: wallpaperscraft.com"><img src="/media/resorts/preview/big/7/b/ou8.jpg" alt="Женевское Озеро"></a></div><div class="photo"><a href="/media/resorts/photo/4/e/pu8.jpg" class="resort-popup" data-id="1054" data-info="Источник: www.starjets.net"><img src="/media/resorts/preview/big/8/a/pu8.jpg" alt="Женевское Озеро"></a></div><div class="photo"><a href="/media/resorts/photo/3/a/qu8.jpg" class="resort-popup" data-id="1054" data-info="Источник: www.adventureinyou.com"><img src="/media/resorts/preview/big/8/2/qu8.jpg" alt="Женевское Озеро"></a></div>                                </div>
+                            </div>
+                                                                                               <div class="repose__item">
+                                <div class="repose__info">
+                                    <div class="repose__name">
+                                        <a href="/ru/countries/resort/3318" class="repose__href">Тичино</a>
+                                    </div>
+
+                                    <div class="repose__item__type">
+                                                                                Загородный курорт                                    </div>
+
+                                    <div class="repose__rating"  title="Место в общем рейтинге курортов">
+                                        <b>#928</b>
+                                    </div>
+                                </div>
+
+                                <div class="repose__photo">
+                                    <div class="photo"><a href="/media/resorts/photo/7/1/av8.jpg" class="resort-popup" data-id="3318" data-info="Источник: www.20min.ch"><img src="/media/resorts/preview/big/a/6/av8.jpg" alt="Тичино"></a></div><div class="photo"><a href="/media/resorts/photo/e/4/bv8.jpg" class="resort-popup" data-id="3318" data-info="Источник: www.1zoom.net"><img src="/media/resorts/preview/big/3/a/bv8.jpg" alt="Тичино"></a></div><div class="photo"><a href="/media/resorts/photo/9/b/cv8.jpg" class="resort-popup" data-id="3318" data-info="Источник: www.tatyanadiamantine.com"><img src="/media/resorts/preview/big/4/a/cv8.jpg" alt="Тичино"></a></div>                                </div>
+                            </div>
+                                                           </div>
+                    </div>
+    </div>
+</div>                        </main>
+                    </div>
+
+                    <aside class="sidebar">
+                        <nav class="site-menu">
+    <div class="site-menu-first">
+        <a href="#auth-login" class="need-auth-button" title="Добавить путешествие">
+            <span class="desktop">Добавить путешествие</span>
+            <span class="mobile">Добавить</span>
+        </a>
+    </div>
+    <ul class="site-menu-list">
+                    <li class="menu-icon-feed">
+                <a href="/ru/feed" title="Лента путешествий">
+                    <span class="desktop">Лента путешествий</span>
+                    <span class="mobile">Лента</span>
+                </a>
+            </li>
+                    <li class="menu-icon-search">
+                <a href="/ru/search" title="Поиск попутчиков">
+                    <span class="desktop">Поиск попутчиков</span>
+                    <span class="mobile">Поиск</span>
+                </a>
+            </li>
+                    <li class="menu-icon-about">
+                <a href="/ru/info/about" title="О проекте">
+                    <span class="desktop">О проекте</span>
+                    <span class="mobile">О проекте</span>
+                </a>
+            </li>
+                    <li class="menu-icon-support">
+                <a href="/ru/support" title="Задать вопрос">
+                    <span class="desktop">Задать вопрос</span>
+                    <span class="mobile">Помощь</span>
+                </a>
+            </li>
+                    <li class="menu-icon-countries active-menu-element">
+                <a href="/ru/countries" title="Страны">
+                    <span class="desktop">Страны</span>
+                    <span class="mobile">Страны</span>
+                </a>
+            </li>
+                    <li class="menu-icon-rating">
+                <a href="/ru/best-resorts" title="Лучшие курорты">
+                    <span class="desktop">Лучшие курорты</span>
+                    <span class="mobile">Курорты</span>
+                </a>
+            </li>
+            </ul>
+    <div class="site-menu--button">
+        <span class="site-menu--button-icon"></span>
+        <span class="site-menu--button-text">Ещё</span>
+    </div>
+</nav>                    </aside>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+    <div class="wrap">
+        <div class="footer__l_left">
+            <a href="/ru" class="footer__logo" title="Поиск попутчиков для путешествия с Triplook"></a>
+
+                <div class="lang-switcher">
+        <ul>
+                            <li>
+                                        <a class="lang-en" href="/en/countries/switzerland" title="English"></a>
+                </li>
+                            <li>
+                                        <a class="lang-ru lang-active" href="/ru/countries/switzerland" title="Русский"></a>
+                </li>
+                    </ul>
+    </div>
+
+            <div class="footer__copyright">&copy; 2025. Все права защищены - <a href="/ru">Triplook</a> поиск попутчиков для отдыха и отпуска</div>
+        </div>
+
+        <div class="footer__l_right">
+            <div class="footer__icons">
+                
+                <script>
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                    ga('create', 'UA-72434137-1', 'auto');
+                    ga('send', 'pageview');
+
+                </script>
+
+                <!-- Facebook Pixel Code -->
+                <script>
+                    !function(f,b,e,v,n,t,s)
+                    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                        n.queue=[];t=b.createElement(e);t.async=!0;
+                        t.src=v;s=b.getElementsByTagName(e)[0];
+                        s.parentNode.insertBefore(t,s)}(window, document,'script',
+                        'https://connect.facebook.net/en_US/fbevents.js');
+                    fbq('init', '383894072532959');
+                    fbq('track', 'PageView');
+                </script>
+                <noscript><img height="1" width="1" style="display:none"
+                               src="https://www.facebook.com/tr?id=383894072532959&ev=PageView&noscript=1"
+                    /></noscript>
+                <!-- End Facebook Pixel Code -->
+            </div>
+        </div>
+
+        <div class="footer__l_center">
+            <nav class="footer__nav">
+                <ul>
+                    <li><a href="/ru/info/about">О проекте</a></li>
+                    <li><a href="/ru/info/privacy">Конфиденциальность</a></li>
+                    <li><a href="/ru/support">Служба поддержки</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__icons">
+                <a href="#">
+                    <img src="/images/app/ios.svg" title="Загрузить из App Store" alt="Загрузить из App Store"/>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.triplook.android">
+                    <img src="/images/app/android.svg" title="Загрузить из Google Play" alt="Загрузить из Google Play"/>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__icons footer__icons-mob">
+            <a href="#">
+                <img src="/images/app/ios.svg" title="Загрузить из App Store" alt="Загрузить из App Store"/>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.triplook.android">
+                <img src="/images/app/android.svg" title="Загрузить из Google Play" alt="Загрузить из Google Play"/>
+            </a>
+        </div>
+    </div>
+</footer>    </div>
+
+    <a class="scroll-to-top" href="#"></a>
+<script src="/assets/2ed8008/js/lightslider.js"></script>
+<script>jQuery(new Image()).on('load', function(){}).attr('src', '/media/countries/photo/5/0/07.jpg');</script></body>
+</html>
