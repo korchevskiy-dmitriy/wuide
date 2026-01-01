@@ -3,7 +3,11 @@ body {
     background-color: white;
     margin: 0;
 }
-
+.container {
+    max-width: 1440px; 
+    width: 90%;       
+    margin: 0 auto;  
+}
 .header_main{
     color: white;
     background-image: url('img_main/image-8.jpg');
@@ -20,8 +24,22 @@ header{
     align-items: center;          
 
     padding-top: 3%;
-    padding-left: 11.2%;
+    padding-left: 3%;
     padding-right: 3%;
+}
+main {
+    display: flex;               /* Включаем режим сетки */
+    justify-content: space-between; /* Раскидываем лево и право по краям */
+    align-items: flex-end;       /* Прижимаем всё к низу (как на скрине) */
+    
+    padding-bottom: 80px;        /* Отступ снизу экрана */
+    min-height: 80vh;            /* Высота, чтобы занять экран */
+    box-sizing: border-box;
+}
+.left-content {
+    max-width: 50%;              /* Занимает половину ширины */
+    display: flex;
+    flex-direction: column;      /* Элементы друг под другом */
 }
 .logo-link {
     text-decoration: none; 
@@ -125,13 +143,11 @@ h1{
     font-weight: 600;
     line-height: 1.2;
 
-    margin-left: 11.2%;
-    margin-top: 143px;
+    margin-top: 13%;
 }
 
 .exp {
     margin-top: 30px; 
-    margin-left: 11.2%; 
 
     width: 270px;   
     padding: 20px;   
@@ -177,7 +193,6 @@ h1{
     max-width: 380px;
     width: 90%;
     margin-top: 140px;
-    margin-left: 11.2%;
 }
 
 .tag_list ul {
@@ -229,18 +244,18 @@ h1{
 }
 
 .main_description {
-    max-width: 750px;
-    padding: 6px;
+    margin-top: 0; 
+    margin-right: 0;
+    margin-left: 0;
+
+    width: 50%;    
+
+    padding: 30px;
     box-sizing: border-box;
-    border: 1px solid rgba(202, 202, 202, 1);
+    border: 1px solid rgba(255, 255, 255, 0.3); 
     border-radius: 30px;
-    background: rgba(11, 11, 20, 0.75);
-
-    margin-right: 4%; 
-
-    margin-left: auto;
-
-    margin-top: -22%; 
+    background: rgba(11, 11, 20, 0.65); 
+    backdrop-filter: blur(10px);       
 }
 h2 {
     max-width: 60%;
@@ -255,7 +270,7 @@ h2 {
     font-weight: 700;
     line-height: 44px;
     margin-top: 30px;
-    margin-left: 5%;
+    margin-left: 0;
 }
 
 .main_description p{
@@ -268,7 +283,7 @@ h2 {
     font-weight: 700;
     line-height: 1.4;
     margin-top: 30px;
-    margin-left: 5%;
+    margin-left: 0;
 }
 .icons {
     max-width: 28%;
@@ -296,7 +311,6 @@ h2 {
     max-width: 77.6%;
 
     margin-top: 75px;
-    margin-left: 11.2%;
 }
 
 .title2 h3{
@@ -328,6 +342,31 @@ h2 {
     gap: 20px;
 }
 
+.filter-dropdown-unit {
+    position: relative; 
+    display: inline-block; 
+}
+.filter-list-options {
+    position: absolute;
+    top: 100%; 
+    left: 0; 
+    
+    z-index: 1000; 
+    
+    background-color: white; 
+    width: 100%; 
+    min-width: 120px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 10px 0;
+    margin-top: 8px;
+    list-style: none;
+}
+
+.filter-list-options li {
+    padding: 0;
+    margin: 0;
+}
 .arrow_icon {
     transition: transform 0.3s ease; 
 }
