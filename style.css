@@ -1,4 +1,4 @@
-.body2 {
+body {
     color: #333333;
     background-color: white;
     margin: 0;
@@ -28,18 +28,18 @@ header{
     padding-right: 3%;
 }
 main {
-    display: flex;               /* Включаем режим сетки */
-    justify-content: space-between; /* Раскидываем лево и право по краям */
-    align-items: flex-end;       /* Прижимаем всё к низу (как на скрине) */
+    display: flex;              
+    justify-content: space-between; 
+    align-items: flex-end;       
     
-    padding-bottom: 80px;        /* Отступ снизу экрана */
-    min-height: 80vh;            /* Высота, чтобы занять экран */
+    padding-bottom: 80px;        
+    min-height: 80vh;            
     box-sizing: border-box;
 }
 .left-content {
-    max-width: 50%;              /* Занимает половину ширины */
+    max-width: 50%;             
     display: flex;
-    flex-direction: column;      /* Элементы друг под другом */
+    flex-direction: column;    
 }
 .logo-link {
     text-decoration: none; 
@@ -468,6 +468,8 @@ h2 {
 }
 .country_img{
     max-width: 100%;
+    position: relative; 
+    display: block;
 }
 
 .main_photo {
@@ -477,14 +479,19 @@ h2 {
     border-top-left-radius: 20px; 
     border-top-right-radius: 20px;
 }
-.arrow_more{
-    max-width: 50px;
-    max-height: 50px;
+.arrow_more {  
     position: absolute;
-    border-radius: 0px 0px 0px 20px;
-    background: var(--white, rgba(255, 255, 255, 1));
-    margin-top: -210px;
-    margin-left: 290px;
+    top: 0;   
+    right: 0; 
+    z-index: 10; 
+    
+    border-top-right-radius: 20px; 
+    background-color: white; 
+    width: 50px; 
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .name_and_flag{
