@@ -858,3 +858,33 @@ body {
 .hidden {
     display: none !important;
 }
+
+
+/* footer logo */
+.logo-link {
+    text-decoration: none; 
+    display: flex;         
+    align-items: center;   
+    gap: 15px;
+}
+.logo-icon-wrapper {
+    width: 40px; 
+    height: 40px;
+
+    border-radius: 50%; 
+    background-color: white; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-icon-wrapper img {
+    width: 24px; 
+    height: 24px;
+}
+.logo-text {
+    font-family: 'Nunito', sans-serif; 
+    font-size: 32px; 
+    font-weight: 600; 
+    color: white;
+}
