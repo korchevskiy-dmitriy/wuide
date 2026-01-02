@@ -265,6 +265,61 @@ body {
 }
 
 
+.key-information{
+
+    max-width: 1490px;
+    border-radius: 35px;
+    background: var(--main, rgba(11, 11, 20, 1));
+
+    padding: 40px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-info{
+    color: var(--white, rgba(255, 255, 255, 1));
+
+    font-family: Nunito;
+    font-style: Bold;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 49px;
+}
+.external-block{
+    max-width: 1390px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.main-phrase{
+    color: var(--white, rgba(255, 255, 255, 1));
+
+    font-family: Nunito;
+    font-style: Bold;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33px;
+}
+
+.desc-text-value{
+    color: var(--white, rgba(255, 255, 255, 1));
+
+    font-family: Nunito;
+    font-style: Medium;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+
+    margin-top: 7px;
+}
+
+
 
 /* gallery */
 .traveler_achievements{
