@@ -1,4 +1,4 @@
-/* --- МОДАЛЬНОЕ ОКНО (ВХОД / РЕГИСТРАЦИЯ) --- */
+
 const modal = document.getElementById('auth-modal-id');
 const signInBtn = document.getElementById('reg_signin_id');
 const logInBtn = document.getElementById('reg_login_id');
@@ -8,7 +8,6 @@ const modalTitle = document.getElementById('modal-title');
 const signInForm = document.getElementById('signin-form');
 const logInForm = document.getElementById('login-form');
 
-// Открытие Sign In из шапки
 signInBtn.addEventListener('click', () => {
     modal.classList.add('open');
     logInForm.classList.add('hidden');
@@ -16,12 +15,10 @@ signInBtn.addEventListener('click', () => {
     modalTitle.textContent = 'Sign in';
 });
 
-// Закрытие крестиком
 closeBtn.addEventListener('click', () => {
     modal.classList.remove('open');
 });
 
-// Открытие Log In из шапки
 logInBtn.addEventListener('click', () => {
     modal.classList.add('open');
     signInForm.classList.add('hidden');
@@ -29,14 +26,12 @@ logInBtn.addEventListener('click', () => {
     modalTitle.textContent = 'Log in';
 });
 
-// Закрытие при клике вне окна
 window.addEventListener('click', (event) => {
     if (event.target === modal){
         modal.classList.remove('open');
     }
 });
 
-/* --- МОДАЛЬНОЕ ОКНО (КНОПКИ В ФУТЕРЕ) --- */
 const signInEndBtn = document.getElementById('reg_signin_footer_id');
 const logInEndBtn = document.getElementById('reg_login_footer_id');
 
@@ -54,8 +49,6 @@ logInEndBtn.addEventListener('click', () => {
     modalTitle.textContent = 'Log in';
 });
 
-
-/* --- СЛАЙДЕР (ГАЛЕРЕЯ) --- */
 const btnPrev = document.getElementById('btn-prev');
 const btnNext = document.getElementById('btn-next');
 const tracks = document.querySelectorAll('.slider-track');
@@ -123,7 +116,6 @@ btnPrev.addEventListener('click', () => {
     }
 });
 
-/* --- СКРЫТЬ / ПОКАЗАТЬ ПАРОЛЬ --- */
 const passToggleBtn = document.querySelectorAll('.password-toggle');
 passToggleBtn.forEach((toggle) =>{
     toggle.addEventListener('click', () => {
@@ -139,7 +131,6 @@ passToggleBtn.forEach((toggle) =>{
     });
 });
 
-/* --- ЗАГРУЗКА ФОТО --- */
 const fileInput = document.getElementById('user_photo_form');
 const photoConteiner = document.getElementById('user_photo_id');
 
@@ -156,7 +147,6 @@ fileInput.addEventListener('change', function()  {
     }
 });
 
-/* --- АНИМАЦИЯ ПОЯВЛЕНИЯ ПРИ СКРОЛЛЕ --- */
 const hiddenElements = document.querySelectorAll('.hidden-element');
 
 const observer = new IntersectionObserver((entries) => {

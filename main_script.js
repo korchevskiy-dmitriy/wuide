@@ -7,28 +7,37 @@ const modalTitle = document.getElementById('modal-title');
 const signInForm = document.getElementById('signin-form');
 const logInForm = document.getElementById('login-form');
 
-signInBtn.addEventListener('click', () => {
+function openModal() {
     modal.classList.add('open');
+    document.body.classList.add('no-scroll'); 
+}
+
+function closeModal() {
+    modal.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+}
+
+signInBtn.addEventListener('click', () => {
+    openModal();
     logInForm.classList.add('hidden');
     signInForm.classList.remove('hidden');
-    modalTitle.textContent = 'Sign in'
+    modalTitle.textContent = 'Sign in';
 });
 
-
 closeBtn.addEventListener('click', () => {
-    modal.classList.remove('open')
+    closeModal();
 });
 
 logInBtn.addEventListener('click', () => {
-    modal.classList.add('open');
+    openModal(); 
     signInForm.classList.add('hidden');
     logInForm.classList.remove('hidden');
-    modalTitle.textContent = 'Log in'
+    modalTitle.textContent = 'Log in';
 });
 
 window.addEventListener('click', (event) => {
     if (event.target === modal){
-        modal.classList.remove('open');
+        closeModal(); 
     }
 });
 
@@ -36,19 +45,18 @@ const signInEndBtn = document.getElementById('reg_signin_footer_id');
 const logInEndBtn = document.getElementById('reg_login_footer_id');
 
 signInEndBtn.addEventListener('click', () => {
-    modal.classList.add('open');
+    openModal();
     logInForm.classList.add('hidden');
     signInForm.classList.remove('hidden');
-    modalTitle.textContent = 'Sign in'    
+    modalTitle.textContent = 'Sign in';    
 });
 
 logInEndBtn.addEventListener('click', () => {
-    modal.classList.add('open');
+    openModal();
     signInForm.classList.add('hidden');
     logInForm.classList.remove('hidden');
-    modalTitle.textContent = 'Log in'
+    modalTitle.textContent = 'Log in';
 });
-
 const exploreNowBtn = document.getElementById('exp_id');
 const firstSection = document.getElementById('first_section_id');
 
@@ -219,3 +227,49 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 hiddenElements.forEach((el) => observer.observe(el));
+
+
+
+/* phone scrolling */
+const galleryContainer = document.querySelector('.gallery');
+const sliderTracks = document.querySelectorAll('.slider-track');
+
+function setTrackSpeed(speed) {
+    sliderTracks.forEach(track => {
+        const animations = track.getAnimations();
+        animations.forEach(anim => {
+            if (anim.updatePlaybackRate) {
+                anim.updatePlaybackRate(speed);
+            } else {
+                anim.playbackRate = speed;
+            }
+        });
+    });
+}
+
+if (galleryContainer && sliderTracks.length > 0) {
+    
+    setTimeout(() => {
+        setTrackSpeed(0.33); 
+    }, 100);
+
+    galleryContainer.addEventListener('touchstart', () => {
+        setTrackSpeed(1.0); 
+    });
+
+    galleryContainer.addEventListener('touchend', () => {
+        setTrackSpeed(0.33);
+    });
+
+    galleryContainer.addEventListener('mousedown', () => {
+        setTrackSpeed(1.0);
+    });
+
+    galleryContainer.addEventListener('mouseup', () => {
+        setTrackSpeed(0.33);
+    });
+    
+    galleryContainer.addEventListener('mouseleave', () => {
+        setTrackSpeed(0.33);
+    });
+}

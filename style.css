@@ -1173,3 +1173,356 @@ h2 {
     opacity: 1;       
     transform: translateY(0); 
 }
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;   
+}
+
+/* mobile version */
+
+@media (max-width: 768px) {
+
+    .header_main {
+        min-height: auto;
+        padding-bottom: 50px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    .main_reg {
+        width: 100%;
+        justify-content: center; 
+        gap: 15px;
+    }
+
+    main {
+        flex-direction: column; 
+        padding-bottom: 20px;
+        min-height: auto;
+    }
+
+    .left-content {
+        max-width: 100%; 
+        width: 100%;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .exp {
+        margin-top: 20px;
+        width: 100%; 
+        max-width: 320px;
+    }
+
+    .tag_list {
+        margin-top: 40px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .tag_list ul {
+        justify-content: center; 
+    }
+
+    .main_description {
+        width: 100%;
+        margin-top: 40px;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    h2 {
+        max-width: 100%;
+        font-size: 24px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .main_description p {
+        max-width: 100%;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .icons {
+        max-width: 100%;
+        justify-content: center;
+        gap: 30px;
+        margin-left: 0;
+    }
+
+    .explore_country_on_full {
+        max-width: 100%;
+        padding: 0 15px;
+        margin-top: 40px;
+    }
+
+    .filters {
+        margin-top: 20px;
+        margin-left: 0;
+        max-width: 100%;
+        justify-content: space-between; 
+    }
+
+    .title2 h3 {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    .title2 p {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .country_cards_block {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .country_card {
+        max-width: 100%;
+    }
+
+    .show_more {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .traveler {
+        font-size: 28px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .gallery {
+        padding: 0 10px;
+    }
+
+    .slider-track {
+        gap: 10px;
+    }
+    
+    .slider-track img {
+        width: calc((100vw - 20px) / 1.5); 
+        min-width: calc((100vw - 20px) / 1.5);
+        max-width: calc((100vw - 20px) / 1.5);
+        height: 250px; 
+    }
+
+    .previous_slide, .next_slide {
+        width: 40px;
+        height: 40px;
+    }
+    .previous_slide img, .next_slide img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .gallery {
+        overflow-x: auto; 
+    }
+    .gallery::-webkit-scrollbar {
+        display: none;
+    }
+
+    .end_of_main {
+        height: auto; 
+        padding: 40px 0;
+    }
+
+    .imp {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column; 
+        gap: 30px;
+    }
+
+    .logo_link_2 {
+        margin-left: 0;
+        justify-content: center;
+    }
+    
+    .end_of_main p {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .icons_2 {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+
+    .modal-content {
+        width: 90%;        
+        padding: 25px 20px;     
+        max-height: 90vh; 
+        overflow-y: auto;  
+        border-radius: 30px;
+    }
+
+    .head_form_container {
+        margin: 0 0 20px 0;         
+        justify-content: space-between;
+        width: 100%;
+    }
+    .name_signin, 
+    .email_signin, 
+    .surname_signin, 
+    .password_signin, 
+    .country-select, 
+    .email_login, 
+    .password_login {
+        width: 100% !important;
+        height: 60px !important;      
+        padding: 0 20px !important;  
+        margin: 0 !important;        
+        border-radius: 20px !important;
+        box-sizing: border-box !important;
+        font-size: 16px !important;   
+        display: flex;
+        align-items: center;         
+    }
+
+    .password-wrapper, 
+    .password-wrapper-2, 
+    .country_signin {
+        width: 100% !important;
+        margin: 0 !important;
+        height: auto !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    .form-grid-container, 
+    .container_email_password {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;      
+        margin: 10px 0 20px 0 !important;
+    }
+
+    .user_photo {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        width: 100% !important;
+        height: 140px !important; 
+        margin: 0 0 10px 0 !important;
+        border-radius: 20px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .photo-label {
+        margin-top: 0 !important;
+        margin-bottom: 10px;
+    }
+    .submit-btn-signin, 
+    .submit-btn-login {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        width: 100% !important;
+        height: 60px !important;      
+        margin: 10px 0 0 0 !important;
+        border-radius: 60px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .password-toggle, .select-arrow {
+        right: 20px !important;
+    }
+
+    .gallery::before,
+    .gallery::after {
+        display: none !important;
+    }
+    .gallery {
+        padding: 0 20px !important; 
+        scroll-behavior: smooth;   
+        -webkit-overflow-scrolling: touch; 
+    }
+    
+   
+    .slider-track {
+        width: max-content; 
+    }
+
+    /* =========================================
+       5. СЛАЙДЕР: ИНТЕРАКТИВНАЯ СКОРОСТЬ
+       (Замени этим кодом прошлый блок слайдера внутри media)
+       ========================================= */
+
+    .traveler_achievements {
+        margin-top: 30px !important;
+        padding-bottom: 20px;
+        overflow: hidden; 
+    }
+
+    .traveler {
+        font-size: 24px !important;
+        text-align: center;
+        margin-bottom: 20px !important;
+        margin-left: 0 !important;
+    }
+
+    .gallery {
+        padding: 0 !important;
+        position: static !important;
+        
+        pointer-events: auto !important; 
+        user-select: none;  
+        -webkit-user-select: none;
+        touch-action: none; 
+    }
+
+    .gallery::before, .gallery::after, .buttons {
+        display: none !important;
+    }
+
+    .slider-track {
+        display: flex;
+        gap: 15px;
+        width: max-content;
+        
+        margin: 0 0 15px 0 !important;
+
+        animation: scroll-left 25s linear infinite; 
+        will-change: transform;
+    }
+
+    #track-2 {
+        animation-direction: reverse; 
+    }
+
+    .slider-track img {
+        width: 160px !important; 
+        min-width: 160px !important;
+        height: 120px !important;
+        border-radius: 12px !important;
+        object-fit: cover;
+        pointer-events: none;
+    }
+
+    @keyframes scroll-left {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+}
