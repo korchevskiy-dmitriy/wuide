@@ -1464,12 +1464,6 @@ body.no-scroll {
     .slider-track {
         width: max-content; 
     }
-
-    /* =========================================
-       5. СЛАЙДЕР: ИНТЕРАКТИВНАЯ СКОРОСТЬ
-       (Замени этим кодом прошлый блок слайдера внутри media)
-       ========================================= */
-
     .traveler_achievements {
         margin-top: 30px !important;
         padding-bottom: 20px;
