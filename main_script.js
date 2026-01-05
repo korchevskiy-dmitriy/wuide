@@ -273,3 +273,51 @@ if (galleryContainer && sliderTracks.length > 0) {
         setTrackSpeed(0.33);
     });
 }
+
+
+/* country downloading */
+async function loadCountries() {
+    console.log("Загружаем страны...");
+    
+    try {
+        const response = await fetch('http://localhost:8888/wuide/api.php/countries');
+        const countries = await response.json();
+
+        const container = document.getElementById('country_cards_block_id');
+        if (!container) return;
+
+        container.innerHTML = '';
+
+        countries.forEach(country => {
+            const cardHTML = `
+                <div class="country_card hidden-element show">
+                    <div class="country_img">
+                        <img class="main_photo" src="${country.country_photo}" alt="${country.country}">
+                        
+                        <a href="country.html?id=${country.id}" class="arrow_more">
+                            <img class="arrow-card" src="img_main/Frame 20.svg" alt="More">
+                        </a>
+                    </div>
+                    <div class="description_country">
+                        <div class="name_and_flag">
+                            <h4 class="name_of_country">${country.country}</h4>
+                            <img src="img_main/twemoji_flag-czechia.png" class="flag_of_country">
+                        </div>
+                        <div class="exactly_price">
+                            <span class="text_price">Price</span>
+                            <span class="count">${country.price}</span>
+                        </div>
+                        <p class="description_of_country">
+                            ${country.short_description}
+                        </p>
+                    </div>
+                </div>
+            `;
+            container.insertAdjacentHTML('beforeend', cardHTML);
+        });
+
+    } catch (error) {
+        console.error("Ошибка загрузки стран:", error);
+    }
+}
+loadCountries();

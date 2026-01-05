@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "name": "Test",
+        "surname": "User",
+        "email": "test@test.com",
+        "password": "$2y$10$huskd8rYuRhIZKo3dbUtBuh4Mq9L5gGvE\/sC\/jK15TZ23ZrLXDRbO",
+        "photoUrl": null,
+        "country": "us",
+        "reviewId": null,
+        "role": "user",
+        "creationDate": "2026-01-05 21:58:24",
+        "api_token": "f84cf9e2d222a82f8f0966cf0bbd48ab74455136dd60c39dcc94b1cdd6724f08"
+    }
+]

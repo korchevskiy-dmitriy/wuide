@@ -203,3 +203,91 @@ if (galleryContainer && sliderTracks.length > 0) {
         setTrackSpeed(3.0);
     });
 }
+
+
+
+
+
+
+
+
+/* downloading data of country */
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const params = new URLSearchParams(window.location.search);
+    const countryId = params.get('id');
+
+    if (!countryId) return;
+
+    console.log("Загружаем данные для страны ID:", countryId);
+
+    try {
+        const response = await fetch(`http://localhost:8888/wuide/api.php/countries/${countryId}`);
+        
+        if (!response.ok) {
+            console.error("Страна не найдена");
+            return;
+        }
+
+        const country = await response.json();
+        console.log("Данные с сервера:", country);
+
+        
+        const title = document.getElementById('country-name');
+        if (title) title.textContent = country.country;
+
+        
+        const shortDesc = document.getElementById('country-short-desc');
+        if (shortDesc) shortDesc.textContent = country.short_description;
+
+        
+        const fullDesc = document.getElementById('country-full-desc');
+        if (fullDesc) fullDesc.textContent = country.full_description;
+
+        const capital = document.getElementById('info-capital');
+        if (capital) capital.textContent = country.capital;
+
+        const duration = document.getElementById('info-duration');
+        if (duration) duration.textContent = country.visit_duration;
+
+        const time = document.getElementById('info-time');
+        if (time) time.textContent = country.visiting_time;
+
+        const priceBlock = document.getElementById('price-range');
+        if (priceBlock) priceBlock.textContent = `Average price level: ${country.price}`;
+
+
+        const placesContainer = document.getElementById('places-container');
+        if (placesContainer && country.places.length > 0) {
+            placesContainer.innerHTML = '';
+            
+            country.places.forEach(place => {
+                const html = `
+                    <div class="place-card">
+                        <img class="place-photos" src="${place.photo_url}" alt="${place.name}">
+                        <p class="place-title">${place.name}</p>
+                    </div>
+                `;
+                placesContainer.insertAdjacentHTML('beforeend', html);
+            });
+        }
+
+        const foodContainer = document.getElementById('food-container');
+        if (foodContainer && country.foods.length > 0) {
+            foodContainer.innerHTML = ''; 
+            
+            country.foods.forEach(food => {
+                const html = `
+                    <div class="place-card">
+                        <img class="food-photos" src="${food.photo_url}" alt="${food.name}">
+                        <p class="place-title">${food.name}</p>
+                    </div>
+                `;
+                foodContainer.insertAdjacentHTML('beforeend', html);
+            });
+        }
+
+    } catch (error) {
+        console.error("Ошибка загрузки:", error);
+    }
+});

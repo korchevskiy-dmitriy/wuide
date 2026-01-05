@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "country": "Czech Republic",
+        "region": "Europe",
+        "short_description": "The country where medieval charm meets modern life. Explore fairytale castles, taste world-famous beer, and wander through Prague.",
+        "full_description": "Country of fairytale castles, ancient streets, and vibrant culture in the heart of Europe. Walk through Prague’s old town, taste world-famous beer, and feel the atmosphere of history blending with modern life.",
+        "price": "$$",
+        "capital": "Prague",
+        "visit_duration": "5-7 days",
+        "visiting_time": "April-October",
+        "country_photo": "img_main/image 9.svg",
+        "map_photo": "resourses/map.png",
+        "creation_date": "2024-01-01",
+        "places": [
+            {
+                "name": "Charles Bridge",
+                "description": "Famous historic bridge crossing the Vltava river.",
+                "photo_url": "recommendations img/charles bridge.png"
+            },
+            {
+                "name": "Prague Castle",
+                "description": "The largest ancient castle in the world.",
+                "photo_url": "recommendations img/charles bridge.png"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Beef Tenderloin",
+                "description": "Traditional dish with cream sauce and dumplings.",
+                "photo_url": "recommendations img/Beef tenderloin.png"
+            },
+            {
+                "name": "Trdelník",
+                "description": "Sweet pastry cooked over an open flame.",
+                "photo_url": "recommendations img/Beef tenderloin.png"
+            }
+        ],
+        "reviews": [],
+        "reviewers_id": []
+    },
+    {
+        "id": 2,
+        "country": "USA",
+        "region": "America",
+        "short_description": "From the bustling streets of New York to the sunny beaches of California. A land of endless possibilities and diverse landscapes.",
+        "full_description": "The United States offers a vast array of travel experiences. Explore the Grand Canyon, enjoy the nightlife of Las Vegas, or relax in Miami. Every state feels like a different country.",
+        "price": "$$$",
+        "capital": "Washington, D.C.",
+        "visit_duration": "10-14 days",
+        "visiting_time": "Year-round",
+        "country_photo": "img_main/image 9.svg",
+        "map_photo": "resourses/map.png",
+        "creation_date": "2024-01-02",
+        "places": [
+            {
+                "name": "Statue of Liberty",
+                "description": "Iconic symbol of freedom in New York Harbor.",
+                "photo_url": "recommendations img/charles bridge.png"
+            },
+            {
+                "name": "Grand Canyon",
+                "description": "Massive canyon carved by the Colorado River.",
+                "photo_url": "recommendations img/charles bridge.png"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Hamburger",
+                "description": "Classic American beef burger.",
+                "photo_url": "recommendations img/Beef tenderloin.png"
+            },
+            {
+                "name": "New York Pizza",
+                "description": "Famous thin-crust pizza slice.",
+                "photo_url": "recommendations img/Beef tenderloin.png"
+            }
+        ],
+        "reviews": [],
+        "reviewers_id": []
+    },
+    {
+        "id": 3,
+        "country": "Germany",
+        "region": "Europe",
+        "short_description": "Discover the heart of Europe with its rich history",
+        "full_description": "Germany is a land of innovation and tradition. Visit the Oktoberfest in Munich, explore the Berlin Wall history, or take a scenic drive through the Black Forest.",
+        "price": "$$",
+        "capital": "Berlin",
+        "visit_duration": "7-10 days",
+        "visiting_time": "May-September",
+        "country_photo": "img_main/image 9.svg",
+        "map_photo": "resourses/map.png",
+        "creation_date": "2024-01-03",
+        "places": [
+            {
+                "name": "Brandenburg Gate",
+                "description": "18th-century neoclassical monument in Berlin.",
+                "photo_url": "recommendations img/charles bridge.png"
+            },
+            {
+                "name": "Neuschwanstein Castle",
+                "description": "19th-century historic palace on a rugged hill.",
+                "photo_url": "recommendations img/charles bridge.png"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Bratwurst",
+                "description": "Type of German sausage made from veal, beef, or pork.",
+                "photo_url": "recommendations img/Beef tenderloin.png"
+            },
+            {
+                "name": "Pretzel",
+                "description": "Type of baked bread product made from dough.",
+                "photo_url": "recommendations img/Beef tenderloin.png"
+            }
+        ],
+        "reviews": [],
+        "reviewers_id": []
+    }
+]
