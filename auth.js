@@ -29,11 +29,13 @@ if (registrationForm) {
             const result = await response.json();
 
             if (response.ok) {
-                localStorage.setItem('authToken', result.token);
-                localStorage.setItem('userId', result.userId);
-
-                alert('Registration successful! Welcome.');
-                window.location.reload(); 
+                alert('Registration successful! Please Log In.');
+                
+                registrationForm.reset();
+                
+                const loginBtn = document.getElementById('reg_login_id');
+                if (loginBtn) loginBtn.click();
+                
             } else {
                 alert('Registration failed: ' + (result.error || result.message));
             }

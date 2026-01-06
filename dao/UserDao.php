@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../entity/User.php';
+
 class UserDao {
     private $filePath;
 
@@ -28,7 +30,8 @@ class UserDao {
     public function save(User $user) {
         $users = $this->getAll();
         
-        $userData = (array) $user;
+        // ВАЖНО: Используем toArray(), чтобы ключи стали photo_url, api_token и т.д.
+        $userData = $user->toArray();
         
         $users[] = $userData;
         
@@ -45,7 +48,7 @@ class UserDao {
         
         $maxId = 0;
         foreach ($users as $user) {
-            if ($user['id'] > $maxId) {
+            if (isset($user['id']) && $user['id'] > $maxId) {
                 $maxId = $user['id'];
             }
         }
@@ -58,7 +61,8 @@ class UserDao {
 
         foreach ($users as &$userArr) {
             if ($userArr['id'] == $updatedUser->id) {
-                $userArr = (array) $updatedUser;
+                // ВАЖНО: Здесь тоже используем toArray()
+                $userArr = $updatedUser->toArray();
                 $found = true;
                 break;
             }
@@ -74,6 +78,7 @@ class UserDao {
     public function findByToken($token) {
         $users = $this->getAll();
         foreach ($users as $user) {
+            // Теперь ключ точно будет 'api_token'
             if (isset($user['api_token']) && $user['api_token'] === $token) {
                 return $user;
             }

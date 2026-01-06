@@ -11,7 +11,7 @@ class User {
     public ?int $reviewId;
     public string $role;
     public string $creationDate;
-    public $api_token;
+    public ?string $api_token;
 
     public function __construct(
         int $id,
@@ -24,8 +24,7 @@ class User {
         ?int $reviewId = null,
         string $role = 'user',
         string $creationDate = null,
-        string $api_token = null
-        
+        ?string $api_token = null
     ) {
         $this->id           = $id;
         $this->name         = $name;
@@ -34,11 +33,10 @@ class User {
         $this->password     = $password;
         $this->photoUrl     = $photoUrl;
         $this->country      = $country;
-        $this->reviewId     = null;
+        $this->reviewId     = $reviewId;
         $this->role         = $role;
-        $this->api_token = $api_token;
+        $this->api_token    = $api_token;
         $this->creationDate = $creationDate ?? date('Y-m-d H:i:s');
-        
     }
 
     public static function fromArray(array $data): self
@@ -52,8 +50,9 @@ class User {
             $data['photo_url'] ?? null,
             $data['country'] ?? null,
             $data['review_id'] ?? null,
-            $data['role'],
-            $data['creation_date']
+            $data['role'] ?? 'user',
+            $data['creation_date'] ?? null,
+            $data['api_token'] ?? null 
         );
     }
 
@@ -65,11 +64,12 @@ class User {
             'surname'       => $this->surname,
             'email'         => $this->email,
             'password'      => $this->password,
-            'photo_url'     => $this->photoUrl,
+            'photo_url'     => $this->photoUrl, 
             'country'       => $this->country,
             'review_id'     => $this->reviewId,
             'role'          => $this->role,
             'creation_date' => $this->creationDate,
+            'api_token'     => $this->api_token 
         ];
     }
 }
