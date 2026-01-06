@@ -67,45 +67,7 @@ exploreNowBtn.addEventListener('click', () => {
     });
 });
 
-const filterPriceBtn = document.getElementById('filters_price_id');
-const filterPriceList = document.getElementById('price-list-id');
-const priceArrow = document.getElementById('arrow_icon_price_id');
 
-filterPriceBtn.addEventListener('click', () => {
-    filterPriceList.hidden = !filterPriceList.hidden;
-    priceArrow.classList.toggle('rotate');
-});
-
-const filterRegionBtn = document.getElementById('filters_region_id');
-const filterRegionList = document.getElementById('region-list-id');
-const regionArrow = document.getElementById('arrow_icon_region_id');
-
-filterRegionBtn.addEventListener('click', () => {
-    filterRegionList.hidden = !filterRegionList.hidden;
-    regionArrow.classList.toggle('rotate');
-});
-
-const priceOptions = document.querySelectorAll('#price-list-id .option-btn');
-const priceBtnText = filterPriceBtn.querySelector('span');
-
-priceOptions.forEach((option) => {
-    option.addEventListener('click', () => {
-        priceBtnText.textContent = option.textContent;
-        filterPriceList.hidden = true;
-        priceArrow.classList.toggle('rotate');
-    })
-});
-
-const regionOptions = document.querySelectorAll('#region-list-id .option-btn');
-const regionBtnText = filterRegionBtn.querySelector('span');
-
-regionOptions.forEach((option) => {
-    option.addEventListener('click', () => {
-        regionBtnText.textContent = option.textContent;
-        filterRegionList.hidden = true;
-        regionArrow.classList.toggle('rotate');
-    })
-});
 
 
 
@@ -274,50 +236,169 @@ if (galleryContainer && sliderTracks.length > 0) {
     });
 }
 
+/* =================================================================
+   УМНЫЕ ФИЛЬТРЫ И ЗАГРУЗКА СТРАН
+   ================================================================= */
 
-/* country downloading */
+let allCountriesData = [];
+
+// Элементы фильтров
+const filterPriceBtn = document.getElementById('filters_price_id');
+const filterPriceList = document.getElementById('price-list-id');
+const priceArrow = document.getElementById('arrow_icon_price_id');
+const priceBtnText = filterPriceBtn.querySelector('span');
+const priceOptions = document.querySelectorAll('#price-list-id .option-btn');
+
+const filterRegionBtn = document.getElementById('filters_region_id');
+const filterRegionList = document.getElementById('region-list-id');
+const regionArrow = document.getElementById('arrow_icon_region_id');
+const regionBtnText = filterRegionBtn.querySelector('span');
+const regionOptions = document.querySelectorAll('#region-list-id .option-btn');
+
+// Настройки (храним текущий выбор: "$$", "Europe")
+let currentPriceFilter = null;
+let currentRegionFilter = null;
+
+// 1. Управление меню (Открыть/Закрыть)
+filterPriceBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    filterPriceList.hidden = !filterPriceList.hidden;
+    priceArrow.classList.toggle('rotate');
+    filterRegionList.hidden = true; // Закрываем соседа
+});
+
+filterRegionBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    filterRegionList.hidden = !filterRegionList.hidden;
+    regionArrow.classList.toggle('rotate');
+    filterPriceList.hidden = true; // Закрываем соседа
+});
+
+// Закрытие при клике вне меню
+window.addEventListener('click', () => {
+    filterPriceList.hidden = true;
+    priceArrow.classList.remove('rotate');
+    filterRegionList.hidden = true;
+    regionArrow.classList.remove('rotate');
+});
+
+
+// 2. ВЫБОР ЦЕНЫ ($ / $$ / $$$)
+priceOptions.forEach((option) => {
+    option.addEventListener('click', () => {
+        // Берем текст с кнопки (например "$$")
+        const selectedPrice = option.textContent.trim();
+        
+        priceBtnText.textContent = selectedPrice;
+        currentPriceFilter = selectedPrice; // Запоминаем выбор
+
+        // Скрываем меню
+        filterPriceList.hidden = true;
+        priceArrow.classList.remove('rotate');
+
+        applyFilters(); // Фильтруем!
+    });
+});
+
+
+// 3. ВЫБОР РЕГИОНА (Europe / Asia ...)
+regionOptions.forEach((option) => {
+    option.addEventListener('click', () => {
+        const selectedRegion = option.textContent.trim();
+        
+        regionBtnText.textContent = selectedRegion;
+        currentRegionFilter = selectedRegion; // Запоминаем выбор
+
+        filterRegionList.hidden = true;
+        regionArrow.classList.remove('rotate');
+
+        applyFilters(); // Фильтруем!
+    });
+});
+
+
+// 4. ГЛАВНАЯ ФУНКЦИЯ ФИЛЬТРАЦИИ
+function applyFilters() {
+    console.log("Фильтр -> Регион:", currentRegionFilter, "| Цена:", currentPriceFilter);
+
+    // Берем ВСЕ страны и просеиваем их
+    const filtered = allCountriesData.filter(country => {
+        
+        // Сравнение Цены (Если фильтр выбран, проверяем совпадение)
+        if (currentPriceFilter && country.price !== currentPriceFilter) {
+            return false;
+        }
+
+        // Сравнение Региона (Без учета регистра: Europe == europe)
+        if (currentRegionFilter && country.region.toLowerCase() !== currentRegionFilter.toLowerCase()) {
+            return false;
+        }
+
+        return true; // Оставляем страну
+    });
+
+    renderCountries(filtered);
+}
+
+
+// 5. ОТРИСОВКА КАРТОЧЕК
+function renderCountries(countriesList) {
+    const container = document.getElementById('country_cards_block_id');
+    if (!container) return;
+
+    container.innerHTML = ''; // Очищаем контейнер
+
+    // Если список пуст
+    if (countriesList.length === 0) {
+        container.innerHTML = '<h3 style="color: white; width: 100%; text-align: center; margin-top: 50px;">No countries found :(</h3>';
+        return;
+    }
+
+    countriesList.forEach(country => {
+        const cardHTML = `
+            <div class="country_card hidden-element show">
+                <div class="country_img">
+                    <img class="main_photo" src="${country.country_photo}" alt="${country.country}">
+                    
+                    <a href="country.html?id=${country.id}" class="arrow_more">
+                        <img class="arrow-card" src="img_main/Frame 20.svg" alt="More">
+                    </a>
+                </div>
+                <div class="description_country">
+                    <div class="name_and_flag">
+                        <h4 class="name_of_country">${country.country}</h4>
+                        <img src="img_main/twemoji_flag-czechia.png" class="flag_of_country">
+                    </div>
+                    <div class="exactly_price">
+                        <span class="text_price">Price</span>
+                        <span class="count">${country.price}</span> 
+                    </div>
+                    <p class="description_of_country">
+                        ${country.short_description}
+                    </p>
+                </div>
+            </div>
+        `;
+        container.insertAdjacentHTML('beforeend', cardHTML);
+    });
+}
+
+
+// 6. ЗАГРУЗКА ДАННЫХ ПРИ СТАРТЕ
 async function loadCountries() {
     console.log("Загружаем страны...");
-    
     try {
         const response = await fetch('http://localhost:8888/wuide/api.php/countries');
-        const countries = await response.json();
-
-        const container = document.getElementById('country_cards_block_id');
-        if (!container) return;
-
-        container.innerHTML = '';
-
-        countries.forEach(country => {
-            const cardHTML = `
-                <div class="country_card hidden-element show">
-                    <div class="country_img">
-                        <img class="main_photo" src="${country.country_photo}" alt="${country.country}">
-                        
-                        <a href="country.html?id=${country.id}" class="arrow_more">
-                            <img class="arrow-card" src="img_main/Frame 20.svg" alt="More">
-                        </a>
-                    </div>
-                    <div class="description_country">
-                        <div class="name_and_flag">
-                            <h4 class="name_of_country">${country.country}</h4>
-                            <img src="img_main/twemoji_flag-czechia.png" class="flag_of_country">
-                        </div>
-                        <div class="exactly_price">
-                            <span class="text_price">Price</span>
-                            <span class="count">${country.price}</span>
-                        </div>
-                        <p class="description_of_country">
-                            ${country.short_description}
-                        </p>
-                    </div>
-                </div>
-            `;
-            container.insertAdjacentHTML('beforeend', cardHTML);
-        });
-
+        
+        // Сохраняем полученные данные в глобальную переменную
+        allCountriesData = await response.json();
+        
+        // Рисуем все страны сразу
+        renderCountries(allCountriesData);
     } catch (error) {
-        console.error("Ошибка загрузки стран:", error);
+        console.error("Ошибка:", error);
     }
 }
+
 loadCountries();
+

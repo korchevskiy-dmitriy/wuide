@@ -69,12 +69,12 @@ if (loginForm) {
             console.log("Ответ сервера:", result);
 
             if (response.ok) {
-                alert('Login successful! Welcome back.');
-
                 localStorage.setItem('authToken', result.token);
                 localStorage.setItem('userId', result.userId);
 
-                closeModal(); 
+                alert('Login successful! Welcome back.');
+
+                window.location.reload(); 
             } else {
                 alert('Login failed: ' + (result.error || result.message));
             }

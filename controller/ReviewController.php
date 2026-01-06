@@ -10,8 +10,16 @@ class ReviewController {
     }
 
     public function handleRequest($method, $uri) {
-        $headers = getallheaders();
-        $authHeader = $headers['Authorization'] ?? '';
+        $authHeader = '';
+        if (isset($_SERVER['HTTP_AUTHORIZATION'])) {
+            $authHeader = $_SERVER['HTTP_AUTHORIZATION'];
+        } elseif (isset($_SERVER['REDIRECT_HTTP_AUTHORIZATION'])) {
+            $authHeader = $_SERVER['REDIRECT_HTTP_AUTHORIZATION'];
+        } elseif (function_exists('apache_request_headers')) {
+            $headers = apache_request_headers();
+            $authHeader = $headers['Authorization'] ?? $headers['authorization'] ?? '';
+        }
+
         $token = str_replace('Bearer ', '', $authHeader);
 
         try {
@@ -46,12 +54,15 @@ class ReviewController {
 
         } catch (Exception $e) {
             $code = $e->getCode() ?: 500;
+            if ($code < 100 || $code > 599) $code = 500;
+            
             $this->sendResponse($code, ["error" => $e->getMessage()]);
         }
     }
 
     private function sendResponse($code, $data) {
         http_response_code($code);
+        header('Content-Type: application/json');
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
     }
 }

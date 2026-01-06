@@ -9,7 +9,20 @@
         "country": "us",
         "reviewId": null,
         "role": "user",
-        "creationDate": "2026-01-05 21:58:24",
-        "api_token": "f84cf9e2d222a82f8f0966cf0bbd48ab74455136dd60c39dcc94b1cdd6724f08"
+        "creationDate": "2026-01-06 20:15:40",
+        "api_token": "8b9d01d78682fbfcee01c4c0e6eac9efde801e14362ded12aa640a9f8c8ade71"
+    },
+    {
+        "id": 2,
+        "name": "Mykyta",
+        "surname": "Hosalo",
+        "email": "gosalonekit@gmail.com",
+        "password": "$2y$10$m1dM4MdoRx8Ir36YfRFZFua6zSva1syO6lERU\/plgDsR46TcAGBe.",
+        "photoUrl": null,
+        "country": "cz",
+        "reviewId": null,
+        "role": "user",
+        "creationDate": "2026-01-06 21:22:04",
+        "api_token": "5faa962896b619fb07d05a0326089dacd36cf5b56437e0e095a588283e1b64fb"
     }
 ]

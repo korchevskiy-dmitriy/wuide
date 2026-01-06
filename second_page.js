@@ -15,6 +15,14 @@ signInBtn.addEventListener('click', () => {
     modalTitle.textContent = 'Sign in';
 });
 
+const backBtn = document.getElementById('come-back-btn');
+
+if (backBtn) {
+    backBtn.addEventListener('click', () => {
+        window.location.href = 'Wuide.html';
+    });
+}
+
 closeBtn.addEventListener('click', () => {
     modal.classList.remove('open');
 });
@@ -291,3 +299,137 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error("Ошибка загрузки:", error);
     }
 });
+/* modal logic */
+
+document.addEventListener('DOMContentLoaded', () => {
+    initReviewsModal();
+});
+
+function initReviewsModal() {
+    const params = new URLSearchParams(window.location.search);
+    const countryId = params.get('id');
+
+    const modal = document.getElementById('reviews-modal');
+    const openBtn = document.getElementById('open-reviews-modal-btn');
+    const closeBtn = document.getElementById('close-reviews-modal');
+    
+    const reviewsList = document.getElementById('reviews-list-container');
+    const guestMsg = document.getElementById('review-guest-msg');
+    const userForm = document.getElementById('review-user-form');
+    const textArea = document.getElementById('review-text-input');
+    const postBtn = document.getElementById('post-review-btn');
+    const loginLink = document.getElementById('trigger-login-from-modal');
+
+    const modalImg = document.getElementById('modal-country-img');
+    const modalName = document.getElementById('modal-country-name');
+    const modalDesc = document.getElementById('modal-country-desc');
+
+    if (!openBtn || !modal) return;
+
+    openBtn.addEventListener('click', async () => {
+        modal.classList.add('open');
+        document.body.classList.add('no-scroll');
+        
+        updateModalHeader();
+        checkAuthDisplay();
+        await loadReviews(countryId);
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    function closeModal() {
+        modal.classList.remove('open');
+        document.body.classList.remove('no-scroll');
+    }
+
+    function checkAuthDisplay() {
+        const token = localStorage.getItem('authToken');
+        if (token) {
+            if(userForm) userForm.classList.remove('hidden');
+            if(guestMsg) guestMsg.classList.add('hidden');
+        } else {
+            if(userForm) userForm.classList.add('hidden');
+            if(guestMsg) guestMsg.classList.remove('hidden');
+        }
+    }
+
+    if (loginLink) {
+        loginLink.addEventListener('click', () => {
+            closeModal();
+            const mainLoginBtn = document.getElementById('reg_login_id');
+            if(mainLoginBtn) mainLoginBtn.click();
+        });
+    }
+
+    function updateModalHeader() {
+        const pageTitle = document.getElementById('country-name');
+        const pageDesc = document.getElementById('country-short-desc');
+        
+        if (modalName && pageTitle) modalName.textContent = pageTitle.textContent;
+        if (modalDesc && pageDesc) modalDesc.textContent = pageDesc.textContent;
+        if (modalImg) modalImg.src = "resourses/img-country.png"; 
+    }
+
+    async function loadReviews(id) {
+        if (!reviewsList) return;
+        reviewsList.innerHTML = '<p style="text-align:center; padding:20px; color:#888;">Loading...</p>';
+        
+        try {
+            const response = await fetch(`http://localhost:8888/wuide/api.php/reviews?country_id=${id}`);
+            const reviews = await response.json();
+            reviewsList.innerHTML = ''; 
+
+            if (reviews.length === 0) {
+                reviewsList.innerHTML = '<p style="text-align:center; padding:20px; color:#aaa;">No reviews yet.</p>';
+                return;
+            }
+
+            reviews.forEach(r => {
+                const photo = r.user_photo ? r.user_photo : 'resourses/logo.svg';
+                const date = new Date(r.date).toLocaleDateString();
+                const html = `
+                    <div class="review-card-modal">
+                        <img src="${photo}" alt="user">
+                        <div class="review-card-content">
+                            <strong>${r.user_name} <span class="review-date-small">${date}</span></strong>
+                            <p>${r.text}</p>
+                        </div>
+                    </div>
+                `;
+                reviewsList.insertAdjacentHTML('beforeend', html);
+            });
+        } catch (e) {
+            console.error(e);
+            reviewsList.innerHTML = '<p style="color:red; text-align:center;">Error loading reviews</p>';
+        }
+    }
+
+    if (postBtn) {
+        postBtn.addEventListener('click', async () => {
+            const text = textArea.value.trim();
+            const token = localStorage.getItem('authToken');
+            if (!text || !token) return;
+
+            try {
+                const res = await fetch('http://localhost:8888/wuide/api.php/reviews', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + token
+                    },
+                    body: JSON.stringify({ country_id: countryId, text: text })
+                });
+
+                if (res.ok) {
+                    textArea.value = '';
+                    loadReviews(countryId);
+                } else {
+                    alert("Error sending review");
+                }
+            } catch (e) { console.error(e); }
+        });
+    }
+}

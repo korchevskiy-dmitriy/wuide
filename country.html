@@ -51,6 +51,7 @@
                         </div>
                         
                         <button id="discover-btn">Start to Discover</button>
+                        <button id="open-reviews-modal-btn" class="reviews-trigger-btn">See Reviews</button>
                     </div>
                 </div>
                 
@@ -253,6 +254,41 @@
                         </div>
                         <button type="submit" class="submit-btn-login">Log in</button>
                     </form>
+                </div>
+            </div>
+            <div class="auth-modal" id="reviews-modal">
+                <div class="modal-content reviews-modal-content">
+                    <div class="head_form_container">
+                        <h6 id="reviews-modal-title">Reviews</h6>
+                        <button class="icon_cross" id="close-reviews-modal">
+                            <svg class="cross-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 6L6 18"/><path d="M6 6L18 18"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="reviews-modal-header">
+                        <img id="modal-country-img" src="" alt="Country">
+                        <div class="reviews-modal-info">
+                            <h3 id="modal-country-name">Country Name</h3>
+                            <p id="modal-country-desc">Description...</p>
+                        </div>
+                    </div>
+
+                    <div id="reviews-list-container" class="reviews-scroll-area">
+                        <p class="loading-text">Loading reviews...</p>
+                    </div>
+
+                    <div class="reviews-footer">
+                        <div id="review-guest-msg" class="guest-msg hidden">
+                            Please <span id="trigger-login-from-modal" class="login-link">log in</span> to write a review.
+                        </div>
+                        
+                        <div id="review-user-form" class="hidden">
+                            <textarea id="review-text-input" placeholder="Write a review..."></textarea>
+                            <button id="post-review-btn">Post the Review</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
