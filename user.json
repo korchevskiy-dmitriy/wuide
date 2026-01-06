@@ -22,7 +22,20 @@
         "country": "cz",
         "reviewId": null,
         "role": "user",
-        "creationDate": "2026-01-06 21:41:59",
-        "api_token": "b6259b937c18a268741fafc0e0c6483b50e3870ccc423bb3b800a805ab4840e2"
+        "creationDate": "2026-01-06 22:02:26",
+        "api_token": "06e90d9514d85baf5c8a964c9f8ba826669a14c74f6c54f79855a576ba81ba0a"
+    },
+    {
+        "id": 3,
+        "name": "Mykyta",
+        "surname": "Hosalo",
+        "email": "qwe@gmail.com",
+        "password": "$2y$10$Wp5S1MzOSvjntECxDvXRRuaNwFwYIzM2ej6qiziJJkRAaVoRD3C\/y",
+        "photoUrl": null,
+        "country": "cz",
+        "reviewId": null,
+        "role": "user",
+        "creationDate": "2026-01-06 21:50:18",
+        "api_token": "7782273a83ab3af744f20afb40dfac1b67bf38fb99dce90511d9b57475aba69a"
     }
 ]

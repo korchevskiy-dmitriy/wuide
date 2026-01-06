@@ -1308,7 +1308,9 @@ body.no-scroll {
 .red-outline-btn:hover {
     background: #FFF0F0;
 }
-
+modal-title-text{
+    width:100%; 
+}
 .nav-profile-trigger {
     display: flex;
     align-items: center;

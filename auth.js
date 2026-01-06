@@ -6,10 +6,14 @@ if (registrationForm) {
         event.preventDefault();
 
         const formData = new FormData(registrationForm);
-        
         const data = Object.fromEntries(formData.entries());
 
-        data.photo_url = ""; 
+        const fileInput = document.getElementById('user_photo_form');
+        if (fileInput && fileInput.files[0]) {
+            data.photo_url = await toBase64(fileInput.files[0]);
+        } else {
+            data.photo_url = null;
+        }
 
         console.log("Отправляем данные:", data); 
 
@@ -23,25 +27,30 @@ if (registrationForm) {
             });
 
             const result = await response.json();
-            console.log("Ответ сервера:", result);
 
             if (response.ok) {
-                alert('Success! Registration complete. Please Log In.');
-                
-                registrationForm.reset();
-                
-                document.getElementById('reg_login_id').click(); 
-                
+                localStorage.setItem('authToken', result.token);
+                localStorage.setItem('userId', result.userId);
+
+                alert('Registration successful! Welcome.');
+                window.location.reload(); 
             } else {
-                alert('Error: ' + (result.error || result.message));
+                alert('Registration failed: ' + (result.error || result.message));
             }
 
         } catch (error) {
             console.error('Ошибка сети:', error);
-            alert('Server error. Check console for details.');
+            alert('Server error.');
         }
     });
 }
+
+const toBase64 = file => new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = error => reject(error);
+});
 
 
 /* log in logic*/
