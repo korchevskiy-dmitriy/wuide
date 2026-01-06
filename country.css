@@ -1197,6 +1197,140 @@ body {
 
 .hidden { display: none !important; }
 
+
+/* profile modal */
+.profile-modal-content {
+    max-width: 700px !important;
+    border-radius: 40px !important;
+    padding: 40px !important;
+}
+
+.profile-header-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.profile-avatar-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #eee;
+    background-size: cover;
+    background-position: center;
+    background-image: url('resourses/logo.svg'); 
+}
+
+.profile-text-info h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    color: #0B0B14;
+}
+
+.profile-text-info p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0 0 0;
+}
+
+.profile-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.profile-input {
+    width: 100%;
+    height: 55px;
+    background: #EAEAEA;
+    border-radius: 20px;
+    border: none;
+    padding: 0 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.profile-input:focus {
+    outline: 2px solid #0B0B14;
+    background: #fff;
+}
+
+.full-width {
+    grid-column: span 3; 
+}
+
+.profile-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.black-btn {
+    width: 100%;
+    height: 55px;
+    background: #0B0B14;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.black-btn:hover { background: #333; }
+
+.red-outline-btn {
+    width: 100%;
+    height: 55px;
+    background: transparent;
+    color: #FF5F57;
+    border: 2px solid #FF5F57;
+    border-radius: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.red-outline-btn:hover {
+    background: #FFF0F0;
+}
+
+.nav-profile-trigger {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 30px;
+    transition: background 0.2s;
+}
+.nav-profile-trigger:hover {
+    background: rgba(0,0,0,0.05);
+}
+.nav-user-name {
+    font-family: 'Nunito';
+    font-weight: 700;
+    font-size: 18px;
+    color: #333;
+}
+.nav-user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #ddd;
+}
+
 @media (max-width: 768px) {
     .reviews-trigger-btn { width: 100%; }
     .reviews-modal-wrapper, .reviews-modal-content {
