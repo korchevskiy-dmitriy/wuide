@@ -291,6 +291,57 @@
                     </div>
                 </div>
             </div>
+            <div class="auth-modal" id="profile-modal">
+                <div class="modal-content profile-modal-content">
+                    <div class="head_form_container">
+                        <h6 class="modal-title-text" style="width:100%; text-align:center;">Profile</h6>
+                        <button class="icon_cross" id="close-profile-modal">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 6L6 18"/><path d="M6 6L18 18"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="profile-header-section">
+                        <div class="profile-avatar-large" id="profile-modal-avatar">
+                            </div>
+                        <div class="profile-text-info">
+                            <h3 id="profile-modal-name">User Name</h3>
+                            <p id="profile-modal-country">Country</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-form-grid">
+                        <input type="text" id="prof-name" placeholder="Name" class="profile-input">
+                        <input type="text" id="prof-surname" placeholder="Surname" class="profile-input">
+                        
+                        <div class="custom-select-wrapper">
+                            <select id="prof-country" class="profile-input profile-select">
+                                <option value="" disabled>Select Country</option>
+                                <option value="cz">Czechia</option>
+                                <option value="us">USA</option>
+                                <option value="de">Germany</option>
+                                <option value="it">Italy</option>
+                                <option value="fr">France</option>
+                                <option value="ua">Ukraine</option>
+                            </select>
+                        </div>
+
+                        <input type="email" id="prof-email" placeholder="Email" class="profile-input full-width" readonly style="opacity: 0.7; cursor: not-allowed;">
+                        
+                        <div class="password-wrapper full-width">
+                            <input type="password" id="prof-password" placeholder="New Password (leave empty to keep)" class="profile-input">
+                            <span class="password-toggle" id="prof-pass-toggle">👁</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-buttons">
+                        <button id="update-profile-btn" class="black-btn">Update</button>
+                        <button id="logout-profile-btn" class="black-btn">Log out</button>
+                        <button id="delete-account-btn" class="red-outline-btn">Delete account</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <script src="auth.js"></script>
