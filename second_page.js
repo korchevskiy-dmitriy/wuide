@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (time) time.textContent = country.visiting_time;
 
         const priceBlock = document.getElementById('price-range');
-        if (priceBlock) priceBlock.textContent = `Average price level: ${country.price}`;
+        if (priceBlock) priceBlock.textContent = ``;
 
 
         const placesContainer = document.getElementById('places-container');

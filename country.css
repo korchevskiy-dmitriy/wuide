@@ -320,44 +320,51 @@ body {
 }
 
 
-.our-recommentaion-block{
+.our-recommentaion-block {
     max-width: 1445px;
     margin-left: auto;
     margin-right: auto;
-
     margin-top: 50px;
+    padding-bottom: 50px; 
 }
-.our-racommentaion-txt{
-    color: var(--main, rgba(11, 11, 20, 1));
 
+.our-racommentaion-txt {
+    color: var(--main, rgba(11, 11, 20, 1));
     font-family: Nunito;
-    font-style: Bold;
     font-size: 36px;
     font-weight: 700;
     line-height: 49px;
 }
-.places-block, .food-block{
+.places-block, .food-block {
     margin-top: 25px;
-    max-width: 1490px;
+    width: 100%;
 }
-.recommendation-img, .recommendation-img{
-    margin-top: 10px;
+.recommendation-img {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    gap: 50px;      
+    width: 100%;
+    margin-top: 10px;
 }
-.place-and-food{
+.place-and-food {
     color: var(--main, rgba(11, 11, 20, 1));
-
     font-family: Nunito;
-    font-style: SemiBold;
     font-size: 24px;
     font-weight: 600;
     line-height: 33px;
+    margin-bottom: 15px;
 }
-.place-card{
+.place-card {
     position: relative;
+    flex: 1;             
+    height: 170px;        
+    border-radius: 20px;  
+    overflow: hidden;     
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.place-card:hover {
+    transform: scale(1.02);
 }
 
 .place-card::after {
@@ -366,24 +373,22 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50%; 
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    height: 60%; 
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
     z-index: 1; 
     pointer-events: none; 
-    border-radius: 15px;
 }
-.place-photos, .food-photos{
-    width: 100%;        
+.place-photos, .food-photos {
+    width: 100%;
     height: 100%;
-    object-fit: cover;  
+    object-fit: cover;    
     display: block;
-    border-radius: 15px;
 }
 
 .place-title {
     position: absolute; 
-    bottom: 20px;       
-    left: 20px;        
+    bottom: 25px;       
+    left: 25px;        
     
     margin: 0;         
     
@@ -392,6 +397,7 @@ body {
     font-size: 24px;   
     font-weight: 700;   
     z-index: 2;        
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 /* gallery */
 .traveler_achievements{

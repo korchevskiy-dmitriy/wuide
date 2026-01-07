@@ -235,14 +235,10 @@ if (galleryContainer && sliderTracks.length > 0) {
         setTrackSpeed(0.33);
     });
 }
-
-/* =================================================================
-   УМНЫЕ ФИЛЬТРЫ И ЗАГРУЗКА СТРАН
-   ================================================================= */
-
+/* smart filters */
 let allCountriesData = [];
+let isExpanded = false; 
 
-// Элементы фильтров
 const filterPriceBtn = document.getElementById('filters_price_id');
 const filterPriceList = document.getElementById('price-list-id');
 const priceArrow = document.getElementById('arrow_icon_price_id');
@@ -255,26 +251,26 @@ const regionArrow = document.getElementById('arrow_icon_region_id');
 const regionBtnText = filterRegionBtn.querySelector('span');
 const regionOptions = document.querySelectorAll('#region-list-id .option-btn');
 
-// Настройки (храним текущий выбор: "$$", "Europe")
+const showMoreBtn = document.getElementById('show_more_id');
+
 let currentPriceFilter = null;
 let currentRegionFilter = null;
 
-// 1. Управление меню (Открыть/Закрыть)
+
 filterPriceBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     filterPriceList.hidden = !filterPriceList.hidden;
     priceArrow.classList.toggle('rotate');
-    filterRegionList.hidden = true; // Закрываем соседа
+    filterRegionList.hidden = true;
 });
 
 filterRegionBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     filterRegionList.hidden = !filterRegionList.hidden;
     regionArrow.classList.toggle('rotate');
-    filterPriceList.hidden = true; // Закрываем соседа
+    filterPriceList.hidden = true;
 });
 
-// Закрытие при клике вне меню
 window.addEventListener('click', () => {
     filterPriceList.hidden = true;
     priceArrow.classList.remove('rotate');
@@ -283,78 +279,88 @@ window.addEventListener('click', () => {
 });
 
 
-// 2. ВЫБОР ЦЕНЫ ($ / $$ / $$$)
 priceOptions.forEach((option) => {
     option.addEventListener('click', () => {
-        // Берем текст с кнопки (например "$$")
         const selectedPrice = option.textContent.trim();
-        
         priceBtnText.textContent = selectedPrice;
-        currentPriceFilter = selectedPrice; // Запоминаем выбор
+        currentPriceFilter = selectedPrice;
 
-        // Скрываем меню
+        isExpanded = false;
+
         filterPriceList.hidden = true;
         priceArrow.classList.remove('rotate');
 
-        applyFilters(); // Фильтруем!
+        applyFilters(); 
     });
 });
 
 
-// 3. ВЫБОР РЕГИОНА (Europe / Asia ...)
 regionOptions.forEach((option) => {
     option.addEventListener('click', () => {
         const selectedRegion = option.textContent.trim();
-        
         regionBtnText.textContent = selectedRegion;
-        currentRegionFilter = selectedRegion; // Запоминаем выбор
+        currentRegionFilter = selectedRegion;
+
+        isExpanded = false;
 
         filterRegionList.hidden = true;
         regionArrow.classList.remove('rotate');
 
-        applyFilters(); // Фильтруем!
+        applyFilters(); 
     });
 });
 
+if (showMoreBtn) {
+    showMoreBtn.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        
+        isExpanded = true;
+        
+        applyFilters();
+    });
+}
 
-// 4. ГЛАВНАЯ ФУНКЦИЯ ФИЛЬТРАЦИИ
+
 function applyFilters() {
     console.log("Фильтр -> Регион:", currentRegionFilter, "| Цена:", currentPriceFilter);
 
-    // Берем ВСЕ страны и просеиваем их
     const filtered = allCountriesData.filter(country => {
-        
-        // Сравнение Цены (Если фильтр выбран, проверяем совпадение)
         if (currentPriceFilter && country.price !== currentPriceFilter) {
             return false;
         }
-
-        // Сравнение Региона (Без учета регистра: Europe == europe)
         if (currentRegionFilter && country.region.toLowerCase() !== currentRegionFilter.toLowerCase()) {
             return false;
         }
-
-        return true; // Оставляем страну
+        return true; 
     });
 
     renderCountries(filtered);
 }
 
 
-// 5. ОТРИСОВКА КАРТОЧЕК
 function renderCountries(countriesList) {
     const container = document.getElementById('country_cards_block_id');
     if (!container) return;
 
-    container.innerHTML = ''; // Очищаем контейнер
+    container.innerHTML = ''; 
 
-    // Если список пуст
     if (countriesList.length === 0) {
         container.innerHTML = '<h3 style="color: white; width: 100%; text-align: center; margin-top: 50px;">No countries found :(</h3>';
+        if(showMoreBtn) showMoreBtn.style.display = 'none'; 
         return;
     }
 
-    countriesList.forEach(country => {
+    let visibleItems = countriesList;
+
+    if (!isExpanded && countriesList.length > 3) {
+        visibleItems = countriesList.slice(0, 3);
+        
+        if(showMoreBtn) showMoreBtn.style.display = 'flex'; 
+    } else {
+        if(showMoreBtn) showMoreBtn.style.display = 'none';
+    }
+
+    visibleItems.forEach(country => {
         const cardHTML = `
             <div class="country_card hidden-element show">
                 <div class="country_img">
@@ -384,21 +390,16 @@ function renderCountries(countriesList) {
 }
 
 
-// 6. ЗАГРУЗКА ДАННЫХ ПРИ СТАРТЕ
 async function loadCountries() {
     console.log("Загружаем страны...");
     try {
         const response = await fetch('http://localhost:8888/wuide/api.php/countries');
-        
-        // Сохраняем полученные данные в глобальную переменную
         allCountriesData = await response.json();
         
-        // Рисуем все страны сразу
-        renderCountries(allCountriesData);
+        applyFilters(); 
     } catch (error) {
         console.error("Ошибка:", error);
     }
 }
 
 loadCountries();
-
