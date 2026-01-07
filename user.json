@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "name": "Bob bob",
+        "surname": "Old Bob",
+        "email": "bob@gmail.com",
+        "password": "$2y$10$xYLZWGFMgRZOGXXDxYW.fuBMGTdC.OcaohaVXmxRt\/M5NvWcassOW",
+        "photoUrl": null,
+        "country": "Poland",
+        "reviewId": null,
+        "role": "user",
+        "creationDate": "2026-01-04 11:23:20",
+        "api_token": "ca0c1b1811ad910fe72f453bf4c60cc534d690c2dd8bfb98184f634e2b602c85"
+    },
+    {
+        "id": 2,
+        "name": "Neeeekit",
+        "surname": "Super Nekit",
+        "email": "dada@gmail.com",
+        "password": "$2y$10$y9saKAx3H5eDRWoudPR6YOtbOmVrrFfJzoLz98RHSVujKM25N1kb6",
+        "photoUrl": null,
+        "country": "USA",
+        "reviewId": null,
+        "role": "admin",
+        "creationDate": "2026-01-07 18:47:59",
+        "api_token": "7723f48754f1f52fc1ae2008e68e3bc7e0a00dc82fd7f5f5a634e2be1c961413"
+    }
+]

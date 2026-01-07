@@ -1,0 +1,831 @@
+[
+    {
+        "id": 1,
+        "country": "Czech Republic",
+        "flag_code": "unknown",
+        "region": "Europe",
+        "short_description": "Pristine landscapes and historic charm.",
+        "full_description": "The Czech Republic, located in the heart of Europe, is a country rich in history, culture, and architectural wonders. Known for its picturesque towns, stunning castles, and vibrant cities like Prague, it offers a unique blend of old-world charm and modern amenities. Visitors can explore cobblestone streets, enjoy traditional Czech cuisine, and experience a variety of cultural festivals throughout the year. With its affordable prices and friendly locals, the Czech Republic is an ideal destination for travelers seeking both adventure and relaxation.",
+        "price": "$$",
+        "capital": "Prague",
+        "visit_duration": "5 - 7 days",
+        "visiting_time": "Spring\/Autumn",
+        "reviews": [],
+        "reviewers_id": [],
+        "country_photo": "https:\/\/images.unsplash.com\/photo-1665586079885-3a3d3f507096?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "map_photo": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/ff\/Czech_Republic_in_Europe.svg\/2395px-Czech_Republic_in_Europe.svg.png",
+        "places": [
+            {
+                "name": "Charles Bridge",
+                "description": "Iconic medieval stone bridge.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1564511287568-54483b52a35e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Prague Castle",
+                "description": "Largest ancient castle in the world.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1637013919535-c0e49e46a26f?q=80&w=1082&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Vyšehrad Castle",
+                "description": "Historic fort offering city views.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1766247096660-42ab43dca50d?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Staromestské square",
+                "description": "Historic square with astronomical clock.",
+                "photo_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/4\/44\/Prague_07-2016_View_from_Old_Town_Hall_Tower_img3.jpg"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Beef Tenderloin (Svíčková)",
+                "description": "Beef with creamy sauce and dumplings.",
+                "photo_url": "https:\/\/d25z3bxpfs89pv.cloudfront.net\/recipeimage\/5wt0j623-11f38-097312-cfcd2-jl0726r3\/40235c92-65a2-47b5-a9a8-d6efdb7fd84f\/large\/svickova-omacka-s-knedlikem.jpg"
+            },
+            {
+                "name": "Trdelník",
+                "description": "Sweet chimney cake.",
+                "photo_url": "https:\/\/kuchynelidlu.cz\/productFiles\/7983\/1132x637-1-744-23-beautyshot-1132x637-Trdelnik.jpeg"
+            },
+            {
+                "name": "Vepřo knedlo zelo",
+                "description": "Pork with dumplings and sauerkraut.",
+                "photo_url": "https:\/\/itesco.cz\/\/imgglobal\/content_platform\/recipes\/main\/0f\/0f51f0e11a8493d8dcd6378aa1f22540.jpg"
+            },
+            {
+                "name": "Veprove koleno",
+                "description": "Pork knuckle with sauerkraut.",
+                "photo_url": "https:\/\/kuchynelidlu.cz\/productFiles\/7529\/1132x637-1-KW-05-Pecene-veprove-koleno.jpeg"
+            }
+        ],
+        "creation_date": "2026-01-01"
+    },
+    {
+        "id": 2,
+        "country": "Poland",
+        "flag_code": "unknown",
+        "region": "Europe",
+        "short_description": "Vibrant culture and historic cities.",
+        "full_description": "Poland, a country in Central Europe, is known for its rich history, diverse landscapes, and vibrant cultural scene. It features beautiful medieval towns, stunning castles, and bustling cities like Krakow and Warsaw. The country offers a mix of traditional Polish cuisine, lively festivals, and a warm hospitality that makes it an attractive destination for travelers.",
+        "price": "$$",
+        "capital": "Warsaw",
+        "visit_duration": "5 - 7 days",
+        "visiting_time": "Spring\/Autumn",
+        "reviews": [],
+        "reviewers_id": [],
+        "country_photo": "https:\/\/images.unsplash.com\/photo-1519197924294-4ba991a11128?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "map_photo": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcRRQkr_RgSH1zEDjL6wE7sf9-_g08bgPweUGQ&s",
+        "places": [
+            {
+                "name": "Wawel Castle",
+                "description": "Historic castle and UNESCO World Heritage site.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1699791913496-cbca52f1c626?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Old Town Market Square",
+                "description": "Historic square with colorful buildings.",
+                "photo_url": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/1\/18\/Sukiennice_and_Main_Market_Square_Krakow_Poland.JPG"
+            },
+            {
+                "name": "Malbork Castle",
+                "description": "Historic castle and UNESCO World Heritage site.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1618341415451-c691d6ca19a5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Bialowieza Forest",
+                "description": "Ancient forest with European bison.",
+                "photo_url": "https:\/\/plus.unsplash.com\/premium_photo-1666539896803-d70435d30a45?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QmlhbG93aWV6YSUyMGZvcmVzdHxlbnwwfDB8MHx8fDA%3D"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Pierogi",
+                "description": "Traditional Polish dumplings filled with meat or cheese.",
+                "photo_url": "https:\/\/assets.tmecosys.com\/image\/upload\/t_web_rdp_recipe_584x480_1_5x\/img\/recipe\/ras\/Assets\/FEF4C93D-65CE-4060-A672-4459AA2D7171\/Derivates\/E8EA9A74-C53F-4289-9B2E-FE12FDF6C348.jpg"
+            },
+            {
+                "name": "Kotlet Schabowy",
+                "description": "Pork cutlet with sauerkraut.",
+                "photo_url": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcSWw7z8OgwPUru-cIO1tp_uYKvIZf13o7tIQg&s"
+            },
+            {
+                "name": "Bigos",
+                "description": "Traditional Polish stew with sauerkraut.",
+                "photo_url": "https:\/\/receptypanicuby.cz\/wp-content\/uploads\/2025\/10\/bigos-recept-7-1100x620.jpg"
+            },
+            {
+                "name": "Żurek",
+                "description": "Traditional Polish sour rye soup.",
+                "photo_url": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcTTyjLTuTDlDvhPYUydjSyz8Ipqxca5g-JJOA&s"
+            }
+        ],
+        "creation_date": "2026-01-01"
+    },
+    {
+        "id": 3,
+        "country": "Spain",
+        "flag_code": "unknown",
+        "region": "Europe",
+        "short_description": "Mediterranean vibes and historic sites.",
+        "full_description": "Spain, located on the Iberian Peninsula, is renowned for its diverse culture, vibrant festivals, and stunning architecture. From the bustling streets of Barcelona to the historic allure of Madrid, Spain offers a rich tapestry of experiences. Visitors can indulge in world-famous cuisine, explore ancient castles, and relax on beautiful Mediterranean beaches. The country's warm climate and lively atmosphere make it a top destination for travelers seeking both adventure and relaxation.",
+        "price": "$$",
+        "capital": "Madrid",
+        "visit_duration": "5 - 7 days",
+        "visiting_time": "Summer",
+        "reviews": [],
+        "reviewers_id": [],
+        "country_photo": "https:\/\/images.unsplash.com\/photo-1509840841025-9088ba78a826?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "map_photo": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/f7\/Spain_in_Europe.svg\/330px-Spain_in_Europe.svg.png",
+        "places": [
+            {
+                "name": "Sagrada Família",
+                "description": "Iconic basilica designed by Antoni Gaudí.",
+                "photo_url": "https:\/\/plus.unsplash.com\/premium_photo-1702598969295-71b202296f7d?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Alhambra",
+                "description": "Historic palace and fortress complex.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1605654464243-3668a4c0de3d?q=80&w=1150&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Santiago de Compostela",
+                "description": "Historic cathedral and pilgrimage site.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1638704645810-708030b50ce5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Park Güell",
+                "description": "Famous park designed by Antoni Gaudí.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1630219694734-fe47ab76b15e?q=80&w=1052&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Paella",
+                "description": "Rice dish with seafood or meat.",
+                "photo_url": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcRJt1kDcWSfaSLs64slfhOElIt8DtP3uqYAtQ&s"
+            },
+            {
+                "name": "Churros",
+                "description": "Sweet fried dough served with chocolate.",
+                "photo_url": "https:\/\/www.toprecepty.cz\/fotky\/recepty\/0117\/churros-s-cokoladou-curos-192087-677-508-nw.jpg"
+            },
+            {
+                "name": "Tortilla Española",
+                "description": "Spanish omelette made with potatoes and onions.",
+                "photo_url": "https:\/\/mojo.generalmills.com\/api\/public\/content\/9xIHKwJDH0-1wbHPsVCCVQ_gmi_hi_res_jpeg.jpeg?v=2bfc22c6&t=16e3ce250f244648bef28c5949fb99ff"
+            },
+            {
+                "name": "Jamón Ibérico",
+                "description": "Cured ham from Iberian pigs.",
+                "photo_url": "https:\/\/www.bofrost.es\/dw\/image\/v2\/BGLH_PRD\/on\/demandware.static\/-\/Sites-ES-master-catalog\/default\/dw095fee9c\/images\/8614-Jamon-Iberico-50-Cebo.jpg?sw=845&sh=500"
+            }
+        ],
+        "creation_date": "2026-01-01"
+    },
+    {
+        "id": 4,
+        "country": "Norway",
+        "flag_code": "unknown",
+        "region": "Europe",
+        "short_description": "Stunning fjords and natural beauty.",
+        "full_description": "Norway, located in Northern Europe, is renowned for its breathtaking natural landscapes, including majestic fjords, towering mountains, and pristine lakes. The country offers a wealth of outdoor activities such as hiking, skiing, and fishing, making it a paradise for nature enthusiasts. Norway's rich Viking history, vibrant cities like Oslo and Bergen, and the mesmerizing Northern Lights add to its allure. With its high standard of living and commitment to sustainability, Norway is an ideal destination for travelers seeking both adventure and cultural experiences.",
+        "price": "$$$",
+        "capital": "Oslo",
+        "visit_duration": "5 - 7 days",
+        "visiting_time": "All year round",
+        "reviews": [],
+        "reviewers_id": [],
+        "country_photo": "https:\/\/plus.unsplash.com\/premium_photo-1661963290283-a1883fb9582a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "map_photo": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/6\/6e\/Norway_in_Europe.svg\/330px-Norway_in_Europe.svg.png",
+        "places": [
+            {
+                "name": "Geirangerfjord",
+                "description": "Famous fjord with waterfalls.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1721463890748-87863c8f37a7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Lofoten Islands",
+                "description": "Scenic archipelago with dramatic landscapes.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1710762634126-4c0e8fba44d8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Bergen",
+                "description": "Vibrant city with colorful houses.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1544085311-11a028465b03?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Tromsø",
+                "description": "Northernmost city in the world.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1715372802246-a1858884d395?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Rakfisk",
+                "description": "Fermented fish dish.",
+                "photo_url": "https:\/\/www.tine.no\/oppskrifter\/_next\/image?url=https%3A%2F%2Fwww.tine.no%2F_%2Frecipeimage%2Fw_1200%2Ch_675%2Cc_fill%2Cx_1500%2Cy_1000%2Cg_xy_center%2Frecipeimage%2F317732.jpg&w=1600&q=75"
+            },
+            {
+                "name": "Kjøttkaker",
+                "description": "Meatballs made from lamb or beef.",
+                "photo_url": "https:\/\/res.cloudinary.com\/norgesgruppen\/image\/upload\/c_fill,dpr_auto,f_auto,q_auto:eco,h_360,w_640,g_auto,ar_16:9\/of7rwlrg7iat5qdft9qn"
+            },
+            {
+                "name": "Lutefisk",
+                "description": "Traditional fish dish.",
+                "photo_url": "https:\/\/res.cloudinary.com\/norgesgruppen\/image\/upload\/c_fill,f_auto,h_630,q_auto,w_1200\/zp9e9eki3rhcmsgcmtzg.jpg"
+            },
+            {
+                "name": "Kransekake",
+                "description": "Sweet cake made of rolled waffles.",
+                "photo_url": "https:\/\/ichef.bbci.co.uk\/food\/ic\/food_16x9_1600\/recipes\/pauls_kransekake_83354_16x9.jpg"
+            }
+        ],
+        "creation_date": "2026-01-01"
+    },
+    {
+        "id": 5,
+        "country": "Italy",
+        "flag_code": "unknown",
+        "region": "Europe",
+        "short_description": "Renaissance art and delicious cuisine.",
+        "full_description": "Italy, a country in Southern Europe, is renowned for its rich history, stunning architecture, and world-famous cuisine. From the ancient ruins of Rome to the romantic canals of Venice, Italy offers a diverse range of experiences for travelers. The country is home to numerous UNESCO World Heritage sites, vibrant cities like Florence and Milan, and picturesque countryside regions such as Tuscany. Italian culture is celebrated worldwide for its art, fashion, and culinary delights, making it a top destination for tourists seeking both cultural enrichment and gastronomic pleasures.",
+        "price": "$$",
+        "capital": "Rome",
+        "visit_duration": "5 - 7 days",
+        "visiting_time": "Spring\/Autumn",
+        "reviews": [],
+        "reviewers_id": [],
+        "country_photo": "https:\/\/images.unsplash.com\/photo-1514890547357-a9ee288728e0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "map_photo": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/41\/Italy_in_Europe.svg\/330px-Italy_in_Europe.svg.png",
+        "places": [
+            {
+                "name": "Colosseum",
+                "description": "Iconic ancient amphitheater.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1704915332184-68202025c9ba?q=80&w=1101&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Vatican City",
+                "description": "The smallest independent state in the world.",
+                "photo_url": "https:\/\/plus.unsplash.com\/premium_photo-1661963213811-63d057511c60?q=80&w=1623&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Venice",
+                "description": "Famous for its canals and gondolas.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1558271736-cd043ef2e855?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Florence",
+                "description": "Renaissance art and architecture.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1476362174823-3a23f4aa6d76?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Pizza Margherita",
+                "description": "Classic pizza with tomatoes, mozzarella, and basil.",
+                "photo_url": "https:\/\/safrescobaldistatic.blob.core.windows.net\/media\/2022\/11\/PIZZA-MARGHERITA.jpg"
+            },
+            {
+                "name": "Pasta Carbonara",
+                "description": "Traditional Italian pasta with eggs, cheese, pancetta, and black pepper.",
+                "photo_url": "https:\/\/www.allrecipes.com\/thmb\/Vg2cRidr2zcYhWGvPD8M18xM_WY=\/1500x0\/filters:no_upscale():max_bytes(150000):strip_icc()\/11973-spaghetti-carbonara-ii-DDMFS-4x3-6edea51e421e4457ac0c3269f3be5157.jpg"
+            },
+            {
+                "name": "Tiramisu",
+                "description": "Classic Italian dessert made with coffee-soaked ladyfingers and mascarpone cream.",
+                "photo_url": "https:\/\/cdn.administrace.tv\/2022\/08\/06\/medium_169\/02c7f115d2f29f0f26a5f5e2bb761257.jpg"
+            },
+            {
+                "name": "Gelato",
+                "description": "Italian ice cream with a creamy texture and rich flavors.",
+                "photo_url": "https:\/\/assets.tmecosys.com\/image\/upload\/t_web_rdp_recipe_584x480_1_5x\/img\/recipe\/ras\/Assets\/ce8c10492ec64d73432d297ba97c14f0\/Derivates\/5b75d087ff7f54c3eb7e4e244169e99196cfaff1.jpg"
+            }
+        ],
+        "creation_date": "2026-01-01"
+    },
+    {
+        "id": 6,
+        "country": "USA",
+        "flag_code": "unknown",
+        "region": "North America",
+        "short_description": "Diverse landscapes and iconic landmarks.",
+        "full_description": "The United States of America (USA) is a vast and diverse country located in North America, known for its wide range of landscapes, cultures, and attractions. From the bustling cities of New York and Los Angeles to the natural wonders of the Grand Canyon and Yellowstone National Park, the USA offers something for every type of traveler. The country is famous for its iconic landmarks such as the Statue of Liberty, Mount Rushmore, and the Golden Gate Bridge. With its rich history, vibrant culture, and world-class entertainment, the USA is a top destination for tourists from around the globe.",
+        "price": "$$$",
+        "capital": "Washington",
+        "visit_duration": "5 - 7 days",
+        "visiting_time": "All year round",
+        "reviews": [],
+        "reviewers_id": [],
+        "country_photo": "https:\/\/images.unsplash.com\/photo-1480714378408-67cf0d13bc1b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "map_photo": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/1\/13\/United_States_in_its_region_%28Lower_50_and_Puerto_Rico_special%29.svg\/1280px-United_States_in_its_region_%28Lower_50_and_Puerto_Rico_special%29.svg.png",
+        "places": [
+            {
+                "name": "New York City",
+                "description": "The Big Apple, known for its iconic skyline and cultural diversity.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1568515387631-8b650bbcdb90?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Grand Canyon",
+                "description": "A massive canyon carved by the Colorado River.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1535044243240-144dc3ae56a5?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Yellowstone National Park",
+                "description": "America's first national park, known for its geysers and wildlife.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1594073632422-ef9768f87fa4?q=80&w=1143&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "San Francisco",
+                "description": "Known for its iconic Golden Gate Bridge and diverse neighborhoods.",
+                "photo_url": "https:\/\/plus.unsplash.com\/premium_photo-1673266633864-4cfdcf42eb9c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Hamburger",
+                "description": "A classic American burger with beef patty, lettuce, tomato, and special sauce.",
+                "photo_url": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcSlwuVwVHxReJ4YLuDhCNn8mWLhQjj37w3GjQ&s"
+            },
+            {
+                "name": "Barbecue Ribs",
+                "description": "Tender ribs slow-cooked with a smoky sauce.",
+                "photo_url": "https:\/\/www.daringgourmet.com\/wp-content\/uploads\/2024\/04\/Barbecue-Ribs-Recipe-7.jpg"
+            },
+            {
+                "name": "Pretzels",
+                "description": "Soft and chewy pretzels, often served with mustard.",
+                "photo_url": "https:\/\/southernbite.com\/wp-content\/uploads\/2016\/12\/Crack-Pretzels-500x375.jpg"
+            },
+            {
+                "name": "Clam Chowder",
+                "description": "A creamy soup made with clams and potatoes.",
+                "photo_url": "https:\/\/www.allrecipes.com\/thmb\/v-eAaLyKM0mcAMgtrDCs1JY1zUM=\/1500x0\/filters:no_upscale():max_bytes(150000):strip_icc()\/13041-my-best-clam-chowder-VAT-001-3x4-d337d42241e042489f888e1388eb90fe.jpg"
+            }
+        ],
+        "creation_date": "2026-01-01"
+    },
+    {
+        "id": 7,
+        "country": "Canada",
+        "flag_code": "unknown",
+        "region": "North America",
+        "short_description": "Natural wonders and multicultural cities.",
+        "full_description": "Canada, the second-largest country in the world, is known for its stunning natural landscapes, vibrant cities, and multicultural society. From the majestic Rocky Mountains to the picturesque Niagara Falls, Canada offers a wealth of outdoor activities such as hiking, skiing, and wildlife watching. The country is home to diverse cities like Toronto, Vancouver, and Montreal, each offering unique cultural experiences, culinary delights, and festivals. With its friendly people and high quality of life, Canada is a top destination for travelers seeking both adventure and cultural enrichment.",
+        "price": "$$",
+        "capital": "Ottawa",
+        "visit_duration": "5 - 7 days",
+        "visiting_time": "Summer",
+        "reviews": [],
+        "reviewers_id": [],
+        "country_photo": "https:\/\/images.unsplash.com\/photo-1490623970972-ae8bb3da443e?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "map_photo": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcQwQzBKYGucX4Rz5G7wQHjVtwtUwe90GS92NQ&s",
+        "places": [
+            {
+                "name": "Banff National Park",
+                "description": "Canada's oldest national park, known for its mountain landscapes and turquoise lakes.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1561134643-668f9057cce4?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Niagara Falls",
+                "description": "Famous for its spectacular waterfalls and scenic beauty.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1606516397986-1eeb79e8c052?q=80&w=1164&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Toronto",
+                "description": "Canada's largest city, known for its multiculturalism and vibrant arts scene.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1507992781348-310259076fe0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Vancouver",
+                "description": "Known for its stunning natural beauty and diverse cultural offerings.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1559511260-66a654ae982a?q=80&w=1518&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Poutine",
+                "description": "A Canadian dish consisting of french fries, cheese curds, and brown gravy.",
+                "photo_url": "https:\/\/www.marionskitchen.com\/wp-content\/uploads\/2023\/06\/Classic-Canadian-Poutine-01-1200x675.jpg"
+            },
+            {
+                "name": "Butter Tarts",
+                "description": "A traditional Canadian pastry made with a buttery, sugary filling.",
+                "photo_url": "https:\/\/xoxobella.com\/wp-content\/uploads\/2023\/01\/butter_tart_recipe-5.jpg"
+            },
+            {
+                "name": "Nanaimo Bars",
+                "description": "A traditional Canadian pastry made with a buttery, sugary filling.",
+                "photo_url": "https:\/\/www.allrecipes.com\/thmb\/DHzxOqX_rxsL7zDwN-4DB_0bxyM=\/1500x0\/filters:no_upscale():max_bytes(150000):strip_icc()\/AR-25095-nanaimo-bars-iii-ddmfs-4x3-a12764c85da6481d830bc28014ad3ed3.jpg"
+            },
+            {
+                "name": "BeaverTails",
+                "description": "A traditional Canadian pastry made with a buttery, sugary filling.",
+                "photo_url": "https:\/\/cdn.sanity.io\/images\/6sugrgl1\/production\/38a33d4381d90194307a12816c10db091e581b33-800x533.png?rect=0,90,800,355&w=1988&h=882&fit=crop"
+            }
+        ],
+        "creation_date": "2026-01-01"
+    },
+    {
+        "id": 8,
+        "country": "Brazil",
+        "flag_code": "unknown",
+        "region": "South America",
+        "short_description": "Vibrant culture and natural wonders.",
+        "full_description": "Brazil, the largest country in South America, is known for its vibrant culture, diverse landscapes, and rich biodiversity. From the iconic Christ the Redeemer statue in Rio de Janeiro to the breathtaking Amazon Rainforest, Brazil offers a wide range of experiences for travelers. The country is famous for its lively festivals, such as Carnival, as well as its beautiful beaches, including Copacabana and Ipanema. With its warm climate, friendly people, and delicious cuisine, Brazil is a top destination for those seeking adventure and cultural immersion.",
+        "price": "$$",
+        "capital": "Brasília",
+        "visit_duration": "5 - 7 days",
+        "visiting_time": "Summer",
+        "reviews": [],
+        "reviewers_id": [],
+        "country_photo": "https:\/\/images.unsplash.com\/photo-1483729558449-99ef09a8c325?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "map_photo": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/9\/90\/Brazil_on_the_globe_%28South_America_centered%29.svg\/960px-Brazil_on_the_globe_%28South_America_centered%29.svg.png",
+        "places": [
+            {
+                "name": "Christ the Redeemer",
+                "description": "Iconic statue overlooking Rio de Janeiro.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1700677866588-95226be09b39?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Amazon Rainforest",
+                "description": "The world's largest tropical rainforest.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1591081658714-f576fb7ea3ed?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Ipanema Beach",
+                "description": "Famous beach in Rio de Janeiro.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1587646534144-abd34fe0455f?q=80&w=1129&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Sugarloaf Mountain",
+                "description": "Iconic mountain with panoramic views of Rio de Janeiro.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1550574364-981d838fa2f1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Feijoada",
+                "description": "A traditional Brazilian stew made with black beans and various meats.",
+                "photo_url": "https:\/\/assets.tmecosys.cn\/image\/upload\/t_web_rdp_recipe_584x480\/img\/recipe\/ras\/Assets\/bf0b6a9ffe1e83960ebf31ed8af6d05f\/Derivates\/eabadaf71c49ba2b4c70d7317518fa5225c6bc82.jpg"
+            },
+            {
+                "name": "Brigadeiro",
+                "description": "A traditional Brazilian sweet made with condensed milk, cocoa powder, and butter.",
+                "photo_url": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcTkjab6LnN6KC52Az9fWOCuxjcFKFbmmivj-A&s"
+            },
+            {
+                "name": "Beijinho",
+                "description": "A coconut-based Brazilian sweet similar to brigadeiro.",
+                "photo_url": "https:\/\/www.receitasnestle.com.br\/sites\/default\/files\/styles\/recipe_detail_desktop_new\/public\/srh_recipes\/8d6a0e43fea8d543981a3eb7d870f3b0.jpeg?itok=azWUsQbD"
+            },
+            {
+                "name": "Coxinha",
+                "description": "A popular Brazilian pastry filled with shredded chicken.",
+                "photo_url": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcQETMCM16cvP87xWMCrATZfzoVejl9_L5X1pw&s"
+            }
+        ],
+        "creation_date": "2026-01-01"
+    },
+    {
+        "id": 9,
+        "country": "Argentina",
+        "flag_code": "unknown",
+        "region": "South America",
+        "short_description": "Diverse landscapes and rich culture.",
+        "full_description": "Argentina, located in South America, is known for its diverse landscapes, rich culture, and vibrant cities. From the stunning Iguazu Falls in the north to the breathtaking glaciers of Patagonia in the south, Argentina offers a wide range of natural wonders for travelers to explore. The country is famous for its tango music and dance, as well as its delicious cuisine, including world-renowned beef and Malbec wine. Buenos Aires, the capital city, is a bustling metropolis with a European flair, offering a mix of historic architecture, lively neighborhoods, and cultural attractions. With its warm hospitality and diverse experiences, Argentina is a top destination for those seeking adventure and cultural immersion.",
+        "price": "$$",
+        "capital": "Buenos Aires",
+        "visit_duration": "5 - 7 days",
+        "visiting_time": "Summer",
+        "reviews": [],
+        "reviewers_id": [],
+        "country_photo": "https:\/\/images.unsplash.com\/photo-1706170421190-48b12aa10f5e?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "map_photo": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/1\/10\/Argentina_on_the_globe_%28Argentina_centered%29.svg\/960px-Argentina_on_the_globe_%28Argentina_centered%29.svg.png",
+        "places": [
+            {
+                "name": "Iguazu Falls",
+                "description": "Stunning waterfalls on the border of Argentina and Brazil.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1648510399328-b8981e9fc1bb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Perito Moreno Glacier",
+                "description": "A massive glacier in Patagonia, known for its impressive size and frequent calving events.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1638500551033-a0f60c8e768e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Buenos Aires",
+                "description": "The capital city of Argentina, known for its European flair and vibrant culture.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1711512538805-cc07d32093c2?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Mendoza",
+                "description": "A wine region in Argentina, known for its vineyards and Malbec wines.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1520356996640-d3b614727887?q=80&w=1217&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Asado",
+                "description": "Traditional Argentine grilled meat, typically beef.",
+                "photo_url": "https:\/\/www.wineenthusiast.com\/wp-content\/uploads\/2023\/05\/12_2022_Playing_with_Fire_HERO_Photo_Tara_Donne_Food_Chris_Lanier_Props_Christina_Lane_1920x1280.jpg"
+            },
+            {
+                "name": "Empanadas",
+                "description": "Traditional Argentine pastries filled with meat or cheese.",
+                "photo_url": "https:\/\/assets.bonappetit.com\/photos\/58a34e1df12ac6e639bf24ae\/1:1\/w_2560%2Cc_limit\/argentinian-beef-empanadas.jpg"
+            },
+            {
+                "name": "Wine",
+                "description": "Malbec wines from the Mendoza region.",
+                "photo_url": "https:\/\/minuman.com\/cdn\/shop\/articles\/011123---Malbec-Wine_-A-Deep-Dive-into-Argentina_s-Gift-to-the-Wine-World.jpg?v=1721098131"
+            },
+            {
+                "name": "Dulce de Leche",
+                "description": "A sweet caramel-like sauce made from condensed milk.",
+                "photo_url": "https:\/\/assets.tmecosys.com\/image\/upload\/t_web_rdp_recipe_584x480_1_5x\/img\/recipe\/ras\/Assets\/22C1D347-3F47-48AB-BD37-B5E3F9B7E2C8\/Derivates\/2ef9e7ab-e46b-48ff-ba5d-b5ab6111576f.jpg"
+            }
+        ],
+        "creation_date": "2026-01-01"
+    },
+    {
+        "id": 10,
+        "country": "Japan",
+        "flag_code": "unknown",
+        "region": "Asia",
+        "short_description": "Blend of tradition and modernity.",
+        "full_description": "Japan, an island nation in East Asia, is known for its unique blend of traditional culture and modern innovation. From the bustling streets of Tokyo to the serene temples of Kyoto, Japan offers a diverse range of experiences for travelers. The country is famous for its cherry blossoms, ancient castles, and cutting-edge technology. Japanese cuisine, including sushi, ramen, and tempura, is celebrated worldwide for its flavors and presentation. With its rich history, vibrant pop culture, and stunning natural landscapes, Japan is a top destination for those seeking both cultural enrichment and contemporary experiences.",
+        "price": "$$$",
+        "capital": "Tokyo",
+        "visit_duration": "10 days",
+        "visiting_time": "Spring\/Autumn",
+        "reviews": [],
+        "reviewers_id": [],
+        "country_photo": "https:\/\/images.unsplash.com\/photo-1526481280693-3bfa7568e0f3?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "map_photo": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/e\/e1\/Japan_in_Asia_%28de-facto%29.svg\/1181px-Japan_in_Asia_%28de-facto%29.svg.png",
+        "places": [
+            {
+                "name": "Tokyo",
+                "description": "The capital city of Japan, known for its modern architecture and vibrant culture.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1604928141064-207cea6f571f?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Kyoto",
+                "description": "A city in Japan known for its traditional temples and gardens.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1493976040374-85c8e12f0c0e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Mount Fuji",
+                "description": "A dormant volcano and symbol of Japan.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1618278942403-e973260cc425?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Hiroshima",
+                "description": "A city in Japan known for its peace memorial and historical significance.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1697605623014-c68d4b666420?q=80&w=1730&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Sushi",
+                "description": "A traditional Japanese dish made with vinegared rice and various toppings.",
+                "photo_url": "https:\/\/www.asiafood.cz\/user\/articles\/images\/sushi-2853382_1920.jpg"
+            },
+            {
+                "name": "Ramen",
+                "description": "A traditional Japanese noodle soup.",
+                "photo_url": "https:\/\/images.themodernproper.com\/production\/posts\/2022\/EasyCurryRamen-_7.jpg?w=960&h=960&q=82&fm=jpg&fit=crop&dm=1747762318&s=49ae97198eec8aa953d13e0566310fc5"
+            },
+            {
+                "name": "Tempura",
+                "description": "Battered and fried seafood and vegetables.",
+                "photo_url": "https:\/\/twosleevers.com\/wp-content\/uploads\/2023\/03\/Shrimp-Tempura-1-500x500.png"
+            },
+            {
+                "name": "Miso Soup",
+                "description": "A traditional Japanese soup made with fermented soybean paste.",
+                "photo_url": "https:\/\/bluedotliving.com\/wp-content\/uploads\/2024\/04\/Wakame-Mushroom-Miso-Soup-vseder.png"
+            }
+        ],
+        "creation_date": "2026-01-01"
+    },
+    {
+        "id": 11,
+        "country": "China",
+        "flag_code": "unknown",
+        "region": "Asia",
+        "short_description": "Rich history and culture.",
+        "full_description": "China, the world's most populous country, is known for its rich history, diverse culture, and stunning landscapes. From the ancient wonders of the Great Wall and the Terracotta Army to the modern metropolis of Shanghai, China offers a wide range of experiences for travelers. The country is famous for its traditional festivals, such as Chinese New Year, as well as its delicious cuisine, including Peking duck and dim sum. With its blend of ancient traditions and contemporary innovations, China is a top destination for those seeking cultural enrichment and adventure.",
+        "price": "$$",
+        "capital": "Beijing",
+        "visit_duration": "7 - 10 days",
+        "visiting_time": "Spring\/Autumn",
+        "reviews": [],
+        "reviewers_id": [],
+        "country_photo": "https:\/\/images.unsplash.com\/photo-1474181487882-5abf3f0ba6c2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "map_photo": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/af\/China_in_its_region_%28claimed_hatched%29.svg\/1200px-China_in_its_region_%28claimed_hatched%29.svg.png",
+        "places": [
+            {
+                "name": "Great Wall of China",
+                "description": "A series of fortifications made of stone, brick, and other materials.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1508804185872-d7badad00f7d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Terracotta Army",
+                "description": "A collection of terracotta sculptures depicting the armies of Qin Shi Huang.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1527922891260-918d42a4efc8?q=80&w=1191&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Forbidden City",
+                "description": "The former imperial palace during the Ming and Qing dynasties.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1661012767667-2070302231bf?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Summer Palace",
+                "description": "A vast ensemble of lakes, gardens, and palaces.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1583977393611-885b3e5cc701?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Peking Duck",
+                "description": "A famous dish from Beijing, known for its crispy skin and tender meat.",
+                "photo_url": "https:\/\/static01.nyt.com\/images\/2019\/01\/28\/dining\/kc-peking-duck\/kc-peking-duck-threeByTwoLargeAt2X-v2.jpg"
+            },
+            {
+                "name": "Dim Sum",
+                "description": "Small portions of food served in a variety of styles.",
+                "photo_url": "https:\/\/dimsumpalacemd.com\/wp-content\/uploads\/2023\/06\/Dim-Sum-history.png"
+            },
+            {
+                "name": "Hot Pot",
+                "description": "A communal dish where diners cook their own food in a shared pot.",
+                "photo_url": "https:\/\/static01.nyt.com\/images\/2024\/02\/05\/multimedia\/ND-hot-pot-ljmf\/ND-hot-pot-ljmf-videoSixteenByNineJumbo1600.jpg"
+            },
+            {
+                "name": "Kung Pao Chicken",
+                "description": "A spicy and savory dish made with chicken, vegetables, and peanuts.",
+                "photo_url": "https:\/\/www.seriouseats.com\/thmb\/AaMf6tliWc3jh0R-9KLiJG5fzZo=\/1500x0\/filters:no_upscale():max_bytes(150000):strip_icc()\/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2014__07__2021-02-12-Take-Out-Kung-Pao-Chicken-MHOM-11-c46f6c06713c45c5a287ddbf08779d04.jpg"
+            }
+        ],
+        "creation_date": "2026-01-01"
+    },
+    {
+        "id": 12,
+        "country": "Egypt",
+        "flag_code": "unknown",
+        "region": "Africa",
+        "short_description": "Ancient wonders and rich history.",
+        "full_description": "Egypt, located in North Africa, is known for its ancient wonders, rich history, and vibrant culture. From the iconic pyramids of Giza to the majestic temples of Luxor, Egypt offers a wealth of historical sites for travelers to explore. The country is famous for its contributions to civilization, including advancements in writing, architecture, and art. The Nile River, the lifeblood of Egypt, provides opportunities for scenic cruises and exploration of lush landscapes. With its warm climate, friendly people, and delicious cuisine, Egypt is a top destination for those seeking both adventure and cultural enrichment.",
+        "price": "$",
+        "capital": "Cairo",
+        "visit_duration": " 4 - 6 days",
+        "visiting_time": "Autumn\/Winter",
+        "reviews": [],
+        "reviewers_id": [],
+        "country_photo": "https:\/\/images.unsplash.com\/photo-1572252009286-268acec5ca0a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "map_photo": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/fc\/Egypt_in_Africa_%28claimed%29_%28-mini_map_-rivers%29.svg\/1525px-Egypt_in_Africa_%28claimed%29_%28-mini_map_-rivers%29.svg.png",
+        "places": [
+            {
+                "name": "Pyramids of Giza",
+                "description": "The largest and most famous pyramids in Egypt.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1628503218283-6ddeac69dfea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Temple of Luxor",
+                "description": "A magnificent temple complex dedicated to the god Amun.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1662567819554-63b0ca4f0f84?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Valley of the Kings",
+                "description": "The burial place of pharaohs and queens of the New Kingdom.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1632944398987-494eebe663be?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Nile River",
+                "description": "The lifeblood of Egypt, providing scenic cruises and lush landscapes.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1680356217112-dad9300ce49d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Koshari",
+                "description": "A traditional Egyptian dish made with lentils, rice, pasta, and fried onions.",
+                "photo_url": "https:\/\/silkroadrecipes.com\/wp-content\/uploads\/2021\/06\/Egyptian-Koshari-square.jpg"
+            },
+            {
+                "name": "Ful Medames",
+                "description": "A traditional Egyptian dish made from fava beans.",
+                "photo_url": "https:\/\/www.washingtonpost.com\/wp-apps\/imrs.php?src=https:\/\/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com\/public\/MKIW7MTJRAI6ZE4Q5LRED5GIWE.jpg&w=1100"
+            },
+            {
+                "name": "Ta'meya",
+                "description": "Egyptian falafel made from fava beans.",
+                "photo_url": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcQQ6Vf0y2MEOfg1AFU4d6wkdOPcZOjPlwOjMw&s"
+            },
+            {
+                "name": "Molokhia",
+                "description": "A traditional Egyptian soup made from jute leaves.",
+                "photo_url": "https:\/\/www.simplyleb.com\/wp-content\/uploads\/Molokhia-17-500x375.jpg"
+            }
+        ],
+        "creation_date": "2026-01-01"
+    },
+    {
+        "id": 13,
+        "country": "Marocco",
+        "flag_code": "unknown",
+        "region": "Africa",
+        "short_description": "Exotic culture and landscapes.",
+        "full_description": "Morocco, located in North Africa, is known for its exotic culture, diverse landscapes, and rich history. From the bustling markets of Marrakech to the serene beaches of Essaouira, Morocco offers a wide range of experiences for travelers. The country is famous for its vibrant souks, stunning architecture, and delicious cuisine, including tagine and couscous. The Atlas Mountains and the Sahara Desert provide opportunities for outdoor adventures such as hiking and camel trekking. With its warm hospitality and unique blend of Arab, Berber, and French influences, Morocco is a top destination for those seeking both cultural enrichment and adventure.",
+        "price": "$$",
+        "capital": "Rabat",
+        "visit_duration": "3 - 5 days",
+        "visiting_time": "Spring\/Autumn",
+        "reviews": [],
+        "reviewers_id": [],
+        "country_photo": "https:\/\/images.unsplash.com\/photo-1569383746724-6f1b882b8f46?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "map_photo": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/4\/49\/Morocco_in_Africa_%28claims_hatched%29.svg\/330px-Morocco_in_Africa_%28claims_hatched%29.svg.png",
+        "places": [
+            {
+                "name": "Marrakech Medina",
+                "description": "The historic heart of Marrakech, filled with narrow streets and traditional architecture.",
+                "photo_url": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcSea1TvC3fYf1muAYCKa29uvrucpELkTt5VlA&s"
+            },
+            {
+                "name": "Chefchaouen",
+                "description": "A picturesque blue-washed town nestled in the Rif Mountains.",
+                "photo_url": "https:\/\/images.unsplash.com\/flagged\/photo-1555169048-3c4845cfcf1c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Sahara Desert",
+                "description": "The vast Sahara Desert offers a unique landscape and cultural experience.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1511185307590-3c29c11275ca?q=80&w=1167&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                "name": "Fes Medina",
+                "description": "The historic heart of Fes, filled with narrow streets and traditional architecture.",
+                "photo_url": "https:\/\/images.unsplash.com\/photo-1518979142375-743eaff7a103?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Tagine",
+                "description": "A traditional Moroccan stew cooked in a special clay pot.",
+                "photo_url": "https:\/\/www.thedeliciouscrescent.com\/wp-content\/uploads\/2016\/08\/Moroccan-Lamb-Tagine-6.jpg"
+            },
+            {
+                "name": "Couscous",
+                "description": "A traditional North African dish made from semolina.",
+                "photo_url": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcQmN6a3EGgSdZn0aNvVn5U0AYG4dLxxXTqSqg&s"
+            },
+            {
+                "name": "Pastilla",
+                "description": "A sweet and savory pastry filled with pigeon or chicken.",
+                "photo_url": "https:\/\/static01.nyt.com\/images\/2024\/10\/18\/multimedia\/NB-Chicken-Pastillarex-plfc\/NB-Chicken-Pastillarex-plfc-videoSixteenByNineJumbo1600.jpg"
+            },
+            {
+                "name": "Harira",
+                "description": "A traditional Moroccan soup made with tomatoes, lentils, and meat.",
+                "photo_url": "https:\/\/cdn.vilgain.com\/image\/recipe-cover\/cover-desktop\/marocka-cizrnova-polevka-harira-3.jpeg?v=1687810754"
+            }
+        ],
+        "creation_date": "2026-01-01"
+    },
+    {
+        "id": 14,
+        "country": "Japan",
+        "flag_code": "jp",
+        "region": "Asia",
+        "short_description": "Land of the Rising Sun",
+        "full_description": "Japan is an island country in East Asia. It is situated in the northwest Pacific Ocean...",
+        "price": "$$$",
+        "capital": "Tokyo",
+        "visit_duration": "14 days",
+        "visiting_time": "Spring",
+        "reviews": [],
+        "reviewers_id": [],
+        "country_photo": "https:\/\/example.com\/japan.jpg",
+        "map_photo": "https:\/\/example.com\/japan_map.jpg",
+        "places": [
+            {
+                "name": "Mount Fuji",
+                "description": "Active volcano",
+                "photo_url": "https:\/\/example.com\/fuji.jpg"
+            },
+            {
+                "name": "Kyoto",
+                "description": "Old temples",
+                "photo_url": "https:\/\/example.com\/kyoto.jpg"
+            }
+        ],
+        "foods": [
+            {
+                "name": "Sushi",
+                "description": "Fresh fish",
+                "photo_url": "https:\/\/example.com\/sushi.jpg"
+            }
+        ],
+        "creation_date": "2026-01-07"
+    }
+]
