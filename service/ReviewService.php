@@ -82,14 +82,14 @@ class ReviewService {
 
         if ($action === 'approve') {
             $review->status = 'approved';
+            $this->reviewDao->update($review);
+            return ["message" => "Review approved and published"];
         } elseif ($action === 'reject') {
-            $review->status = 'rejected';
+            $this->reviewDao->delete($reviewId);
+            return ["message" => "Review rejected and deleted from database"];
         } else {
-            throw new Exception("Invalid action", 400);
+            throw new Exception("Invalid action. Use 'approve' or 'reject'", 400);
         }
-
-        $this->reviewDao->update($review);
-        return ["message" => "Review status updated to $action"];
     }
 
     private function checkAdmin(string $token) {
