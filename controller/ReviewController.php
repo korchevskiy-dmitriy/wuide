@@ -45,6 +45,25 @@ class ReviewController {
                 $this->sendResponse(201, $newReview);
                 return;
             }
+            if ($method === 'GET' && strpos($uri, '/reviews/pending') !== false) {
+                $reviews = $this->reviewService->getPendingReviews($token); 
+                $this->sendResponse(200, $reviews);
+                return;
+            }
+
+            if ($method === 'PUT' && preg_match('/\/reviews\/(\d+)\/moderate/', $uri, $matches)) {
+                $reviewId = $matches[1];
+                $input = json_decode(file_get_contents('php://input'), true);
+                
+                if (empty($input['action'])) {
+                    throw new Exception("Action is required", 400);
+                }
+
+                $result = $this->reviewService->moderateReview($token, (int)$reviewId, $input['action']);
+                $this->sendResponse(200, $result);
+                return;
+            }
+            
 
             if ($method === 'DELETE' && isset($_GET['id'])) {
                 $result = $this->reviewService->deleteReview($token, (int)$_GET['id']);

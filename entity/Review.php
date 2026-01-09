@@ -9,6 +9,7 @@ class Review {
     public string $countryName;
     public string $text;
     public string $date;
+    public string $status; 
 
     public function __construct(
         int $id, 
@@ -18,7 +19,8 @@ class Review {
         int $countryId, 
         string $countryName,
         string $text, 
-        string $date
+        string $date,
+        string $status = 'pending'
     ) {
         $this->id = $id;
         $this->userId = $userId;
@@ -28,6 +30,7 @@ class Review {
         $this->countryName = $countryName;
         $this->text = $text;
         $this->date = $date;
+        $this->status = $status; 
     }
 
     public static function fromArray(array $data): self {
@@ -39,7 +42,8 @@ class Review {
             $data['country_id'],
             $data['country_name'],
             $data['text'],
-            $data['date']
+            $data['date'],
+            $data['status'] ?? 'pending' 
         );
     }
 
@@ -52,7 +56,8 @@ class Review {
             'country_id' => $this->countryId,
             'country_name' => $this->countryName,
             'text' => $this->text,
-            'date' => $this->date
+            'date' => $this->date,
+            'status' => $this->status 
         ];
     }
 }

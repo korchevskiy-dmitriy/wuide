@@ -14,6 +14,7 @@
 <body>
     <header class="country-header">
         <img id="logo" src="resourses/logo.svg" alt="logo">
+        <button class="reg_signin hidden" id="admin-btn" type="button">Admin</button>
         <nav id="main_reg_id" class="main_reg">
             <button class="reg_signin" id="reg_signin_id" type="button">Sign up</button>
             <button class="reg_login" id="reg_login_id" type="button"><span>Log in</span></button>
@@ -294,7 +295,7 @@
             <div class="auth-modal" id="profile-modal">
                 <div class="modal-content profile-modal-content">
                     <div class="head_form_container">
-                        <h6 class="modal-title-text">Profile</h6>
+                        <h6 class="modal-title-text" >Profile</h6>
                         <button class="icon_cross" id="close-profile-modal">
                             <svg class="cross-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -304,8 +305,7 @@
                     </div>
 
                     <div class="profile-header-section">
-                        <div class="profile-avatar-large" id="profile-modal-avatar">
-                            </div>
+                        <img class="profile-avatar-large" id="profile-modal-avatar" src="resourses/logo.svg" alt="User Avatar">
                         <div class="profile-text-info">
                             <h3 id="profile-modal-name">User Name</h3>
                             <p id="profile-modal-country">Country</p>
@@ -313,27 +313,15 @@
                     </div>
 
                     <div class="profile-form-grid">
-                        <input type="text" id="prof-name" placeholder="Name" class="profile-input">
-                        <input type="text" id="prof-surname" placeholder="Surname" class="profile-input">
+                        <input type="text" id="prof-name" placeholder="Name" class="profile-input" readonly style="opacity: 0.7; cursor: not-allowed;">
+                        <input type="text" id="prof-surname" placeholder="Surname" class="profile-input" readonly style="opacity: 0.7; cursor: not-allowed;">
                         
                         <div class="custom-select-wrapper">
-                            <select id="prof-country" class="profile-input profile-select">
-                                <option value="" disabled>Select Country</option>
-                                <option value="cz">Czechia</option>
-                                <option value="us">USA</option>
-                                <option value="de">Germany</option>
-                                <option value="it">Italy</option>
-                                <option value="fr">France</option>
-                                <option value="ua">Ukraine</option>
-                            </select>
+                            <input type="text" id="prof-country" class="profile-input profile-select" value="Czechia" readonly style="opacity: 0.7; cursor: not-allowed;">
                         </div>
 
                         <input type="email" id="prof-email" placeholder="Email" class="profile-input full-width" readonly style="opacity: 0.7; cursor: not-allowed;">
-                        
-                        <div class="password-wrapper full-width">
-                            <input type="password" id="prof-password" placeholder="New Password (leave empty to keep)" class="profile-input">
-                            <span class="password-toggle" id="prof-pass-toggle">👁</span>
-                        </div>
+
                     </div>
 
                     <div class="profile-buttons">
@@ -343,8 +331,21 @@
                     </div>
                 </div>
             </div>
+            <div id="admin-modal" class="modal-overlay">
+                <div class="modal-window admin-window">
+                    <div class="modal-header">
+                        <h3>Review Moderation</h3>
+                        <span id="close-admin-modal" class="close-icon">&times;</span>
+                    </div>
+                    <div class="admin-content">
+                        <div id="admin-reviews-list">
+                            </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
+    <script src="admin.js"></script>
     <script src="auth.js"></script>
     <script src="second_page.js"></script>
 </body>

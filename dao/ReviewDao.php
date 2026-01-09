@@ -25,39 +25,52 @@ class ReviewDao {
         $all = $this->getAll();
         return array_values(array_filter($all, fn($r) => $r->userId == $userId));
     }
+    
+    public function findById(int $id): ?Review {
+        $all = $this->getAll();
+        foreach ($all as $r) {
+            if ($r->id === $id) return $r;
+        }
+        return null;
+    }
 
     public function save(Review $review) {
         $reviews = $this->getAll();
-        $newId = count($reviews) > 0 ? end($reviews)->id + 1 : 1;
-        $review->id = $newId;
+        $maxId = 0;
+        foreach ($reviews as $r) {
+            if ($r->id > $maxId) $maxId = $r->id;
+        }
+        $review->id = $maxId + 1;
         
         $reviews[] = $review;
         $this->saveAll($reviews);
         return $review;
     }
 
-    public function delete(int $reviewId, int $userId) {
+    public function update(Review $updatedReview) {
         $reviews = $this->getAll();
-
-        $countBefore = count($reviews);
-
-        $filtered = array_filter($reviews, function($review) use ($reviewId, $userId) {
-            $rId = (int)$review->id;
-            $uId = (int)$review->userId;
-
-            if ($rId === $reviewId && $uId === $userId) {
-                return false; 
+        $found = false;
+        foreach ($reviews as $key => $r) {
+            if ($r->id === $updatedReview->id) {
+                $reviews[$key] = $updatedReview;
+                $found = true;
+                break;
             }
-            return true;
-        });
+        }
+        if ($found) {
+            $this->saveAll($reviews);
+        }
+        return $found;
+    }
 
-        $countAfter = count($filtered);
-
-        if ($countAfter < $countBefore) {
+    public function delete(int $reviewId) {
+        $reviews = $this->getAll();
+        $filtered = array_filter($reviews, fn($r) => $r->id !== $reviewId);
+        
+        if (count($filtered) < count($reviews)) {
             $this->saveAll(array_values($filtered));
             return true;
         }
-
         return false;
     }
 
@@ -65,8 +78,8 @@ class ReviewDao {
         $data = array_map(fn($r) => $r->toArray(), $reviews);
         file_put_contents(
             $this->filePath, 
-            json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
+            json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE),
+            LOCK_EX
         );
     }
-    
 }

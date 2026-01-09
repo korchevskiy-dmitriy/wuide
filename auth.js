@@ -18,7 +18,7 @@ if (registrationForm) {
         console.log("Отправляем данные:", data); 
 
         try {
-            const response = await fetch('http://localhost:8888/wuide/api.php/auth/register', {
+            const response = await fetch(`http://localhost:8888/wuide/api.php/auth/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -68,7 +68,7 @@ if (loginForm) {
         console.log("Попытка входа:", data.email);
 
         try {
-            const response = await fetch('http://localhost:8888/wuide/api.php/auth/login', {
+            const response = await fetch(`http://localhost:8888/wuide/api.php/auth/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -107,7 +107,6 @@ const pName = document.getElementById('prof-name');
 const pSurname = document.getElementById('prof-surname');
 const pCountry = document.getElementById('prof-country');
 const pEmail = document.getElementById('prof-email');
-const pPassword = document.getElementById('prof-password');
 const pAvatarDiv = document.getElementById('profile-modal-avatar');
 const pHeaderName = document.getElementById('profile-modal-name');
 const pHeaderCountry = document.getElementById('profile-modal-country');
@@ -121,7 +120,7 @@ async function checkAuth() {
     if (!token) return;
 
     try {
-        const response = await fetch('http://localhost:8888/wuide/api.php/auth/profile', {
+        const response = await fetch(`http://localhost:8888/wuide/api.php/auth/profile`, {
             method: 'GET',
             headers: { 'Authorization': 'Bearer ' + token }
         });
@@ -174,14 +173,15 @@ function openProfileModal(user) {
     pName.value = user.name;
     pSurname.value = user.surname;
     pEmail.value = user.email;
-    pCountry.value = user.country || "";
-    pPassword.value = "";
-
+    pCountry.value = getCountryName(user.country);
     pHeaderName.textContent = user.name + " " + user.surname;
     pHeaderCountry.textContent = getCountryName(user.country);
     
     const photo = user.photo_url ? user.photo_url : 'resourses/logo.svg';
-    pAvatarDiv.style.backgroundImage = `url('${photo}')`;
+    
+    if (pAvatarDiv) {
+        pAvatarDiv.src = photo;
+    }
 }
 
 if (closeProfileBtn) {
@@ -205,11 +205,7 @@ if (updateBtn) {
         const updateData = {
             name: pName.value,
             surname: pSurname.value,
-            country: pCountry.value
         };
-        if (pPassword.value.trim() !== "") {
-            updateData.password = pPassword.value.trim();
-        }
 
         try {
             const res = await fetch('http://localhost:8888/wuide/api.php/auth/profile', {
