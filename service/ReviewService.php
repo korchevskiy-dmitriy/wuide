@@ -15,10 +15,27 @@ class ReviewService {
         $this->countryDao = new CountryDao();
     }
 
-    public function getReviewsForCountry(int $countryId) {
-        $reviews = $this->reviewDao->findByCountryId($countryId);
-        $approved = array_filter($reviews, fn($r) => $r->status === 'approved');
-        return array_values(array_map(fn($r) => $r->toArray(), $approved));
+    public function getReviewsForCountry(int $countryId, int $page = 1, int $limit = 5) {
+        $allReviews = $this->reviewDao->findByCountryId($countryId);
+        
+        $approved = array_filter($allReviews, fn($r) => $r->status === 'approved');
+        
+        usort($approved, fn($a, $b) => $b->id - $a->id);
+
+        $totalReviews = count($approved); 
+        $totalPages = ceil($totalReviews / $limit); 
+        $offset = ($page - 1) * $limit; 
+
+        $slice = array_slice($approved, $offset, $limit);
+        
+        return [
+            'reviews' => array_values(array_map(fn($r) => $r->toArray(), $slice)),
+            'pagination' => [
+                'current_page' => $page,
+                'total_pages' => $totalPages,
+                'total_reviews' => $totalReviews
+            ]
+        ];
     }
 
     public function addReview(string $token, int $countryId, string $text) {

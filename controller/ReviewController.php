@@ -24,8 +24,12 @@ class ReviewController {
 
         try {
             if ($method === 'GET' && isset($_GET['country_id'])) {
-                $reviews = $this->reviewService->getReviewsForCountry((int)$_GET['country_id']);
-                $this->sendResponse(200, $reviews);
+                $page = isset($_GET['page']) ? (int)$_GET['page'] : 1; 
+                $limit = 5; 
+
+                $result = $this->reviewService->getReviewsForCountry((int)$_GET['country_id'], $page, $limit);
+                
+                $this->sendResponse(200, $result);
                 return;
             }
 

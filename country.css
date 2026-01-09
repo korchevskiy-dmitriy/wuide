@@ -1057,7 +1057,7 @@ body {
 .reviews-modal-content {
     max-width: 900px;
     height: 85vh;
-    padding: 0;
+    padding: 15px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -1365,14 +1365,10 @@ modal-title-text{
     }
 }
 /* admin */
-/* --- ADMIN PANEL STYLES --- */
-
-/* Класс для скрытия кнопки до проверки роли */
 .hidden {
     display: none !important;
 }
 
-/* Стили кнопки Admin в меню */
 #admin-btn {
     border-color: #d9534f;
     color: #ffa7a3;
@@ -1387,14 +1383,13 @@ modal-title-text{
     color: white;
 }
 
-/* Модальное окно (база) */
 .modal-overlay {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 2000; /* Поверх всего */
-    display: none; /* Скрыто по умолчанию */
+    z-index: 2000; 
+    display: none;
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(4px);
@@ -1404,7 +1399,6 @@ modal-title-text{
     display: flex;
 }
 
-/* Само окно */
 .admin-window {
     background: white;
     width: 90%;
@@ -1414,10 +1408,9 @@ modal-title-text{
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     display: flex;
     flex-direction: column;
-    max-height: 85vh; /* Чтобы влезало на экран */
+    max-height: 85vh; 
 }
 
-/* Заголовок модалки */
 .modal-header {
     display: flex;
     justify-content: space-between;
@@ -1441,13 +1434,11 @@ modal-title-text{
 
 .close-icon:hover { color: #000; }
 
-/* Список отзывов (скролл внутри) */
 .admin-content {
     overflow-y: auto;
     padding-right: 5px;
 }
 
-/* Карточка одного отзыва */
 .admin-review-card {
     background: #f9f9f9;
     border: 1px solid #e0e0e0;
@@ -1472,7 +1463,6 @@ modal-title-text{
     border-left: 3px solid #333;
 }
 
-/* Кнопки действий */
 .admin-actions {
     display: flex;
     justify-content: flex-end;
@@ -1502,8 +1492,105 @@ modal-title-text{
     color: #c0392b;
 }
 .btn-reject:hover { background-color: #c0392b; color: white; }
-/* mobile version second page */
+/*  SIMPLE PAGINATION  */
 
+#reviews-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;     
+    padding: 10px 0;
+}
+
+.review-card {
+    background-color: #0B0B14;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;  
+    gap: 20px;
+    color: #fff;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.review-card img {
+    width: 50px !important;   
+    height: 50px !important;  
+    min-width: 50px;         
+    border-radius: 50%;       
+    object-fit: cover;      
+    border: 2px solid rgba(255,255,255,0.2); 
+    flex-shrink: 0;            
+    margin: 0 !important;     
+}
+
+.review-card-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.review-card-content strong {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.review-date-small {
+    font-size: 12px;
+    color: #aaa;
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.review-card-content p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #ddd;
+    margin: 0;
+    word-break: break-word;
+}
+.pagination-controls {
+    width: 100%;          
+    display: flex;       
+    justify-content: center;
+    align-items: center;
+    gap: 20px;             
+    margin-top: 20px;     
+    padding: 10px 0;
+}
+
+.simple-page-btn {
+    background: transparent;
+    border: 1px solid #333;
+    color: #333;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.simple-page-btn:hover {
+    background: #333;
+    color: white;
+}
+
+.page-number-text {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* mobile version second page */
 @media (max-width: 768px) {
     body{
         background-image: none;
@@ -1731,6 +1818,14 @@ modal-title-text{
         width: 100% !important;
         justify-content: center;
         gap: 15px !important;
+    }
+    #admin-btn {
+    border-color: #d9534f;
+    color: #ffa7a3;
+    margin-right: 15px;
+    box-shadow: none;
+    margin-right: auto !important;
+    margin-left: auto !important;
     }
 
     @keyframes scroll-left {

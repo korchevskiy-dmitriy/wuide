@@ -306,6 +306,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initReviewsModal() {
+    function escapeHTML(str) {
+        if (!str) return "";
+        return str
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
     const params = new URLSearchParams(window.location.search);
     const countryId = params.get('id');
 
@@ -373,38 +383,87 @@ function initReviewsModal() {
         if (modalImg) modalImg.src = "resourses/img-country.png"; 
     }
 
-    async function loadReviews(id) {
-        if (!reviewsList) return;
-        reviewsList.innerHTML = '<p style="text-align:center; padding:20px; color:#888;">Loading...</p>';
-        
-        try {
-            const response = await fetch(`http://localhost:8888/wuide/api.php/reviews?country_id=${id}`);
-            const reviews = await response.json();
-            reviewsList.innerHTML = ''; 
+    let currentPage = 1;
 
-            if (reviews.length === 0) {
-                reviewsList.innerHTML = '<p style="text-align:center; padding:20px; color:#aaa;">No reviews yet.</p>';
+    async function loadReviews(countryId, page = 1) {
+        const reviewsList = document.getElementById('reviews-list-container'); 
+        if (!reviewsList) return;
+        
+        reviewsList.innerHTML = '<p style="text-align:center; color:gray;">Loading reviews...</p>';
+    
+        try {
+            const res = await fetch(`http://localhost:8888/wuide/api.php/reviews?country_id=${countryId}&page=${page}`);
+            const data = await res.json(); 
+    
+            reviewsList.innerHTML = ''; 
+    
+            if (!data.reviews || data.reviews.length === 0) {
+                reviewsList.innerHTML = '<p>No reviews yet. Be the first!</p>';
                 return;
             }
-
-            reviews.forEach(r => {
-                const photo = r.user_photo ? r.user_photo : 'resourses/logo.svg';
+    
+            data.reviews.forEach(r => {
                 const date = new Date(r.date).toLocaleDateString();
+                const photo = r.user_photo || 'resourses/default-avatar.png';
+                const safeText = escapeHTML(r.text); 
+                const safeName = escapeHTML(r.user_name);
+    
                 const html = `
-                    <div class="review-card-modal">
+                    <div class="review-card">
                         <img src="${photo}" alt="user">
                         <div class="review-card-content">
-                            <strong>${r.user_name} <span class="review-date-small">${date}</span></strong>
-                            <p>${r.text}</p>
+                            <strong>${safeName} <span class="review-date-small">${date}</span></strong>
+                            <p>${safeText}</p>
                         </div>
                     </div>
                 `;
                 reviewsList.insertAdjacentHTML('beforeend', html);
             });
+    
+            renderPagination(data.pagination, countryId);
+    
         } catch (e) {
             console.error(e);
             reviewsList.innerHTML = '<p style="color:red; text-align:center;">Error loading reviews</p>';
         }
+    }
+
+    function renderPagination(pagination, countryId) {
+        const reviewsList = document.getElementById('reviews-list-container'); 
+        
+        if (pagination.total_pages <= 1) return;
+
+        const div = document.createElement('div');
+        div.className = 'pagination-controls'; 
+
+        if (pagination.current_page > 1) {
+            const prevBtn = document.createElement('button');
+            prevBtn.innerText = '←'; 
+            prevBtn.className = 'simple-page-btn';
+            prevBtn.onclick = () => {
+                currentPage--; 
+                loadReviews(countryId, currentPage); 
+            };
+            div.appendChild(prevBtn);
+        }
+
+        const span = document.createElement('span');
+        span.innerText = `${pagination.current_page} / ${pagination.total_pages}`;
+        span.className = 'page-number-text';
+        div.appendChild(span);
+
+        if (pagination.current_page < pagination.total_pages) {
+            const nextBtn = document.createElement('button');
+            nextBtn.innerText = '→';
+            nextBtn.className = 'simple-page-btn'; 
+            nextBtn.onclick = () => {
+                currentPage++; 
+                loadReviews(countryId, currentPage); 
+            };
+            div.appendChild(nextBtn);
+        }
+
+        reviewsList.appendChild(div);
     }
 
     if (postBtn) {
@@ -425,7 +484,8 @@ function initReviewsModal() {
 
                 if (res.ok) {
                     textArea.value = '';
-                    loadReviews(countryId);
+                    currentPage = 1; 
+                    loadReviews(countryId, 1); 
                 } else {
                     alert("Error sending review");
                 }
