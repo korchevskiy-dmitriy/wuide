@@ -227,18 +227,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (!countryId) return;
 
-    console.log("Загружаем данные для страны ID:", countryId);
+    console.log("Downloading data for country ID:", countryId);
 
     try {
         const response = await fetch(`http://localhost:8888/wuide/api.php/countries/${countryId}`);
         
         if (!response.ok) {
-            console.error("Страна не найдена");
+            console.error("Country isnt found");
             return;
         }
 
         const country = await response.json();
-        console.log("Данные с сервера:", country);
+        console.log("Data from server:", country);
 
         
         const title = document.getElementById('country-name');
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
     } catch (error) {
-        console.error("Ошибка загрузки:", error);
+        console.error("Fail:", error);
     }
 });
 /* modal logic */

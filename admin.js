@@ -1,29 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Проверяем, админ ли мы, сразу при загрузке
     checkAdminRole();
 
-    // 2. Инициализируем элементы
     const adminBtn = document.getElementById('admin-btn');
     const adminModal = document.getElementById('admin-modal');
     const closeAdminBtn = document.getElementById('close-admin-modal');
 
-    // 3. Открытие окна
     if (adminBtn) {
         adminBtn.addEventListener('click', () => {
             if (adminModal) {
                 adminModal.classList.add('open');
-                document.body.style.overflow = 'hidden'; // Блокируем фон
-                loadPendingReviews(); // Загружаем отзывы
+                document.body.style.overflow = 'hidden';
+                loadPendingReviews();
             }
         });
     }
 
-    // 4. Закрытие (крестик)
     if (closeAdminBtn) {
         closeAdminBtn.addEventListener('click', closeModal);
     }
 
-    // 5. Закрытие (клик по фону)
     window.addEventListener('click', (e) => {
         if (adminModal && e.target === adminModal) {
             closeModal();
@@ -36,11 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// --- ГЛОБАЛЬНЫЕ ФУНКЦИИ ---
 
 const API_BASE = 'http://localhost:8888/wuide/api.php';
 
-// Функция проверки роли
 async function checkAdminRole() {
     const token = localStorage.getItem('authToken');
     const btn = document.getElementById('admin-btn');
@@ -53,10 +46,9 @@ async function checkAdminRole() {
         
         if (res.ok) {
             const data = await res.json();
-            // Если роль admin — показываем кнопку
             if (data.user && data.user.role === 'admin') {
                 btn.classList.remove('hidden');
-                btn.style.display = 'block'; // На всякий случай
+                btn.style.display = 'block'; 
             }
         }
     } catch (e) {
@@ -64,7 +56,6 @@ async function checkAdminRole() {
     }
 }
 
-// Загрузка списка
 async function loadPendingReviews() {
     const container = document.getElementById('admin-reviews-list');
     if (!container) return;

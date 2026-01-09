@@ -41,7 +41,7 @@ if (registrationForm) {
             }
 
         } catch (error) {
-            console.error('Ошибка сети:', error);
+            console.error('Fail:', error);
             alert('Server error.');
         }
     });
@@ -65,7 +65,7 @@ if (loginForm) {
         const formData = new FormData(loginForm);
         const data = Object.fromEntries(formData.entries());
 
-        console.log("Попытка входа:", data.email);
+        console.log("Login attempt:", data.email);
 
         try {
             const response = await fetch(`http://localhost:8888/wuide/api.php/auth/login`, {
@@ -77,7 +77,7 @@ if (loginForm) {
             });
 
             const result = await response.json();
-            console.log("Ответ сервера:", result);
+            console.log("Servers answer:", result);
 
             if (response.ok) {
                 localStorage.setItem('authToken', result.token);
@@ -91,7 +91,7 @@ if (loginForm) {
             }
 
         } catch (error) {
-            console.error('Ошибка сети:', error);
+            console.error('Fail:', error);
             alert('Server error. Check console.');
         }
     });

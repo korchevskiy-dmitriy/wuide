@@ -391,7 +391,7 @@ function renderCountries(countriesList) {
 
 
 async function loadCountries() {
-    console.log("Загружаем страны...");
+    console.log("Loading countries...");
     try {
         const response = await fetch('http://localhost:8888/wuide/api.php/countries');
         allCountriesData = await response.json();
