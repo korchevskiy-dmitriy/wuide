@@ -25,6 +25,16 @@ class ReviewService {
         $user = $this->userDao->findByToken($token);
         if (!$user) throw new Exception("Unauthorized", 401);
 
+        $text = trim($text);
+        if (empty($text)) {
+            throw new Exception("Review text cannot be empty", 400);
+        }
+        if (strlen($text) > 500) {
+            throw new Exception("Review is too long (max 500 chars)", 400);
+        }
+
+        $safeText = htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+
         $country = $this->countryDao->findById($countryId);
         if (!$country) throw new Exception("Country not found", 404);
 
@@ -35,12 +45,13 @@ class ReviewService {
             $user['photo_url'] ?? null, 
             $country->id, 
             $country->country, 
-            $text, 
+            $safeText, 
             date('Y-m-d'),
             'pending'
         );
 
-        return $this->reviewDao->save($review)->toArray();
+        $savedReview = $this->reviewDao->save($review);
+        return $savedReview->toArray();
     }
 
     public function getMyReviews(string $token) {

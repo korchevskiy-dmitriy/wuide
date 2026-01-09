@@ -17,18 +17,28 @@ class UserService {
             throw new Exception("All fields are required", 400);
         }
 
+        if (!filter_var($dto->email, FILTER_VALIDATE_EMAIL)) {
+            throw new Exception("Invalid email format", 400);
+        }
+
+        if (strlen($dto->password) < 6) {
+            throw new Exception("Password must be at least 6 characters long", 400);
+        }
+
         if ($this->userDao->findByEmail($dto->email)) {
             throw new Exception("User with this email already exists", 409);
         }
 
-        $hashedPassword = password_hash($dto->password, PASSWORD_DEFAULT);
+        $safeName = htmlspecialchars(strip_tags($dto->name), ENT_QUOTES, 'UTF-8');
+        $safeSurname = htmlspecialchars(strip_tags($dto->surname), ENT_QUOTES, 'UTF-8');
 
+        $hashedPassword = password_hash($dto->password, PASSWORD_DEFAULT);
         $newId = $this->userDao->getNextId();
         
         $user = new User(
             $newId,
-            $dto->name,
-            $dto->surname,
+            $safeName,   
+            $safeSurname, 
             $dto->email,
             $hashedPassword,
             $dto->photoUrl,
