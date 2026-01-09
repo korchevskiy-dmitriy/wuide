@@ -239,6 +239,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const country = await response.json();
         console.log("Data from server:", country);
+        if (country.country_photo) {
+            document.body.style.backgroundImage = `url('${country.country_photo}')`;
+        }
 
         
         const title = document.getElementById('country-name');

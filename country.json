@@ -9,6 +9,7 @@
         "capital": "Prague",
         "visit_duration": "5 - 7 days",
         "visiting_time": "Spring/Autumn",
+        "flag_url": "img_main/flags/cz.svg",
         "country_photo": "https://images.unsplash.com/photo-1665586079885-3a3d3f507096?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "map_photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Czech_Republic_in_Europe.svg/2395px-Czech_Republic_in_Europe.svg.png",
         
@@ -72,6 +73,7 @@
         "capital": "Warsaw",
         "visit_duration": "5 - 7 days",
         "visiting_time": "Spring/Autumn",
+        "flag_url": "img_main/flags/pl.svg",
         "country_photo": "https://images.unsplash.com/photo-1519197924294-4ba991a11128?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "map_photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRQkr_RgSH1zEDjL6wE7sf9-_g08bgPweUGQ&s",
         
@@ -135,6 +137,7 @@
         "capital": "Madrid",
         "visit_duration": "5 - 7 days",
         "visiting_time": "Summer",
+        "flag_url": "img_main/flags/es.svg",
         "country_photo": "https://images.unsplash.com/photo-1509840841025-9088ba78a826?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "map_photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Spain_in_Europe.svg/330px-Spain_in_Europe.svg.png",
         
@@ -198,6 +201,7 @@
         "capital": "Oslo",
         "visit_duration": "5 - 7 days",
         "visiting_time": "All year round",
+        "flag_url": "img_main/flags/no.svg",
         "country_photo": "https://plus.unsplash.com/premium_photo-1661963290283-a1883fb9582a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "map_photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Norway_in_Europe.svg/330px-Norway_in_Europe.svg.png",
         
@@ -261,6 +265,7 @@
         "capital": "Rome",
         "visit_duration": "5 - 7 days",
         "visiting_time": "Spring/Autumn",
+        "flag_url": "img_main/flags/it.svg",
         "country_photo": "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "map_photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Italy_in_Europe.svg/330px-Italy_in_Europe.svg.png",
         
@@ -324,6 +329,7 @@
         "capital": "Washington",
         "visit_duration": "5 - 7 days",
         "visiting_time": "All year round",
+        "flag_url": "img_main/flags/us.svg",
         "country_photo": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "map_photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/United_States_in_its_region_%28Lower_50_and_Puerto_Rico_special%29.svg/1280px-United_States_in_its_region_%28Lower_50_and_Puerto_Rico_special%29.svg.png",
         
@@ -387,6 +393,7 @@
         "capital": "Ottawa",
         "visit_duration": "5 - 7 days",
         "visiting_time": "Summer",
+        "flag_url": "img_main/flags/ca.svg",
         "country_photo": "https://images.unsplash.com/photo-1490623970972-ae8bb3da443e?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "map_photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwQzBKYGucX4Rz5G7wQHjVtwtUwe90GS92NQ&s",
         
@@ -450,6 +457,7 @@
         "capital": "Brasília",
         "visit_duration": "5 - 7 days",
         "visiting_time": "Summer",
+        "flag_url": "img_main/flags/br.svg",
         "country_photo": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "map_photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Brazil_on_the_globe_%28South_America_centered%29.svg/960px-Brazil_on_the_globe_%28South_America_centered%29.svg.png",
         
@@ -513,6 +521,7 @@
         "capital": "Buenos Aires",
         "visit_duration": "5 - 7 days",
         "visiting_time": "Summer",
+        "flag_url": "img_main/flags/ar.svg",
         "country_photo": "https://images.unsplash.com/photo-1706170421190-48b12aa10f5e?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "map_photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Argentina_on_the_globe_%28Argentina_centered%29.svg/960px-Argentina_on_the_globe_%28Argentina_centered%29.svg.png",
         
@@ -576,6 +585,7 @@
         "capital": "Tokyo",
         "visit_duration": "10 days",
         "visiting_time": "Spring/Autumn",
+        "flag_url": "img_main/flags/jp.svg",
         "country_photo": "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "map_photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Japan_in_Asia_%28de-facto%29.svg/1181px-Japan_in_Asia_%28de-facto%29.svg.png",
         
@@ -639,6 +649,7 @@
         "capital": "Beijing",
         "visit_duration": "7 - 10 days",
         "visiting_time": "Spring/Autumn",
+        "flag_url": "img_main/flags/cn.svg",
         "country_photo": "https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "map_photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/China_in_its_region_%28claimed_hatched%29.svg/1200px-China_in_its_region_%28claimed_hatched%29.svg.png",
         
@@ -702,6 +713,7 @@
         "capital": "Cairo",
         "visit_duration": " 4 - 6 days",
         "visiting_time": "Autumn/Winter",
+        "flag_url": "img_main/flags/eg.svg",
         "country_photo": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "map_photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Egypt_in_Africa_%28claimed%29_%28-mini_map_-rivers%29.svg/1525px-Egypt_in_Africa_%28claimed%29_%28-mini_map_-rivers%29.svg.png",
         
@@ -765,6 +777,7 @@
         "capital": "Rabat",
         "visit_duration": "3 - 5 days",
         "visiting_time": "Spring/Autumn",
+        "flag_url": "img_main/flags/ma.svg",
         "country_photo": "https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "map_photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Morocco_in_Africa_%28claims_hatched%29.svg/330px-Morocco_in_Africa_%28claims_hatched%29.svg.png",
         

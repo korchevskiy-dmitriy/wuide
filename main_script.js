@@ -373,7 +373,7 @@ function renderCountries(countriesList) {
                 <div class="description_country">
                     <div class="name_and_flag">
                         <h4 class="name_of_country">${country.country}</h4>
-                        <img src="img_main/twemoji_flag-czechia.png" class="flag_of_country">
+                        <img src="${country.flag_url}" class="flag_of_country" alt="${country.country} flag">
                     </div>
                     <div class="exactly_price">
                         <span class="text_price">Price</span>
